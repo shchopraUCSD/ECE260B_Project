@@ -65,9 +65,10 @@ assign inst[0] = pmem_wr;
 
 
 reg [bw_psum-1:0] temp5b;
+reg [bw_psum-1:0] temp5b_abs;
 reg [bw_psum+3:0] temp_sum;
 reg [bw_psum*col-1:0] temp16b;
-
+reg [bw_psum*col-1:0] temp16b_norm; //normalized vector
 
 
 fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
@@ -168,17 +169,37 @@ $display("##### Estimated multiplication result #####");
   end
 
   for (t=0; t<total_cycle; t=t+1) begin
+	 temp_sum = 0;
      for (q=0; q<col; q=q+1) begin
          for (k=0; k<pr; k=k+1) begin
             result[t][q] = result[t][q] + Q[t][k] * K[q][k];
          end
 
          temp5b = result[t][q];
+		 temp5b_abs = temp5b[bw_psum-1] ? ~temp5b[bw_psum-1:0]+1 : temp5b[bw_psum-1:0];
+		 $display("DBG: temp5b intermediate actual value: %h", temp5b);
+		 //$display("DBG: temp5b intermediate abs value: %h", temp5b_abs);
+		 temp_sum = temp_sum + temp5b_abs;
          temp16b = {temp16b[139:0], temp5b};
      end
 
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
+	 $display("DBG: temp_sum is %d",temp_sum);
      $display("prd @cycle%2d: %40h", t, temp16b);
+	 
+	 //compute normalized vector 
+     //for (idx=0; idx<col; idx=idx+1) begin : norm_idx
+	 //   	temp16b_norm[ (bw_psum*(idx+1))-1 : bw_psum*idx] = temp16b[ (bw_psum*(idx+1))-1 : bw_psum*idx ] / temp_sum;
+	 //end
+  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = temp16b[bw_psum*1 - 1: bw_psum*0] / temp_sum;
+  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = temp16b[bw_psum*2 - 1: bw_psum*1] / temp_sum;
+  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = temp16b[bw_psum*3 - 1: bw_psum*2] / temp_sum;
+  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = temp16b[bw_psum*4 - 1: bw_psum*3] / temp_sum;
+  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = temp16b[bw_psum*5 - 1: bw_psum*4] / temp_sum;
+  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b[bw_psum*6 - 1: bw_psum*5] / temp_sum;
+  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b[bw_psum*7 - 1: bw_psum*6] / temp_sum;
+  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b[bw_psum*8 - 1: bw_psum*7] / temp_sum;
+     $display("normalized prd @cycle%2d: %40h", t, temp16b_norm);
   end
 
 //////////////////////////////////////////////
