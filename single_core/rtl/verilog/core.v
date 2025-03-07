@@ -13,8 +13,12 @@ output [bw_psum*col-1:0] out;
 wire   [bw_psum*col-1:0] pmem_out;
 input  [pr*bw-1:0] mem_in;
 input  clk;
-input  [16:0] inst; 
+//FIXME extend inst for sfp instructions
+input  [18:0] inst; 
 input  reset;
+
+//latch the final normalized output
+reg [bw_psum*col-1:0] sfp_out_q;
 
 wire  [pr*bw-1:0] mac_in;
 wire  [pr*bw-1:0] kmem_out;
@@ -35,6 +39,12 @@ wire  kmem_wr;
 wire  pmem_rd;
 wire  pmem_wr; 
 
+wire sfp_div;
+wire sfp_acc;
+
+//FIXME extend inst for sfp instructions
+assign sfp_div = inst[18];
+assign sfp_acc = inst[17];
 assign ofifo_rd = inst[16];
 assign qkmem_add = inst[15:12];
 assign pmem_add = inst[11:8];
@@ -47,7 +57,10 @@ assign pmem_rd = inst[1];
 assign pmem_wr = inst[0];
 
 assign mac_in  = inst[6] ? kmem_out : qmem_out;
-assign pmem_in = fifo_out;
+assign pmem_in = sfp_div ? sfp_out : fifo_out;
+
+//final output of core - the latch stores the normalized output of sfp
+assign out = sfp_out_q;
 
 mac_array #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) mac_array_instance (
         .in(mac_in), 
@@ -96,10 +109,23 @@ sram_w8 #(.sram_bit(col*bw_psum)) psum_mem_instance (
         .A(pmem_add)
 );
 
+sfp_row #(.bw(bw), .bw_psum(bw_psum), .col(col)) sfp_row_instance(
+		.clk(clk),
+		.acc(sfp_acc),
+		.div(sfp_div),
+		//FIXME fifo_ext_rd and sum_in only come into the picture in dual core design
+		.fifo_ext_rd(1'b0),
+		.sum_in(0),
+		.sum_out(sum_out),
+		.sfp_in(pmem_out),
+		.sfp_out(sfp_out)
+);
 
 
   //////////// For printing purpose ////////////
   always @(posedge clk) begin
+	  if(sfp_div)
+		 sfp_out_q <= sfp_out;
       if(pmem_wr)
          $display("Memory write to PSUM mem add %x %x ", pmem_add, pmem_in); 
   end

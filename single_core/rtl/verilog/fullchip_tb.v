@@ -38,7 +38,8 @@ reg reset = 1;
 reg clk = 0;
 reg [pr*bw-1:0] mem_in; 
 reg ofifo_rd = 0;
-wire [16:0] inst; 
+//FIXME extend inst for sfp instructions
+wire [18:0] inst; 
 reg qmem_rd = 0;
 reg qmem_wr = 0; 
 reg kmem_rd = 0; 
@@ -50,7 +51,12 @@ reg load = 0;
 reg [3:0] qkmem_add = 0;
 reg [3:0] pmem_add = 0;
 
+reg sfp_acc = 0;
+reg sfp_div = 0; 
 
+//FIXME extend inst for sfp instructions
+assign inst[18] = sfp_div;
+assign inst[17] = sfp_acc;
 assign inst[16] = ofifo_rd;
 assign inst[15:12] = qkmem_add;
 assign inst[11:8]  = pmem_add;
@@ -189,17 +195,19 @@ $display("##### Estimated multiplication result #####");
      $display("prd @cycle%2d: %40h", t, temp16b);
 	 
 	 //compute normalized vector 
+	 //the range [bw_psum+3:7] is same as was sfp_row is doing i.e. right shifting sum by 7 bits
+
      //for (idx=0; idx<col; idx=idx+1) begin : norm_idx
 	 //   	temp16b_norm[ (bw_psum*(idx+1))-1 : bw_psum*idx] = temp16b[ (bw_psum*(idx+1))-1 : bw_psum*idx ] / temp_sum;
 	 //end
-  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = temp16b[bw_psum*1 - 1: bw_psum*0] / temp_sum;
-  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = temp16b[bw_psum*2 - 1: bw_psum*1] / temp_sum;
-  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = temp16b[bw_psum*3 - 1: bw_psum*2] / temp_sum;
-  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = temp16b[bw_psum*4 - 1: bw_psum*3] / temp_sum;
-  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = temp16b[bw_psum*5 - 1: bw_psum*4] / temp_sum;
-  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b[bw_psum*6 - 1: bw_psum*5] / temp_sum;
-  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b[bw_psum*7 - 1: bw_psum*6] / temp_sum;
-  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b[bw_psum*8 - 1: bw_psum*7] / temp_sum;
+  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = temp16b[bw_psum*1 - 1: bw_psum*0] / temp_sum[bw_psum+3:7];
+  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = temp16b[bw_psum*2 - 1: bw_psum*1] / temp_sum[bw_psum+3:7];
+  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = temp16b[bw_psum*3 - 1: bw_psum*2] / temp_sum[bw_psum+3:7];
+  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = temp16b[bw_psum*4 - 1: bw_psum*3] / temp_sum[bw_psum+3:7];
+  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = temp16b[bw_psum*5 - 1: bw_psum*4] / temp_sum[bw_psum+3:7];
+  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b[bw_psum*6 - 1: bw_psum*5] / temp_sum[bw_psum+3:7];
+  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b[bw_psum*7 - 1: bw_psum*6] / temp_sum[bw_psum+3:7];
+  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b[bw_psum*8 - 1: bw_psum*7] / temp_sum[bw_psum+3:7];
      //$display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
   end
 
@@ -383,8 +391,45 @@ $display("##### move ofifo to pmem #####");
 ///////////////////////////////////////////
 
 
+////////////// read from pmem, normalize in sfp, write back to pmem ///////////////////
 
+$display("##### sfp operation #####");
 
+	for (q=0; q<total_cycle; q=q+1) begin
+    	#0.5 clk = 1'b0;  
+		pmem_rd = 1;		
+    	#0.5 clk = 1'b1;  		
+    	#0.5 clk = 1'b0;
+		//now pmem has spit out the data, so start the accumulation
+ 		sfp_acc = 1; 
+    	#0.5 clk = 1'b1;  
+    	#0.5 clk = 1'b0;
+		//now accumulation is done, and the sum is stored in the internal FIFO
+		//start the division - FIXME hardcode to 3 cycle delay for now
+		sfp_acc = 0;
+		sfp_div = 1;
+    	#0.5 clk = 1'b1;  
+    	#0.5 clk = 1'b0;
+    	#0.5 clk = 1'b1;  
+    	#0.5 clk = 1'b0;
+    	#0.5 clk = 1'b1;  
+    	#0.5 clk = 1'b0;
+		//division is done - write this back to pmem at the same address
+		pmem_rd = 0; pmem_wr = 1;
+    	#0.5 clk = 1'b1;  
+    	#0.5 clk = 1'b0;
+		//write back to memory done
+		pmem_wr = 0; sfp_div = 0;
+		//now move to the next address 
+		pmem_add = pmem_add + 1;
+		
+	end
+
+  #0.5 clk = 1'b0;  
+  pmem_add = 0;
+  #0.5 clk = 1'b1;  
+
+///////////////////////////////////////////
   #10 $finish;
 
 
