@@ -8,7 +8,8 @@ module fullchip_tb;
 parameter total_cycle = 8;   // how many streamed Q vectors will be processed
 parameter bw = 8;            // Q & K vector bit precision
 parameter bw_psum = 2*bw+4;  // partial sum bit precision
-parameter pr = 16;           // how many products added in each dot product 
+//FIXME change pr from 16 to 8
+parameter pr = 8;           // how many products added in each dot product 
 parameter col = 8;           // how many dot product units are equipped
 
 integer qk_file ; // file handler
@@ -177,14 +178,14 @@ $display("##### Estimated multiplication result #####");
 
          temp5b = result[t][q];
 		 temp5b_abs = temp5b[bw_psum-1] ? ~temp5b[bw_psum-1:0]+1 : temp5b[bw_psum-1:0];
-		 $display("DBG: temp5b intermediate actual value: %h", temp5b);
+		 //$display("DBG: temp5b intermediate actual value: %h", temp5b);
 		 //$display("DBG: temp5b intermediate abs value: %h", temp5b_abs);
 		 temp_sum = temp_sum + temp5b_abs;
          temp16b = {temp16b[139:0], temp5b};
      end
 
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
-	 $display("DBG: temp_sum is %d",temp_sum);
+	 //$display("DBG: temp_sum is %d",temp_sum);
      $display("prd @cycle%2d: %40h", t, temp16b);
 	 
 	 //compute normalized vector 
@@ -199,7 +200,7 @@ $display("##### Estimated multiplication result #####");
   	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b[bw_psum*6 - 1: bw_psum*5] / temp_sum;
   	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b[bw_psum*7 - 1: bw_psum*6] / temp_sum;
   	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b[bw_psum*8 - 1: bw_psum*7] / temp_sum;
-     $display("normalized prd @cycle%2d: %40h", t, temp16b_norm);
+     //$display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
   end
 
 //////////////////////////////////////////////
