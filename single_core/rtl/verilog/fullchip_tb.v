@@ -177,6 +177,7 @@ $display("##### Estimated multiplication result #####");
 
   for (t=0; t<total_cycle; t=t+1) begin
 	 temp_sum = 0;
+	 $display("\nDBG: ======== BEGIN cycle number %d ==========", t);
      for (q=0; q<col; q=q+1) begin
          for (k=0; k<pr; k=k+1) begin
             result[t][q] = result[t][q] + Q[t][k] * K[q][k];
@@ -192,7 +193,8 @@ $display("##### Estimated multiplication result #####");
 
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
 	 //$display("DBG: temp_sum is %d",temp_sum);
-     $display("prd @cycle%2d: %40h", t, temp16b);
+     $display("DBG: temp_sum and divisor: %d , %d ",temp_sum, temp_sum[bw_psum+3:7]);
+     $display("DBG: original prd @cycle%2d: %40h", t, temp16b);
 	 
 	 //compute normalized vector 
 	 //the range [bw_psum+3:7] is same as was sfp_row is doing i.e. right shifting sum by 7 bits
@@ -208,7 +210,8 @@ $display("##### Estimated multiplication result #####");
   	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b[bw_psum*6 - 1: bw_psum*5] / temp_sum[bw_psum+3:7];
   	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b[bw_psum*7 - 1: bw_psum*6] / temp_sum[bw_psum+3:7];
   	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b[bw_psum*8 - 1: bw_psum*7] / temp_sum[bw_psum+3:7];
-     //$display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
+     $display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
+	 $display("DBG: ======== END cycle number %d ==========\n", t);
   end
 
 //////////////////////////////////////////////
@@ -405,11 +408,9 @@ $display("##### sfp operation #####");
     	#0.5 clk = 1'b1;  
     	#0.5 clk = 1'b0;
 		//now accumulation is done, and the sum is stored in the internal FIFO
-		//start the division - FIXME hardcode to 3 cycle delay for now
+		//start the division - FIXME hardcode to 2 cycle delay to match implementation
 		sfp_acc = 0;
 		sfp_div = 1;
-    	#0.5 clk = 1'b1;  
-    	#0.5 clk = 1'b0;
     	#0.5 clk = 1'b1;  
     	#0.5 clk = 1'b0;
     	#0.5 clk = 1'b1;  
@@ -422,7 +423,7 @@ $display("##### sfp operation #####");
 		pmem_wr = 0; sfp_div = 0;
 		//now move to the next address 
 		pmem_add = pmem_add + 1;
-		
+    	#0.5 clk = 1'b1;  	
 	end
 
   #0.5 clk = 1'b0;  
