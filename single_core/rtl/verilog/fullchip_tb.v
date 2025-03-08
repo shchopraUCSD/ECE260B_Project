@@ -76,6 +76,7 @@ reg [bw_psum-1:0] temp5b_abs;
 reg [bw_psum+3:0] temp_sum;
 reg [bw_psum*col-1:0] temp16b;
 reg [bw_psum*col-1:0] temp16b_norm; //normalized vector
+reg [bw_psum*col-1:0] temp16b_abs; //vector to store absolute values to make verification easier
 
 
 fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
@@ -189,27 +190,40 @@ $display("##### Estimated multiplication result #####");
 		 //$display("DBG: temp5b intermediate abs value: %h", temp5b_abs);
 		 temp_sum = temp_sum + temp5b_abs;
          temp16b = {temp16b[139:0], temp5b};
+         temp16b_abs = {temp16b_abs[139:0], temp5b_abs};
      end
 
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
 	 //$display("DBG: temp_sum is %d",temp_sum);
-     $display("DBG: temp_sum and divisor: %d , %d ",temp_sum, temp_sum[bw_psum+3:7]);
+     $display("DBG: temp_sum and divisor: %d , %d ",temp_sum, (temp_sum[bw_psum+3:7]+1));
      $display("DBG: original prd @cycle%2d: %40h", t, temp16b);
 	 
 	 //compute normalized vector 
-	 //the range [bw_psum+3:7] is same as was sfp_row is doing i.e. right shifting sum by 7 bits
+	 //FIXME the range [bw_psum+3:7] is same as was sfp_row is doing i.e. right shifting sum by 7 bits
+	 //FIXME 1 was also added to stabilize the value and avoid division by 0 case
+	 //NOTE: need to handle calculation carefully as these may be negative numbers!
 
-     //for (idx=0; idx<col; idx=idx+1) begin : norm_idx
-	 //   	temp16b_norm[ (bw_psum*(idx+1))-1 : bw_psum*idx] = temp16b[ (bw_psum*(idx+1))-1 : bw_psum*idx ] / temp_sum;
-	 //end
-  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = temp16b[bw_psum*1 - 1: bw_psum*0] / temp_sum[bw_psum+3:7];
-  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = temp16b[bw_psum*2 - 1: bw_psum*1] / temp_sum[bw_psum+3:7];
-  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = temp16b[bw_psum*3 - 1: bw_psum*2] / temp_sum[bw_psum+3:7];
-  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = temp16b[bw_psum*4 - 1: bw_psum*3] / temp_sum[bw_psum+3:7];
-  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = temp16b[bw_psum*5 - 1: bw_psum*4] / temp_sum[bw_psum+3:7];
-  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b[bw_psum*6 - 1: bw_psum*5] / temp_sum[bw_psum+3:7];
-  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b[bw_psum*7 - 1: bw_psum*6] / temp_sum[bw_psum+3:7];
-  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b[bw_psum*8 - 1: bw_psum*7] / temp_sum[bw_psum+3:7];
+	 /*
+     for (idx=0; idx<col; idx=idx+1) begin : norm_idx
+	    	temp16b_norm[ (bw_psum*(idx+1))-1 : bw_psum*idx] = temp16b[ (bw_psum*(idx+1))-1 : bw_psum*idx ] / temp_sum;
+	 end
+  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = {temp16b[bw_psum*1 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*1 - 2: bw_psum*0] / temp_sum[bw_psum+3:7]}}};
+  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = {temp16b[bw_psum*2 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*2 - 2: bw_psum*1] / temp_sum[bw_psum+3:7]}}};
+  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = {temp16b[bw_psum*3 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*3 - 2: bw_psum*2] / temp_sum[bw_psum+3:7]}}};
+  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = {temp16b[bw_psum*4 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*4 - 2: bw_psum*3] / temp_sum[bw_psum+3:7]}}};
+  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = {temp16b[bw_psum*5 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*5 - 2: bw_psum*4] / temp_sum[bw_psum+3:7]}}};
+  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = {temp16b[bw_psum*6 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*6 - 2: bw_psum*5] / temp_sum[bw_psum+3:7]}}};
+  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = {temp16b[bw_psum*7 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*7 - 2: bw_psum*6] / temp_sum[bw_psum+3:7]}}};
+  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = {temp16b[bw_psum*8 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*8 - 2: bw_psum*7] / temp_sum[bw_psum+3:7]}}};
+     */
+  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = $signed(temp16b[bw_psum*1 - 1: bw_psum*0]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = $signed(temp16b[bw_psum*2 - 1: bw_psum*1]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = $signed(temp16b[bw_psum*3 - 1: bw_psum*2]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = $signed(temp16b[bw_psum*4 - 1: bw_psum*3]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = $signed(temp16b[bw_psum*5 - 1: bw_psum*4]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = $signed(temp16b[bw_psum*6 - 1: bw_psum*5]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = $signed(temp16b[bw_psum*7 - 1: bw_psum*6]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = $signed(temp16b[bw_psum*8 - 1: bw_psum*7]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
      $display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
 	 $display("DBG: ======== END cycle number %d ==========\n", t);
   end
