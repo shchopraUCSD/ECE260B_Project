@@ -18,7 +18,7 @@ input  [18:0] inst;
 input  reset;
 
 //latch the final normalized output
-reg [bw_psum*col-1:0] sfp_out_q;
+//reg [bw_psum*col-1:0] sfp_out_q;
 
 wire  [pr*bw-1:0] mac_in;
 wire  [pr*bw-1:0] kmem_out;
@@ -59,8 +59,8 @@ assign pmem_wr = inst[0];
 assign mac_in  = inst[6] ? kmem_out : qmem_out;
 assign pmem_in = sfp_div ? sfp_out : fifo_out;
 
-//final output of core - the latch stores the normalized output of sfp
-assign out = sfp_out_q;
+//final output of core - pmem out for final verification
+assign out = pmem_out;
 
 mac_array #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) mac_array_instance (
         .in(mac_in), 
@@ -124,8 +124,8 @@ sfp_row #(.bw(bw), .bw_psum(bw_psum), .col(col)) sfp_row_instance(
 
   //////////// For printing purpose ////////////
   always @(posedge clk) begin
-	  if(sfp_div)
-		 sfp_out_q <= sfp_out;
+	  //if(sfp_div)
+		 //sfp_out_q <= sfp_out;
       if(pmem_wr)
          $display("Memory write to PSUM mem add %x %x ", pmem_add, pmem_in); 
   end

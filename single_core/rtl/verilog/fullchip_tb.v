@@ -222,6 +222,7 @@ $display("##### Estimated multiplication result #####");
   	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = {temp16b[bw_psum*7 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*7 - 2: bw_psum*6] / temp_sum[bw_psum+3:7]}}};
   	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = {temp16b[bw_psum*8 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*8 - 2: bw_psum*7] / temp_sum[bw_psum+3:7]}}};
      */
+     /*
   	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = $signed(temp16b[bw_psum*1 - 1: bw_psum*0]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
   	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = $signed(temp16b[bw_psum*2 - 1: bw_psum*1]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
   	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = $signed(temp16b[bw_psum*3 - 1: bw_psum*2]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
@@ -230,6 +231,18 @@ $display("##### Estimated multiplication result #####");
   	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = $signed(temp16b[bw_psum*6 - 1: bw_psum*5]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
   	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = $signed(temp16b[bw_psum*7 - 1: bw_psum*6]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
   	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = $signed(temp16b[bw_psum*8 - 1: bw_psum*7]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+     */
+
+	 //numerator must also be absolute value as per canvas discussion
+  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = temp16b_abs[bw_psum*1 - 1: bw_psum*0] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = temp16b_abs[bw_psum*2 - 1: bw_psum*1] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = temp16b_abs[bw_psum*3 - 1: bw_psum*2] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = temp16b_abs[bw_psum*4 - 1: bw_psum*3] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = temp16b_abs[bw_psum*5 - 1: bw_psum*4] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b_abs[bw_psum*6 - 1: bw_psum*5] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b_abs[bw_psum*7 - 1: bw_psum*6] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b_abs[bw_psum*8 - 1: bw_psum*7] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+
      $display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
 	 final_pmem_expected_result[t] = temp16b_norm[bw_psum*col-1:0];
 	 $display("DBG: ======== END cycle number %d ==========\n", t);

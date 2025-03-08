@@ -4,7 +4,7 @@ Warning: Design 'core' has '1' unresolved references. For more detailed informat
 Report : reference
 Design : core
 Version: K-2015.06-SP2
-Date   : Sat Mar  8 12:04:19 2025
+Date   : Sat Mar  8 13:30:32 2025
 ****************************************
 
 Attributes:
@@ -22,8 +22,6 @@ Reference          Library       Unit Area   Count    Total Area   Attributes
 -----------------------------------------------------------------------------
 AO22D0             tcbn65gplustc
                                   2.880000     160    460.800018  
-EDFQD1             tcbn65gplustc
-                                  9.360000     160   1497.599945  n
 INVD0              tcbn65gplustc
                                   1.080000       6      6.480000  
 INVD2              tcbn65gplustc
@@ -39,5 +37,5 @@ sfp_row                           0.000000       1      0.000000  b
 sram_w8                           0.000000       1      0.000000  b
 sram_w8                           0.000000       2      0.000000  b
 -----------------------------------------------------------------------------
-Total 11 references                                 82072.439687
+Total 10 references                                 80574.839742
 1
