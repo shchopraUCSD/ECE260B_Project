@@ -69,7 +69,10 @@ assign inst[2] = kmem_wr;
 assign inst[1] = pmem_rd;
 assign inst[0] = pmem_wr;
 
+wire [bw_psum*col-1:0] out;
+reg [bw_psum*col-1:0] out_q;
 
+integer error_count = 0;
 
 reg [bw_psum-1:0] temp5b;
 reg [bw_psum-1:0] temp5b_abs;
@@ -78,11 +81,14 @@ reg [bw_psum*col-1:0] temp16b;
 reg [bw_psum*col-1:0] temp16b_norm; //normalized vector
 reg [bw_psum*col-1:0] temp16b_abs; //vector to store absolute values to make verification easier
 
+reg [bw_psum*col-1:0] final_pmem_expected_result[total_cycle-1:0];
+
 
 fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .reset(reset),
       .clk(clk), 
-      .mem_in(mem_in), 
+      .mem_in(mem_in),
+      .out(out), 
       .inst(inst)
 );
 
@@ -225,6 +231,7 @@ $display("##### Estimated multiplication result #####");
   	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = $signed(temp16b[bw_psum*7 - 1: bw_psum*6]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
   	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = $signed(temp16b[bw_psum*8 - 1: bw_psum*7]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
      $display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
+	 final_pmem_expected_result[t] = temp16b_norm[bw_psum*col-1:0];
 	 $display("DBG: ======== END cycle number %d ==========\n", t);
   end
 
@@ -443,11 +450,46 @@ $display("##### sfp operation #####");
   #0.5 clk = 1'b0;  
   pmem_add = 0;
   #0.5 clk = 1'b1;  
+///////////////////////////////////////////
+
+////////////// final data validation by reading pmem ///////////////////
+
+  #0.5 clk = 1'b0;  
+  pmem_rd = 1;
+  #0.5 clk = 1'b1;  
+
+  for (q=0; q<total_cycle+1; q=q+1) begin
+    #0.5 clk = 1'b0;  
+
+    pmem_add = pmem_add + 1;
+    if(q>0)begin
+    	$display("DBG: final output from pmem for @cycle%2d: %40h", q-1, out_q);
+		if(out_q[bw_psum*col-1:0] != final_pmem_expected_result[q-1])begin
+			error_count = error_count + 1;
+		end
+    end
+
+    #0.5 clk = 1'b1;  
+  end
+
+  #0.5 clk = 1'b0;  
+  pmem_wr = 0; pmem_add = 0;
+  #0.5 clk = 1'b1;  
+  $display("\n\n ============ FINAL SIMULATION RESULT =============== \n");
+  if(!error_count)begin
+		$display("SUCCESS: all pmem values match :-)\n");
+  end else begin
+		$display("ERROR: %d values did not match :-(\n",error_count);
+  end
 
 ///////////////////////////////////////////
   #10 $finish;
 
 
+end
+
+always @ (posedge clk) begin
+	out_q <= out;
 end
 
 endmodule

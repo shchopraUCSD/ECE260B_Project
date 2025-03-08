@@ -1,4 +1,6 @@
-set clock_cycle 1.0 
+# FIXME first try with a relaxed clock cycle so that timing can be met. 
+# we will optimize the final dual core design at the end
+set clock_cycle 2.0 
 set io_delay 0.2 
 
 set clock_port clk

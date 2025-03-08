@@ -4,7 +4,7 @@ Warning: Design 'core' has '1' unresolved references. For more detailed informat
 Report : area
 Design : core
 Version: K-2015.06-SP2
-Date   : Fri Mar  7 17:54:48 2025
+Date   : Sat Mar  8 12:04:14 2025
 ****************************************
 
 Library(s) Used:
@@ -12,21 +12,21 @@ Library(s) Used:
     tcbn65gplustc (File: /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db)
 
 Number of ports:                        18814
-Number of nets:                         42440
-Number of cells:                        23631
-Number of combinational cells:          17967
-Number of sequential cells:              5494
+Number of nets:                         38482
+Number of cells:                        19212
+Number of combinational cells:          13549
+Number of sequential cells:              5493
 Number of macros/black boxes:               0
-Number of buf/inv:                       1672
+Number of buf/inv:                       1620
 Number of references:                      11
 
-Combinational area:              64235.520042
-Buf/Inv area:                     2392.560075
-Noncombinational area:           30854.879664
+Combinational area:              51806.159842
+Buf/Inv area:                     1771.920070
+Noncombinational area:           30266.279845
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                 95090.399707
+Total cell area:                 82072.439687
 Total area:                 undefined
 
 Information: This design contains black box (unknown) components. (RPT-8)
