@@ -1,0 +1,1 @@
+/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/pnr/pnr_sram_only/constraints/sram_w8.sdc
