@@ -2,7 +2,7 @@
 *	Innovus 15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
 *	
 *
-* 	Date & Time:	2025-Mar-09 13:42:42 (2025-Mar-09 20:42:42 GMT)
+* 	Date & Time:	2025-Mar-09 16:13:18 (2025-Mar-09 23:13:18 GMT)
 *
 *----------------------------------------------------------------------------------------
 *
@@ -43,54 +43,54 @@
 
 Total Power 
 -----------------------------------------------------------------------------------------
-Total Internal Power:        4.68081274 	   78.4885%
-Total Switching Power:       1.14635386 	   19.2222%
-Total Leakage Power:         0.13652813 	    2.2893%
-Total Power:                 5.96369468 
+Total Internal Power:        4.67674466 	   79.3131%
+Total Switching Power:       1.14320653 	   19.3877%
+Total Leakage Power:         0.07660714 	    1.2992%
+Total Power:                 5.89655831 
 -----------------------------------------------------------------------------------------
 
 
 Group                           Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-Sequential                         4.378      0.1156     0.06632        4.56       76.46 
-Macro                                  0           0     0.05987     0.05987       1.004 
+Sequential                         4.378      0.1157     0.06632        4.56       77.33 
+Macro                                  0           0           0           0           0 
 IO                                     0           0           0           0           0 
-Combinational                    0.06479      0.1983    0.007216      0.2703       4.532 
-Clock (Combinational)             0.2383      0.8325    0.003127       1.074       18.01 
+Combinational                     0.0648      0.1988    0.007216      0.2708       4.592 
+Clock (Combinational)             0.2342      0.8288    0.003072       1.066       18.08 
 Clock (Sequential)                     0           0           0           0           0 
 -----------------------------------------------------------------------------------------
-Total                              4.681       1.146      0.1365       5.964         100 
+Total                              4.677       1.143     0.07661       5.897         100 
 -----------------------------------------------------------------------------------------
 
 
 Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-VDD                       0.9      4.681       1.146      0.1365       5.964         100 
+VDD                       0.9      4.677       1.143     0.07661       5.897         100 
 
 
 Clock                           Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-CLK                               0.2383      0.8325    0.003127       1.074       18.01 
+CLK                               0.2342      0.8288    0.003072       1.066       18.08 
 -----------------------------------------------------------------------------------------
-Total (excluding duplicates)      0.2383      0.8325    0.003127       1.074       18.01 
+Total (excluding duplicates)      0.2342      0.8288    0.003072       1.066       18.08 
 -----------------------------------------------------------------------------------------
 
 
 -----------------------------------------------------------------------------------------
 *	Power Distribution Summary: 
-* 		Highest Average Power:   CTS_ccl_BUF_CLK_G0_L1_1 (CKBD16): 	   0.07252 
+* 		Highest Average Power:   CTS_ccl_BUF_CLK_G0_L1_1 (CKBD16): 	   0.07238 
 * 		Highest Leakage Power:   CTS_ccl_BUF_CLK_G0_L1_1 (CKBD16): 	 0.0002228 
-* 		Total Cap: 	1.34607e-11 F
-* 		Total instances in design:  6495
+* 		Total Cap: 	1.34723e-11 F
+* 		Total instances in design:  1869
 * 		Total instances in design with no power:     0
 *          Total instances in design with no activity:     0
-* 		Total Fillers and Decap:  4626
+* 		Total Fillers and Decap:     0
 -----------------------------------------------------------------------------------------
 
-Total leakage power = 0.136528 mW
+Total leakage power = 0.0766071 mW
  Cell usage statistics:  
- Library tcbn65gpluswc , 6495 cells ( 100.000000%) , 0.136528 mW ( 100.000000%  ) 
+ Library tcbn65gpluswc , 1869 cells ( 100.000000%) , 0.0766071 mW ( 100.000000%  ) 
  

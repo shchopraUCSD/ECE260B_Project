@@ -6,6 +6,7 @@
 - did two synth runs - with and without SRAM. The with SRAM run is what we will use for reporting synth power, area, timing
 - *typical* libraries are being used for all synthesis runs
 - there is only one verilog fileset (in the rtl/ subdirectory) but for PNR, the gate-level netlist from synthesis is *copied* to the pnr's netlist/ subdirectory
+- had to remove filler/DCAP cells from SRAM PnR for it to work
 
 ## Dual Core
 - in dual core, use a req/ack interface for the individual sums. whoever is doing dual core RTL/TB needs to decide how the data movement happens

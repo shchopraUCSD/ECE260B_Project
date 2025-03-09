@@ -1,4 +1,5 @@
 # Floorplan
+# FIXME lower the starting density since the error message says "Density too high (100.3%), stopping detail placement."
 floorPlan -site core -r 1 0.50 2.0 2.0 2.0 2.0
 
 globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose

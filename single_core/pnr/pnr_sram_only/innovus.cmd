@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Mar  9 13:41:13 2025                
+#  Created on Sun Mar  9 16:11:52 2025                
 #                                                     
 #######################################################
 
@@ -68,7 +68,6 @@ saveDesign floorplan.enc
 setPlaceMode -timingDriven true -reorderScan false -congEffort medium -modulePlan false
 setOptMode -effort high -powerEffort high -leakageToDynamicRatio 0.5 -fixFanoutLoad true -restruct true -verbose true
 place_opt_design
-addFiller -cell {DCAP DCAP4 DCAP8 DCAP16 DCAP32} -merge true
 saveDesign placement.enc
 set_ccopt_property -update_io_latency false
 create_ccopt_clock_tree_spec -file /home/linux/ieng6/ee260bwi25/shchopra/project/single_core/pnr/pnr_sram_only/constraints/sram_w8.ccopt
