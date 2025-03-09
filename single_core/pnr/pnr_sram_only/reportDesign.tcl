@@ -3,7 +3,7 @@ verifyGeometry
 verifyConnectivity
 
 # Timing report
-report_timing -max_paths 5 > ${design}.post_route.timing.rpt
+report_timing -max_paths 10 > ${design}.post_route.timing.rpt
 
 # Power report
 report_power -outfile ${design}.post_route.power.rpt

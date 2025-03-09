@@ -3,7 +3,7 @@
 Report : reference
 Design : sram_w8
 Version: K-2015.06-SP2
-Date   : Sat Mar  8 14:36:57 2025
+Date   : Sat Mar  8 15:53:23 2025
 ****************************************
 
 Attributes:
@@ -25,8 +25,6 @@ BUFFD0             tcbn65gplustc
                                   1.440000      16     23.040001  
 BUFFD1             tcbn65gplustc
                                   1.440000      27     38.880002  
-CKBD1              tcbn65gplustc
-                                  1.440000       5      7.200000  
 CKND2D0            tcbn65gplustc
                                   1.440000       2      2.880000  
 EDFQD1             tcbn65gplustc
@@ -52,5 +50,5 @@ NR3D1              tcbn65gplustc
 OR3D0              tcbn65gplustc
                                   2.520000       1      2.520000  
 -----------------------------------------------------------------------------
-Total 16 references                                 12508.199596
+Total 15 references                                 12500.999596
 1
