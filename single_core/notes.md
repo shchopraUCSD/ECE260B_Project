@@ -20,6 +20,7 @@
 ## Next steps at this time
 - SRAM PnR (this plus core w/o SRAM PnR goes into core hierarchical PnR) 
 - single core hierarchical PnR (goes into single core GLS)
+- single core GLS: worth it to use synth netlist instead of PNR netlist?
 - dual core RTL/TB
  
 ## Work Distribution
