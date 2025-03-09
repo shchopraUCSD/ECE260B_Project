@@ -7,6 +7,7 @@
 - *typical* libraries are being used for all synthesis runs
 - there is only one verilog fileset (in the rtl/ subdirectory) but for PNR, the gate-level netlist from synthesis is *copied* to the pnr's netlist/ subdirectory
 - had to remove filler/DCAP cells from SRAM PnR for it to work
+- single core PNR: see suggested floorplan image, srams will need appropriate rotation, keep mem\_in on left, sum\_out on right (keeping 2 dual cores, left and right, in mind) and output at bottom (right below psum mem's Q port) 
 
 ## Dual Core
 - in dual core, use a req/ack interface for the individual sums. whoever is doing dual core RTL/TB needs to decide how the data movement happens
