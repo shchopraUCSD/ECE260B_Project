@@ -131,6 +131,7 @@ if {  [sizeof_collection $unmapped_designs] != 0 } {
 sh date
 sh uptime
 
+
 # Done
 echo "run.scr completed successfully"
 

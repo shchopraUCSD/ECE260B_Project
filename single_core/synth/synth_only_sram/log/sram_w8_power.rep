@@ -7,7 +7,7 @@ Report : power
         -analysis_effort low
 Design : sram_w8
 Version: K-2015.06-SP2
-Date   : Sat Mar  8 15:52:56 2025
+Date   : Sun Mar  9 13:39:13 2025
 ****************************************
 
 
@@ -33,12 +33,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =   4.6362 mW   (98%)
-  Net Switching Power  =  75.0219 uW    (2%)
+  Cell Internal Power  =   4.6320 mW   (98%)
+  Net Switching Power  =  76.2827 uW    (2%)
                          ---------
-Total Dynamic Power    =   4.7112 mW  (100%)
+Total Dynamic Power    =   4.7082 mW  (100%)
 
-Cell Leakage Power     =  54.8280 uW
+Cell Leakage Power     =  54.9093 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -48,9 +48,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           4.6035        3.6912e-02        4.9679e+04            4.6901  (  98.41%)
+register           4.6001        3.7933e-02        4.9680e+04            4.6877  (  98.42%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  3.2661e-02        3.8110e-02        5.1493e+03        7.5920e-02  (   1.59%)
+combinational  3.1884e-02        3.8349e-02        5.2289e+03        7.5462e-02  (   1.58%)
 --------------------------------------------------------------------------------------------------
-Total              4.6362 mW     7.5022e-02 mW     5.4828e+04 nW         4.7660 mW
+Total              4.6320 mW     7.6283e-02 mW     5.4909e+04 nW         4.7632 mW
 1

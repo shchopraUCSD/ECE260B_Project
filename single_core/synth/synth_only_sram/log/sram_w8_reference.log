@@ -3,7 +3,7 @@
 Report : reference
 Design : sram_w8
 Version: K-2015.06-SP2
-Date   : Sat Mar  8 15:53:23 2025
+Date   : Sun Mar  9 13:39:45 2025
 ****************************************
 
 Attributes:
@@ -21,17 +21,23 @@ Reference          Library       Unit Area   Count    Total Area   Attributes
 -----------------------------------------------------------------------------
 AOI22D0            tcbn65gplustc
                                   2.520000     512   1290.239990  
-BUFFD0             tcbn65gplustc
-                                  1.440000      16     23.040001  
 BUFFD1             tcbn65gplustc
-                                  1.440000      27     38.880002  
+                                  1.440000       1      1.440000  
+BUFFD3             tcbn65gplustc
+                                  2.520000       1      2.520000  
+CKBD1              tcbn65gplustc
+                                  1.440000       2      2.880000  
+CKBD2              tcbn65gplustc
+                                  2.160000       4      8.640000  
+CKBD4              tcbn65gplustc
+                                  3.240000       8     25.920000  
 CKND2D0            tcbn65gplustc
                                   1.440000       2      2.880000  
 EDFQD1             tcbn65gplustc
                                   9.360000    1152  10782.719604  n
 IND2D0             tcbn65gplustc
                                   2.160000       1      2.160000  
-INR2XD0            tcbn65gplustc
+INR2D1             tcbn65gplustc
                                   2.160000       8     17.280001  
 INR3D0             tcbn65gplustc
                                   2.520000       1      2.520000  
@@ -40,15 +46,15 @@ INVD0              tcbn65gplustc
 ND4D0              tcbn65gplustc
                                   2.520000     128    322.559998  
 NR2D0              tcbn65gplustc
+                                  1.440000       2      2.880000  
+NR2D1              tcbn65gplustc
                                   1.440000       3      4.320000  
-NR2XD0             tcbn65gplustc
-                                  1.440000       3      4.320000  
-NR3D0              tcbn65gplustc
-                                  2.160000       1      2.160000  
-NR3D1              tcbn65gplustc
+NR2D3              tcbn65gplustc
                                   3.240000       1      3.240000  
-OR3D0              tcbn65gplustc
+NR3D0              tcbn65gplustc
+                                  2.160000       2      4.320000  
+OR3D1              tcbn65gplustc
                                   2.520000       1      2.520000  
 -----------------------------------------------------------------------------
-Total 15 references                                 12500.999596
+Total 18 references                                 12481.199594
 1
