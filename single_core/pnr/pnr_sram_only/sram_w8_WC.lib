@@ -1,6 +1,6 @@
 library (sram_w8 ){
   delay_model : table_lookup;
-  date : "Sun Mar  9 16:15:00 2025" ;
+  date : "Sun Mar  9 17:53:57 2025" ;
   revision : "0.0" ;
   bus_naming_style : "%s[%d]" ;
   capacitive_load_unit ( 1.0000,pf);

@@ -2,7 +2,7 @@
 #Load design
 set desdir 		"/home/linux/ieng6/ee260bwi25/public/DESIGNdata"
 set libdir 		"/home/linux/ieng6/ee260bwi25/public/PDKdata"
-set mydir       "/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/pnr/pnr_sram_only"
+set mydir       "./"
 set design 		"sram_w8"
 set netlist 		"./netlist/$design.v"
 set sdc 		"./constraints/$design.sdc"
