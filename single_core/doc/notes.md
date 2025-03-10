@@ -12,10 +12,11 @@
 - had to remove filler/DCAP cells from SRAM PnR for it to work
 ### Single Core PNR
 - see suggested floorplan image, srams will need appropriate rotation, keep mem\_in on left, sum\_out on right (keeping 2 dual cores, left and right, in mind) and output at bottom (right below psum mem's Q port) 
-- for netlist/ subdirectory in hierarchical PNR, have copied the netlist from the synth run without the SRAMs 
+- for netlist/ subdirectory in hierarchical PNR, have copied the netlist from the synth run *without* the SRAMs (i.e. SRAMs are a black box) 
 ### Single Core GLS
 - TBD. 
-- should we use synth netlist? or directly PNR netlist?
+- should we use synth netlist? or directly PNR netlist? --> give a run with synth netlist and see
+- GLS with synth netlist needs the netlist *with* the SRAMs (i.e. SRAMs are NOT a black box) 
 
 ## Dual Core
 ### RTL
@@ -25,18 +26,22 @@
 - there is a *high fanout net* found during synthesis - need to look at this during optimizations
 - there is a weird 2-cycle behaviour of div and div\_q in sfp\_row --> need to be careful about this if doing *multicycle for div* operation in SFP
 - right now, with 1ns clock period, timing isn't being met, path from i/p of mac\_col to OFIFO's input. So need to pipeline the MAC operation
+- may need to use multicycle/pipelining for division in SFP, as well as for the mac\_col
 - *bumped up clock period to 2ns for now*. plan to complete pnr, gls etc. of dual core with this first, and only then come back and try to make it meet timing for clock period of 1ns
 
 # LOGISTICS
 ## Next steps at this time
 - SRAM PnR (this plus core w/o SRAM PnR goes into core hierarchical PnR) --> DONE 
-- single core hierarchical PnR (goes into single core GLS)
-- single core GLS: worth it to use synth netlist instead of PNR netlist?
+- single core hierarchical PnR (also goes into single core GLS)
+- single core GLS: worth it to use synth netlist instead of PNR netlist? yes, let's run it and see
 - dual core RTL/TB
  
 ## Work Distribution
-- single core (without SRAMs) RTL, GLS - Shaurya
-- SRAM PnR, and single core hierarchical PnR - Shaurya + 1 person(?) 
-- dual core RTL, TB - 2 people (?)  
-- dual core PnR - later 
-- optimizations (meet timing using pipelining, multi-cycle etc.) - later
+- single core (without SRAMs) RTL, TB --> Shaurya --> DONE
+- SRAM PnR --> Shaurya --> DONE
+- single core hierarchical PnR --> Mayank, Soumil
+- single core GLS (synth/PnR) --> Shaurya
+- dual core RTL, TB --> Divyang, Navya
+- dual core PnR --> LATER 
+- dual core GLS --> LATER 
+- optimizations --> LATER
