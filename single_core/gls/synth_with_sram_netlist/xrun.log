@@ -1,0 +1,659 @@
+xrun(64): 20.09-s017: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s017: Started on Mar 10, 2025 at 13:12:23 PDT
+xrun
+	+gui
+	+access+rwc
+	+xm64bit
+	+xmstatus
+	+xmtimescale+1ns/1ps
+	+xmoveride_timescale
+	+xmseq_udp_delay+20ps
+	-v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
+	-v ../../synth/synth_with_sram/core.out.v
+	-v ../../rtl/verilog/fullchip.v
+	../../rtl/verilog/fullchip_tb.v
+
+   User defined plus("+") options:
+	+xmoveride_timescale
+
+file: ../../rtl/verilog/fullchip_tb.v
+	module worklib.fullchip_tb:v
+		errors: 0, warnings: 0
+file: /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
+file: ../../synth/synth_with_sram/core.out.v
+file: ../../rtl/verilog/fullchip.v
+	module fullchip.fullchip:v
+		errors: 0, warnings: 0
+file: ../../synth/synth_with_sram/core.out.v
+	module core.core:v
+		errors: 0, warnings: 0
+file: ../../synth/synth_with_sram/core.out.v
+	module core.mac_array_col8_bw8_bw_psum20_pr16:v
+		errors: 0, warnings: 0
+	module core.ofifo_col8_bw20:v
+		errors: 0, warnings: 0
+	module core.sram_w8_sram_bit128_1:v
+		errors: 0, warnings: 0
+	module core.sram_w8_sram_bit160:v
+		errors: 0, warnings: 0
+	module core.sram_w8_sram_bit128_0:v
+		errors: 0, warnings: 0
+file: ../../synth/synth_with_sram/core.out.v
+	module core.mac_col_bw8_bw_psum20_pr16_col_id1:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr16_col_id2:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr16_col_id3:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr16_col_id4:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr16_col_id5:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr16_col_id6:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr16_col_id7:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr16_col_id8:v
+		errors: 0, warnings: 0
+	module core.fifo_depth16_bw20_simd1_7:v
+		errors: 0, warnings: 0
+	module core.fifo_depth16_bw20_simd1_6:v
+		errors: 0, warnings: 0
+	module core.fifo_depth16_bw20_simd1_0:v
+		errors: 0, warnings: 0
+	module core.fifo_depth16_bw20_simd1_1:v
+		errors: 0, warnings: 0
+	module core.fifo_depth16_bw20_simd1_2:v
+		errors: 0, warnings: 0
+	module core.fifo_depth16_bw20_simd1_3:v
+		errors: 0, warnings: 0
+	module core.fifo_depth16_bw20_simd1_4:v
+		errors: 0, warnings: 0
+	module core.fifo_depth16_bw20_simd1_5:v
+		errors: 0, warnings: 0
+file: ../../synth/synth_with_sram/core.out.v
+	module core.mac_8in_bw8_bw_psum20_pr16_7:v
+		errors: 0, warnings: 0
+	module core.mac_8in_bw8_bw_psum20_pr16_6:v
+		errors: 0, warnings: 0
+	module core.mac_8in_bw8_bw_psum20_pr16_5:v
+		errors: 0, warnings: 0
+	module core.mac_8in_bw8_bw_psum20_pr16_4:v
+		errors: 0, warnings: 0
+	module core.mac_8in_bw8_bw_psum20_pr16_3:v
+		errors: 0, warnings: 0
+	module core.mac_8in_bw8_bw_psum20_pr16_2:v
+		errors: 0, warnings: 0
+	module core.mac_8in_bw8_bw_psum20_pr16_1:v
+		errors: 0, warnings: 0
+	module core.mac_8in_bw8_bw_psum20_pr16_0:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_16_1_bw20_simd1_7:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_16_1_bw20_simd1_6:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_16_1_bw20_simd1_0:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_16_1_bw20_simd1_1:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_16_1_bw20_simd1_2:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_16_1_bw20_simd1_3:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_16_1_bw20_simd1_4:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_16_1_bw20_simd1_5:v
+		errors: 0, warnings: 0
+file: ../../synth/synth_with_sram/core.out.v
+	module core.fifo_mux_8_1_bw20_simd1_15:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_119:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_14:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_12:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_13:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_118:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_0:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_1:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_112:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_2:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_3:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_113:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_4:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_5:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_114:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_6:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_7:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_115:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_8:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_9:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_116:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_10:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_11:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_117:v
+		errors: 0, warnings: 0
+file: ../../synth/synth_with_sram/core.out.v
+	module core.fifo_mux_2_1_bw20_simd1_105:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_106:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_107:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_108:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_109:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_110:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_111:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_98:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_99:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_100:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_101:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_102:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_103:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_104:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_84:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_85:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_86:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_87:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_88:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_89:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_90:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_91:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_92:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_93:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_94:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_95:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_96:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_97:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_0:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_1:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_2:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_3:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_4:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_5:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_6:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_7:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_8:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_9:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_10:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_11:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_12:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_13:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_14:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_15:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_16:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_17:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_18:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_19:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_20:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_21:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_22:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_23:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_24:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_25:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_26:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_27:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_28:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_29:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_30:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_31:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_32:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_33:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_34:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_35:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_36:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_37:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_38:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_39:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_40:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_41:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_42:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_43:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_44:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_45:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_46:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_47:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_48:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_49:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_50:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_51:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_52:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_53:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_54:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_55:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_56:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_57:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_58:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_59:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_60:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_61:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_62:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_63:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_64:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_65:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_66:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_67:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_68:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_69:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_70:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_71:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_72:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_73:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_74:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_75:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_76:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_77:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_78:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_79:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_80:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_81:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_82:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_83:v
+		errors: 0, warnings: 0
+file: /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
+	module tcbn65gplus.AO21D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.AO22D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.AOI21D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.AOI221D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.AOI22D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.AOI31D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.AOI32D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.BUFFD0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.BUFFD1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.CKBD1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.CKBD2:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.CKND2:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.CKND2D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.CMPE42D1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.DFD1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.DFKCNQD1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.DFQD1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.EDFQD1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.FA1D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.FA1D1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.HA1D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.IND2D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.IND2D1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.IND3D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.INR2D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.INR2XD0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.INR2XD1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.INVD0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.INVD1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.IOA21D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.MAOI22D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.MOAI22D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.MUX2D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.MUX2ND0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.ND2D3:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.ND3D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.ND3D1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.ND4D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.NR2D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.NR2XD0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.NR2XD1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.NR3D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.NR3D1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.NR4D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OA21D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OA22D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OAI211D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OAI21D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OAI21D1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OAI221D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OAI222D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OAI22D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OAI22D1:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OAI31D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OAI32D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OR2D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.OR3D0:v
+		errors: 0, warnings: 0
+	module tcbn65gplus.XNR2D0:v
+		errors: 0, warnings: 0
+	primitive tcbn65gplus.tsmc_mux:v
+		errors: 0, warnings: 0
+	primitive tcbn65gplus.tsmc_xbuf:v
+		errors: 0, warnings: 0
+	primitive tcbn65gplus.tsmc_dff:v
+		errors: 0, warnings: 0
+xmvlog: Memory Usage - Current physical: 21.6M, Current virtual: 92.8M
+xmvlog: CPU Usage - 0.1s system + 1.7s user = 1.7s total (1.8s, 94.8% cpu)
+xmelab: *N,INFSUD: -NOSPECIFY is automatically used with -SEQ_UDP_DELAY.
+		Caching library 'fullchip' ....... Done
+		Caching library 'worklib' ....... Done
+		Caching library 'core' ....... Done
+		Caching library 'tcbn65gplus' ....... Done
+	Elaborating the design hierarchy:
+core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance (
+                                                                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip.v,17|67): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,39513): sum_out
+
+core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance (
+            |
+xmelab: *E,CUTMIP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip.v,17|12): Too many module instance parameter assignments (definition in file /home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v, line 39513).
+  DFD1 cnt_q_reg_2_ ( .D(n20), .CP(clk), .QN(n14) );
+                  |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,2459|18): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+  DFD1 cnt_q_reg_0_ ( .D(n148), .CP(clk), .QN(n13) );
+                  |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,5001|18): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+  DFD1 cnt_q_reg_0_ ( .D(n153), .CP(clk), .QN(n18) );
+                  |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,7610|18): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+  DFD1 cnt_q_reg_0_ ( .D(n150), .CP(clk), .QN(n15) );
+                  |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,10223|18): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+  DFD1 cnt_q_reg_0_ ( .D(n149), .CP(clk), .QN(n14) );
+                  |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,15451|18): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+  DFD1 cnt_q_reg_3_ ( .D(n148), .CP(clk), .Q(cnt_q[3]) );
+                  |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,15519|18): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+  DFD1 cnt_q_reg_0_ ( .D(n215), .CP(clk), .QN(n14) );
+                  |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,20674|18): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+  ofifo_col8_bw20 ofifo_inst ( .clk(clk), .in(array_out), .out(fifo_out), .rd(
+                           |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,39604|27): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31042): o_valid
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31042): o_full
+
+  fifo_depth16_bw20_simd1_7 col_idx_0__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31051|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,22122): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,22123): o_empty
+
+  DFD1 rd_ptr_reg_1_ ( .D(n179), .CP(rd_clk), .Q(rd_ptr[1]) );
+                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,22174|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+  fifo_depth16_bw20_simd1_6 col_idx_1__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31054|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,23305): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,23306): o_empty
+
+  DFD1 rd_ptr_reg_1_ ( .D(n179), .CP(rd_clk), .Q(rd_ptr[1]) );
+                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,23357|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+  fifo_depth16_bw20_simd1_5 col_idx_2__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31057|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,30414): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,30415): o_empty
+
+  DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
+                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,30467|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+  fifo_depth16_bw20_simd1_4 col_idx_3__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31060|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,29230): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,29231): o_empty
+
+  DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
+                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,29283|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+  fifo_depth16_bw20_simd1_3 col_idx_4__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31063|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,28046): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,28047): o_empty
+
+  DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
+                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,28099|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+  fifo_depth16_bw20_simd1_2 col_idx_5__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31066|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,26862): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,26863): o_empty
+
+  DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
+                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,26915|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+  fifo_depth16_bw20_simd1_1 col_idx_6__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31069|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,25678): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,25679): o_empty
+
+  DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
+                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,25731|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+  fifo_depth16_bw20_simd1_0 col_idx_7__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31072|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,24494): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,24495): o_empty
+
+  DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
+                   |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,24547|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+		Caching library 'core' ....... Done
+		Caching library 'tcbn65gplus' ....... Done
+		Caching library 'worklib' ....... Done
+		Caching library 'fullchip' ....... Done
+  sfp_row sfp_row_instance ( .clk(clk), .acc(inst[17]), .div(inst[18]), 
+                         |
+xmelab: *E,CUVMUR (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,39684|25): instance 'fullchip_tb.fullchip_instance@fullchip<module>.core_instance@core<module>.sfp_row_instance' of design unit 'sfp_row' is unresolved in 'core.core:v'.
+xmelab: Memory Usage - Final: 44.0M, Peak: 44.0M, Peak virtual: 171.4M
+xmelab: CPU Usage - 0.1s system + 0.1s user = 0.2s total (0.2s, 78.9% cpu)
+xrun: *E,ELBERR: Error during elaboration (status 1), exiting.
+TOOL:	xrun(64)	20.09-s017: Exiting on Mar 10, 2025 at 13:12:26 PDT  (total: 00:00:03)

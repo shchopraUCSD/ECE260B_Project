@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-VFILE
+/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
+-VFILE
+../../synth/synth_with_sram/core.out.v
+-VFILE
+../../rtl/verilog/fullchip.v
