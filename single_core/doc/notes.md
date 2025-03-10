@@ -1,15 +1,24 @@
 # NOTES
 ## Single Core
+### RTL
 - using 2ns clock period instead of 1ns for single core synth/pnr/gls - we will do optimization by reducing to 1ns once dual core pnr is done (as per project instructions) 
 - the normalization step shifts the sum (denomiantor) to the right by 7 bits. since this could cause a potential division by 0, *1 was added to the denominator* for stability 
 - note that in numerator also, absolute value is used, in both RTL and TB, as per the canvas discussion. 
+### Synthesis
 - did two synth runs - with and without SRAM. The with SRAM run is what we will use for reporting synth power, area, timing
 - *typical* libraries are being used for all synthesis runs
+### SRAM PNR
 - there is only one verilog fileset (in the rtl/ subdirectory) but for PNR, the gate-level netlist from synthesis is *copied* to the pnr's netlist/ subdirectory
 - had to remove filler/DCAP cells from SRAM PnR for it to work
-- single core PNR: see suggested floorplan image, srams will need appropriate rotation, keep mem\_in on left, sum\_out on right (keeping 2 dual cores, left and right, in mind) and output at bottom (right below psum mem's Q port) 
+### Single Core PNR
+- see suggested floorplan image, srams will need appropriate rotation, keep mem\_in on left, sum\_out on right (keeping 2 dual cores, left and right, in mind) and output at bottom (right below psum mem's Q port) 
+- for netlist/ subdirectory in hierarchical PNR, have copied the netlist from the synth run without the SRAMs 
+### Single Core GLS
+- TBD. 
+- should we use synth netlist? or directly PNR netlist?
 
 ## Dual Core
+### RTL
 - in dual core, use a req/ack interface for the individual sums. whoever is doing dual core RTL/TB needs to decide how the data movement happens
 
 ## Optimizations
@@ -20,7 +29,7 @@
 
 # LOGISTICS
 ## Next steps at this time
-- SRAM PnR (this plus core w/o SRAM PnR goes into core hierarchical PnR) 
+- SRAM PnR (this plus core w/o SRAM PnR goes into core hierarchical PnR) --> DONE 
 - single core hierarchical PnR (goes into single core GLS)
 - single core GLS: worth it to use synth netlist instead of PNR netlist?
 - dual core RTL/TB
