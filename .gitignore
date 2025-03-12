@@ -1,5 +1,10 @@
 *.swp
+*.swo
+*.swn
+*.nfs*
 *.vcd
 compiled
 *.alib
 *.svf
+*.cmd*
+*.log*
