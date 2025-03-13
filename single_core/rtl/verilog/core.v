@@ -115,7 +115,7 @@ sfp_row #(.bw(bw), .bw_psum(bw_psum), .col(col)) sfp_row_instance(
 		.div(sfp_div),
 		//FIXME fifo_ext_rd and sum_in only come into the picture in dual core design
 		.fifo_ext_rd(1'b0),
-		.sum_in(0),
+		.sum_in(24'b0),
 		.sum_out(sum_out),
 		.sfp_in(pmem_out),
 		.sfp_out(sfp_out)
