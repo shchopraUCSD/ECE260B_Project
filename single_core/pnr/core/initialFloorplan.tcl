@@ -17,9 +17,9 @@ addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit M1 -max_sa
 #setObjFPlanBox Instance kmem_instance [Fill out] 
 #setObjFPlanBox Instance psum_mem_instance [Fill out] 
 
-setObjFPlanBox Instance kmem_instance 50 50 210.6 210.6
-setObjFPlanBox Instance psum_mem_instance 50 365 210.6 525.6
-setObjFPlanBox Instance qmem_instance 359.1005 200.2015 522.7005 360.8015
+setObjFPlanBox Instance qmem_instance 50 400 210.6 560.6
+setObjFPlanBox Instance kmem_instance 50 200 210.6 360.6
+setObjFPlanBox Instance psum_mem_instance 359.1005 25 522.7005 185.6
 
 addHaloToBlock {3 3 3 3} qmem_instance 
 addHaloToBlock {3 3 3 3} kmem_instance 
