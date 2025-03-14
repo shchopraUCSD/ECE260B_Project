@@ -1,6 +1,6 @@
 #
 #Load design
-set desdir 		"/home/linux/ieng6/ee260bwi25/public/DESIGNdata"
+set desdir 		"./"
 set libdir 		"/home/linux/ieng6/ee260bwi25/public/PDKdata"
 set mydir       "./"
 set design 		"core"
