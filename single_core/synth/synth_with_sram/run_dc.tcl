@@ -1,5 +1,6 @@
 set top_module core
-set rtlPath "/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog"
+set uname $tcl_platform(user)
+set rtlPath "/home/linux/ieng6/ee260bwi25/$uname/ECE260B_Project/single_core/rtl/verilog"
 
 # Target library
 # FIXME use typical corner

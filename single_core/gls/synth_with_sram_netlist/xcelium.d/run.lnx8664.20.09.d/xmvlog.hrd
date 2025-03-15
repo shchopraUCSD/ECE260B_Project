@@ -8,3 +8,5 @@
 ../../synth/synth_with_sram/core.out.v
 -VFILE
 ../../rtl/verilog/fullchip.v
+-DEFINE
+GLS_RUN

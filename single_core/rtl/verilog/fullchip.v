@@ -13,8 +13,11 @@ input  [18:0] inst;
 input  reset;
 output [bw_psum*col-1:0] out;
 
-
+`ifdef GLS_RUN
+core core_instance (
+`else
 core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance (
+`endif
       .reset(reset), 
       .clk(clk), 
       .mem_in(mem_in), 

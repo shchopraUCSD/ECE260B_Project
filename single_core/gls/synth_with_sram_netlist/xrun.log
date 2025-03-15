@@ -1,5 +1,5 @@
 xrun(64): 20.09-s017: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s017: Started on Mar 10, 2025 at 13:12:23 PDT
+TOOL:	xrun(64)	20.09-s017: Started on Mar 14, 2025 at 18:52:33 PDT
 xrun
 	+gui
 	+access+rwc
@@ -8,6 +8,7 @@ xrun
 	+xmtimescale+1ns/1ps
 	+xmoveride_timescale
 	+xmseq_udp_delay+20ps
+	-define GLS_RUN
 	-v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
 	-v ../../synth/synth_with_sram/core.out.v
 	-v ../../rtl/verilog/fullchip.v
@@ -16,644 +17,428 @@ xrun
    User defined plus("+") options:
 	+xmoveride_timescale
 
-file: ../../rtl/verilog/fullchip_tb.v
-	module worklib.fullchip_tb:v
-		errors: 0, warnings: 0
-file: /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
-file: ../../synth/synth_with_sram/core.out.v
-file: ../../rtl/verilog/fullchip.v
-	module fullchip.fullchip:v
-		errors: 0, warnings: 0
-file: ../../synth/synth_with_sram/core.out.v
-	module core.core:v
-		errors: 0, warnings: 0
-file: ../../synth/synth_with_sram/core.out.v
-	module core.mac_array_col8_bw8_bw_psum20_pr16:v
-		errors: 0, warnings: 0
-	module core.ofifo_col8_bw20:v
-		errors: 0, warnings: 0
-	module core.sram_w8_sram_bit128_1:v
-		errors: 0, warnings: 0
-	module core.sram_w8_sram_bit160:v
-		errors: 0, warnings: 0
-	module core.sram_w8_sram_bit128_0:v
-		errors: 0, warnings: 0
-file: ../../synth/synth_with_sram/core.out.v
-	module core.mac_col_bw8_bw_psum20_pr16_col_id1:v
-		errors: 0, warnings: 0
-	module core.mac_col_bw8_bw_psum20_pr16_col_id2:v
-		errors: 0, warnings: 0
-	module core.mac_col_bw8_bw_psum20_pr16_col_id3:v
-		errors: 0, warnings: 0
-	module core.mac_col_bw8_bw_psum20_pr16_col_id4:v
-		errors: 0, warnings: 0
-	module core.mac_col_bw8_bw_psum20_pr16_col_id5:v
-		errors: 0, warnings: 0
-	module core.mac_col_bw8_bw_psum20_pr16_col_id6:v
-		errors: 0, warnings: 0
-	module core.mac_col_bw8_bw_psum20_pr16_col_id7:v
-		errors: 0, warnings: 0
-	module core.mac_col_bw8_bw_psum20_pr16_col_id8:v
-		errors: 0, warnings: 0
-	module core.fifo_depth16_bw20_simd1_7:v
-		errors: 0, warnings: 0
-	module core.fifo_depth16_bw20_simd1_6:v
-		errors: 0, warnings: 0
-	module core.fifo_depth16_bw20_simd1_0:v
-		errors: 0, warnings: 0
-	module core.fifo_depth16_bw20_simd1_1:v
-		errors: 0, warnings: 0
-	module core.fifo_depth16_bw20_simd1_2:v
-		errors: 0, warnings: 0
-	module core.fifo_depth16_bw20_simd1_3:v
-		errors: 0, warnings: 0
-	module core.fifo_depth16_bw20_simd1_4:v
-		errors: 0, warnings: 0
-	module core.fifo_depth16_bw20_simd1_5:v
-		errors: 0, warnings: 0
-file: ../../synth/synth_with_sram/core.out.v
-	module core.mac_8in_bw8_bw_psum20_pr16_7:v
-		errors: 0, warnings: 0
-	module core.mac_8in_bw8_bw_psum20_pr16_6:v
-		errors: 0, warnings: 0
-	module core.mac_8in_bw8_bw_psum20_pr16_5:v
-		errors: 0, warnings: 0
-	module core.mac_8in_bw8_bw_psum20_pr16_4:v
-		errors: 0, warnings: 0
-	module core.mac_8in_bw8_bw_psum20_pr16_3:v
-		errors: 0, warnings: 0
-	module core.mac_8in_bw8_bw_psum20_pr16_2:v
-		errors: 0, warnings: 0
-	module core.mac_8in_bw8_bw_psum20_pr16_1:v
-		errors: 0, warnings: 0
-	module core.mac_8in_bw8_bw_psum20_pr16_0:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_16_1_bw20_simd1_7:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_16_1_bw20_simd1_6:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_16_1_bw20_simd1_0:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_16_1_bw20_simd1_1:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_16_1_bw20_simd1_2:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_16_1_bw20_simd1_3:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_16_1_bw20_simd1_4:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_16_1_bw20_simd1_5:v
-		errors: 0, warnings: 0
-file: ../../synth/synth_with_sram/core.out.v
-	module core.fifo_mux_8_1_bw20_simd1_15:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_119:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_14:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_12:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_13:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_118:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_0:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_1:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_112:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_2:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_3:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_113:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_4:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_5:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_114:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_6:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_7:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_115:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_8:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_9:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_116:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_10:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_8_1_bw20_simd1_11:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_117:v
-		errors: 0, warnings: 0
-file: ../../synth/synth_with_sram/core.out.v
-	module core.fifo_mux_2_1_bw20_simd1_105:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_106:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_107:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_108:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_109:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_110:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_111:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_98:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_99:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_100:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_101:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_102:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_103:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_104:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_84:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_85:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_86:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_87:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_88:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_89:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_90:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_91:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_92:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_93:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_94:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_95:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_96:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_97:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_0:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_1:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_2:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_3:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_4:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_5:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_6:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_7:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_8:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_9:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_10:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_11:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_12:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_13:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_14:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_15:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_16:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_17:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_18:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_19:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_20:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_21:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_22:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_23:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_24:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_25:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_26:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_27:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_28:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_29:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_30:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_31:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_32:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_33:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_34:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_35:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_36:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_37:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_38:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_39:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_40:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_41:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_42:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_43:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_44:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_45:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_46:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_47:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_48:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_49:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_50:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_51:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_52:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_53:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_54:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_55:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_56:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_57:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_58:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_59:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_60:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_61:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_62:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_63:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_64:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_65:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_66:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_67:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_68:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_69:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_70:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_71:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_72:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_73:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_74:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_75:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_76:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_77:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_78:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_79:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_80:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_81:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_82:v
-		errors: 0, warnings: 0
-	module core.fifo_mux_2_1_bw20_simd1_83:v
-		errors: 0, warnings: 0
-file: /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
-	module tcbn65gplus.AO21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AO22D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI221D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI22D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI31D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI32D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.BUFFD0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.BUFFD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKBD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKBD2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CMPE42D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFKCNQD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFQD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.EDFQD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.FA1D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.FA1D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.HA1D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IND2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IND2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IND3D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2XD0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2XD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INVD0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INVD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IOA21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.MAOI22D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.MOAI22D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.MUX2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.MUX2ND0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND2D3:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND3D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND3D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND4D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2XD0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2XD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR3D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR3D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR4D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OA21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OA22D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI211D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI21D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI221D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI222D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI22D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI22D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI31D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI32D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OR2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OR3D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XNR2D0:v
-		errors: 0, warnings: 0
-	primitive tcbn65gplus.tsmc_mux:v
-		errors: 0, warnings: 0
-	primitive tcbn65gplus.tsmc_xbuf:v
-		errors: 0, warnings: 0
-	primitive tcbn65gplus.tsmc_dff:v
-		errors: 0, warnings: 0
-xmvlog: Memory Usage - Current physical: 21.6M, Current virtual: 92.8M
-xmvlog: CPU Usage - 0.1s system + 1.7s user = 1.7s total (1.8s, 94.8% cpu)
+Recompiling... reason: unable to stat '/./home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v'.
+xmvlog: Memory Usage - Current physical: 31.6M, Current virtual: 103.0M
+xmvlog: CPU Usage - 0.1s system + 2.4s user = 2.5s total (2.5s, 99.1% cpu)
 xmelab: *N,INFSUD: -NOSPECIFY is automatically used with -SEQ_UDP_DELAY.
 		Caching library 'fullchip' ....... Done
 		Caching library 'worklib' ....... Done
 		Caching library 'core' ....... Done
 		Caching library 'tcbn65gplus' ....... Done
 	Elaborating the design hierarchy:
-core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance (
-                                                                   |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip.v,17|67): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,39513): sum_out
+core core_instance (
+                 |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/rtl/verilog/fullchip.v,17|17): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,75530): sum_out
 
-core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance (
-            |
-xmelab: *E,CUTMIP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip.v,17|12): Too many module instance parameter assignments (definition in file /home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v, line 39513).
   DFD1 cnt_q_reg_2_ ( .D(n20), .CP(clk), .QN(n14) );
                   |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,2459|18): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,2458|18): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
 
   DFD1 cnt_q_reg_0_ ( .D(n148), .CP(clk), .QN(n13) );
                   |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,5001|18): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,4999|18): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
 
   DFD1 cnt_q_reg_0_ ( .D(n153), .CP(clk), .QN(n18) );
                   |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,7610|18): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,7604|18): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
 
   DFD1 cnt_q_reg_0_ ( .D(n150), .CP(clk), .QN(n15) );
                   |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,10223|18): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,10218|18): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
 
   DFD1 cnt_q_reg_0_ ( .D(n149), .CP(clk), .QN(n14) );
                   |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,15451|18): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,15440|18): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
 
   DFD1 cnt_q_reg_3_ ( .D(n148), .CP(clk), .Q(cnt_q[3]) );
                   |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,15519|18): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,15508|18): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
 
   DFD1 cnt_q_reg_0_ ( .D(n215), .CP(clk), .QN(n14) );
                   |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,20674|18): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,20662|18): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
 
   ofifo_col8_bw20 ofifo_inst ( .clk(clk), .in(array_out), .out(fifo_out), .rd(
                            |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,39604|27): 2 output ports were not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31042): o_valid
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31042): o_full
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,75632|27): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31013): o_valid
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31013): o_full
 
   fifo_depth16_bw20_simd1_7 col_idx_0__fifo_instance ( .rd_clk(clk), .wr_clk(
                                                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31051|51): 2 output ports were not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,22122): o_full
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,22123): o_empty
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31021|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,22109): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,22110): o_empty
 
   DFD1 rd_ptr_reg_1_ ( .D(n179), .CP(rd_clk), .Q(rd_ptr[1]) );
                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,22174|19): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,22159|19): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
 
   fifo_depth16_bw20_simd1_6 col_idx_1__fifo_instance ( .rd_clk(clk), .wr_clk(
                                                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31054|51): 2 output ports were not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,23305): o_full
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,23306): o_empty
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31024|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,23290): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,23291): o_empty
 
   DFD1 rd_ptr_reg_1_ ( .D(n179), .CP(rd_clk), .Q(rd_ptr[1]) );
                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,23357|19): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,23340|19): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
 
   fifo_depth16_bw20_simd1_5 col_idx_2__fifo_instance ( .rd_clk(clk), .wr_clk(
                                                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31057|51): 2 output ports were not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,30414): o_full
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,30415): o_empty
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31027|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,30387): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,30388): o_empty
 
   DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,30467|19): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,30438|19): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
 
   fifo_depth16_bw20_simd1_4 col_idx_3__fifo_instance ( .rd_clk(clk), .wr_clk(
                                                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31060|51): 2 output ports were not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,29230): o_full
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,29231): o_empty
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31030|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,29205): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,29206): o_empty
 
   DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,29283|19): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,29256|19): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
 
   fifo_depth16_bw20_simd1_3 col_idx_4__fifo_instance ( .rd_clk(clk), .wr_clk(
                                                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31063|51): 2 output ports were not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,28046): o_full
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,28047): o_empty
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31033|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,28023): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,28024): o_empty
 
   DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,28099|19): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,28074|19): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
 
   fifo_depth16_bw20_simd1_2 col_idx_5__fifo_instance ( .rd_clk(clk), .wr_clk(
                                                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31066|51): 2 output ports were not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,26862): o_full
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,26863): o_empty
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31036|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,26841): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,26842): o_empty
 
   DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,26915|19): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,26892|19): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
 
   fifo_depth16_bw20_simd1_1 col_idx_6__fifo_instance ( .rd_clk(clk), .wr_clk(
                                                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31069|51): 2 output ports were not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,25678): o_full
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,25679): o_empty
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31039|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,25659): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,25660): o_empty
 
   DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,25731|19): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,25710|19): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
 
   fifo_depth16_bw20_simd1_0 col_idx_7__fifo_instance ( .rd_clk(clk), .wr_clk(
                                                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,31072|51): 2 output ports were not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,24494): o_full
-xmelab: (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,24495): o_empty
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,31042|51): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,24477): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,24478): o_empty
 
   DFD1 rd_ptr_reg_1_ ( .D(n287), .CP(rd_clk), .Q(rd_ptr[1]) );
                    |
-xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,24547|19): 1 output port was not connected:
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,24528|19): 1 output port was not connected:
 xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
 
-		Caching library 'core' ....... Done
-		Caching library 'tcbn65gplus' ....... Done
-		Caching library 'worklib' ....... Done
-		Caching library 'fullchip' ....... Done
-  sfp_row sfp_row_instance ( .clk(clk), .acc(inst[17]), .div(inst[18]), 
-                         |
-xmelab: *E,CUVMUR (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_with_sram/core.out.v,39684|25): instance 'fullchip_tb.fullchip_instance@fullchip<module>.core_instance@core<module>.sfp_row_instance' of design unit 'sfp_row' is unresolved in 'core.core:v'.
-xmelab: Memory Usage - Final: 44.0M, Peak: 44.0M, Peak virtual: 171.4M
-xmelab: CPU Usage - 0.1s system + 0.1s user = 0.2s total (0.2s, 78.9% cpu)
-xrun: *E,ELBERR: Error during elaboration (status 1), exiting.
-TOOL:	xrun(64)	20.09-s017: Exiting on Mar 10, 2025 at 13:12:26 PDT  (total: 00:00:03)
+  fifo_depth16_bw24_1 fifo_inst_int ( .rd_clk(clk), .wr_clk(clk), .in({
+                                  |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,44042|34): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,38653): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,38653): o_empty
+
+  EDFD1 rd_ptr_reg_4_ ( .D(N32), .E(n42), .CP(rd_clk), .Q(rd_ptr[4]) );
+                    |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,38715|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,8968): QN
+
+  EDFD4 rd_ptr_reg_1_ ( .D(N29), .E(n42), .CP(rd_clk), .Q(rd_ptr[1]) );
+                    |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,38994|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9074): QN
+
+  EDFD4 rd_ptr_reg_3_ ( .D(N31), .E(n42), .CP(rd_clk), .Q(rd_ptr[3]) );
+                    |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,38996|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9074): QN
+
+  fifo_depth16_bw24_0 fifo_inst_ext ( .rd_clk(clk), .wr_clk(clk), .in(sum_q), 
+                                  |
+xmelab: *W,CUVWSP (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,44048|34): 2 output ports were not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,39810): o_full
+xmelab: (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/synth/synth_with_sram/core.out.v,39810): o_empty
+
+	Top level design units:
+		fullchip_tb
+      .mem_in(mem_in), 
+                   |
+xmelab: *W,CUVMPW (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/rtl/verilog/fullchip.v,23|19): port sizes differ in port connection(64/128) for the instance(fullchip_tb.fullchip_instance) .
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                54565     422
+		UDPs:                   16577       3
+		Primitives:            104963       9
+		Registers:               7224      51
+		Scalar wires:           11696       -
+		Expanded wires:            72       3
+		Vectored wires:             1       -
+		Always blocks:              1       1
+		Initial blocks:            17      17
+		Cont. assignments:         13      13
+		Pseudo assignments:         6       6
+		Simulation timescale:     1ps
+	Writing initial simulation snapshot: worklib.fullchip_tb:v
+xmelab: Memory Usage - Final: 73.8M, Peak: 83.1M, Peak virtual: 210.1M
+xmelab: CPU Usage - 0.1s system + 4.9s user = 5.1s total (5.1s, 98.8% cpu)
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/ECE/XCELIUM-2009/tools/xcelium/files/xmsimrc
+xcelium> run
+##### Q data txt reading #####
+Open failed on file "qdata.txt". No such file or directory
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,111|31): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,112|31): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,113|31): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,114|31): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,119|39): $fscanf --  Null file descriptor.
+##### K data txt reading #####
+Open failed on file "kdata.txt". No such file or directory
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,150|31): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,151|31): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,152|31): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,153|31): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+xmsim: *E,SYSFMT (/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v,160|39): $fscanf --  Null file descriptor.
+##### Estimated multiplication result #####
+
+DBG: ======== BEGIN cycle number           0 ==========
+DBG: temp_sum and divisor:        x ,          x 
+DBG: original prd @cycle 0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: normalized prd @cycle 0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: ======== END cycle number           0 ==========
+
+
+DBG: ======== BEGIN cycle number           1 ==========
+DBG: temp_sum and divisor:        x ,          x 
+DBG: original prd @cycle 1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: normalized prd @cycle 1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: ======== END cycle number           1 ==========
+
+
+DBG: ======== BEGIN cycle number           2 ==========
+DBG: temp_sum and divisor:        x ,          x 
+DBG: original prd @cycle 2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: normalized prd @cycle 2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: ======== END cycle number           2 ==========
+
+
+DBG: ======== BEGIN cycle number           3 ==========
+DBG: temp_sum and divisor:        x ,          x 
+DBG: original prd @cycle 3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: normalized prd @cycle 3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: ======== END cycle number           3 ==========
+
+
+DBG: ======== BEGIN cycle number           4 ==========
+DBG: temp_sum and divisor:        x ,          x 
+DBG: original prd @cycle 4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: normalized prd @cycle 4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: ======== END cycle number           4 ==========
+
+
+DBG: ======== BEGIN cycle number           5 ==========
+DBG: temp_sum and divisor:        x ,          x 
+DBG: original prd @cycle 5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: normalized prd @cycle 5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: ======== END cycle number           5 ==========
+
+
+DBG: ======== BEGIN cycle number           6 ==========
+DBG: temp_sum and divisor:        x ,          x 
+DBG: original prd @cycle 6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: normalized prd @cycle 6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: ======== END cycle number           6 ==========
+
+
+DBG: ======== BEGIN cycle number           7 ==========
+DBG: temp_sum and divisor:        x ,          x 
+DBG: original prd @cycle 7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: normalized prd @cycle 7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: ======== END cycle number           7 ==========
+
+##### Qmem writing  #####
+##### Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+##### sfp operation #####
+DBG: final output from pmem for @cycle 0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ ============ FINAL SIMULATION RESULT =============== 
+
+SUCCESS: all pmem values match :-)
+
+Simulation complete via $finish(1) at time 151 NS + 0
+/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v:499 
+xcelium> ^C
+xcelium> exit
+xmsim: Memory Usage - Final: 141.9M, Peak: 141.9M, Peak virtual: 358.2M
+xmsim: CPU Usage - 11.4s system + 6.7s user = 18.1s total (635.6s, 2.9% cpu)
+TOOL:	xrun(64)	20.09-s017: Exiting on Mar 14, 2025 at 19:03:16 PDT  (total: 00:10:43)
