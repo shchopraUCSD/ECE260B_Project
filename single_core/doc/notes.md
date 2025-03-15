@@ -17,7 +17,9 @@
 - TBD. 
 - should we use synth netlist? or directly PNR netlist? --> give a run with synth netlist and see
 - GLS with synth netlist needs the netlist *with* the SRAMs (i.e. SRAMs are NOT a black box) 
-
+#### Warnings
+- ports not connected : cnt\_q in mac\_col (expected), o\_full/o\_valid in ofifo --> expected, shouldn't matter
+- Bit-select or part-select index out of declared bounds : for mem\_in assignments from the K/Q 2D arrays. --> values at mem\_in seem to match RTL sims. 
 ## Dual Core
 ### RTL
 - in dual core, use a req/ack interface for the individual sums. whoever is doing dual core RTL/TB needs to decide how the data movement happens
