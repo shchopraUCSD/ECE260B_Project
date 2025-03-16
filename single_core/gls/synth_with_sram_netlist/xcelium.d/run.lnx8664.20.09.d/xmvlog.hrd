@@ -10,3 +10,5 @@
 ../../rtl/verilog/fullchip.v
 -DEFINE
 GLS_RUN
+-DEFINE
+INITIALIZE_MEMORY

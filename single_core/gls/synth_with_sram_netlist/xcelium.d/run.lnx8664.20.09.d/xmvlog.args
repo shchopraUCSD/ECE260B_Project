@@ -8,6 +8,8 @@
 -STATUS
 -DEFINE
 GLS_RUN
+-DEFINE
+INITIALIZE_MEMORY
 -VFILE
 /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
 -VFILE

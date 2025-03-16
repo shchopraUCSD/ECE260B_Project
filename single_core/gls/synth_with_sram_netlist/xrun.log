@@ -1,5 +1,5 @@
 xrun(64): 20.09-s017: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s017: Started on Mar 15, 2025 at 11:14:45 PDT
+TOOL:	xrun(64)	20.09-s017: Started on Mar 15, 2025 at 19:53:10 PDT
 xrun
 	+gui
 	+access+rwc
@@ -9,6 +9,8 @@ xrun
 	+xmoveride_timescale
 	+xmseq_udp_delay+20ps
 	-define GLS_RUN
+	-define INITIALIZE_MEMORY
+	-xminitialize 0
 	-v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
 	-v ../../synth/synth_with_sram/core.out.v
 	-v ../../rtl/verilog/fullchip.v
@@ -19,7 +21,7 @@ xrun
 
 Recompiling... reason: unable to stat '/./home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v'.
 xmvlog: Memory Usage - Current physical: 31.6M, Current virtual: 103.0M
-xmvlog: CPU Usage - 0.1s system + 2.4s user = 2.4s total (2.5s, 98.5% cpu)
+xmvlog: CPU Usage - 0.1s system + 2.3s user = 2.4s total (2.4s, 99.0% cpu)
 xmelab: *N,INFSUD: -NOSPECIFY is automatically used with -SEQ_UDP_DELAY.
 		Caching library 'fullchip' ....... Done
 		Caching library 'worklib' ....... Done
@@ -210,14 +212,487 @@ xmelab: *W,CUVMPW (/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_co
 		Pseudo assignments:         6       6
 		Simulation timescale:     1ps
 	Writing initial simulation snapshot: worklib.fullchip_tb:v
-xmelab: Memory Usage - Final: 73.8M, Peak: 83.1M, Peak virtual: 210.1M
-xmelab: CPU Usage - 0.1s system + 4.9s user = 5.0s total (5.1s, 97.8% cpu)
+xmelab: Memory Usage - Final: 73.8M, Peak: 83.2M, Peak virtual: 210.1M
+xmelab: CPU Usage - 0.1s system + 4.7s user = 4.8s total (4.9s, 99.1% cpu)
 
 -------------------------------------
 Relinquished control to SimVision...
 xcelium> 
 xcelium> source /software/ECE/XCELIUM-2009/tools/xcelium/files/xmsimrc
+xcelium> input .simvision/30314_mak025__autosave.tcl
+xcelium> 
+xcelium> # XM-Sim Command File
+xcelium> # TOOL:	xmsim(64)	20.09-s017
+xcelium> #
+xcelium> 
+xcelium> set tcl_prompt1 {puts -nonewline "xcelium> "}
+puts -nonewline "xcelium> "
+xcelium> set tcl_prompt2 {puts -nonewline "> "}
+puts -nonewline "> "
+xcelium> set vlog_format %h
+%h
+xcelium> set vhdl_format %v
+%v
+xcelium> set real_precision 6
+6
+xcelium> set display_unit auto
+auto
+xcelium> set time_unit module
+module
+xcelium> set heap_garbage_size -200
+-200
+xcelium> set heap_garbage_time 0
+0
+xcelium> set assert_report_level note
+note
+xcelium> set assert_stop_level error
+error
+xcelium> set autoscope yes
+yes
+xcelium> set assert_1164_warnings yes
+yes
+xcelium> set pack_assert_off {}
+xcelium> set severity_pack_assert_off {note warning}
+note warning
+xcelium> set assert_output_stop_level failed
+failed
+xcelium> set tcl_debug_level 0
+0
+xcelium> set relax_path_name 1
+1
+xcelium> set vhdl_vcdmap XX01ZX01X
+XX01ZX01X
+xcelium> set intovf_severity_level ERROR
+ERROR
+xcelium> set probe_screen_format 0
+0
+xcelium> set rangecnst_severity_level ERROR
+ERROR
+xcelium> set textio_severity_level ERROR
+ERROR
+xcelium> set vital_timing_checks_on 1
+1
+xcelium> set vlog_code_show_force 0
+0
+xcelium> set assert_count_attempts 1
+1
+xcelium> set tcl_all64 false
+false
+xcelium> set tcl_runerror_exit false
+false
+xcelium> set assert_report_incompletes 0
+0
+xcelium> set show_force 1
+1
+xcelium> set force_reset_by_reinvoke 0
+0
+xcelium> set tcl_relaxed_literal 0
+0
+xcelium> set probe_exclude_patterns {}
+xcelium> set probe_packed_limit 4k
+4k
+xcelium> set probe_unpacked_limit 16k
+16k
+xcelium> set assert_internal_msg no
+no
+xcelium> set svseed 1
+1
+xcelium> set assert_reporting_mode 0
+0
+xcelium> set vcd_compact_mode 0
+0
+xcelium> alias . run
+xcelium> alias quit exit
+xcelium> database -open -vcd -into fullchip_tb.vcd _fullchip_tb.vcd1 -timescale fs
+Created VCD database _fullchip_tb.vcd1
+xcelium> database -open -evcd -into fullchip_tb.vcd _fullchip_tb.vcd -timescale fs
+xmsim: *E,FNINUS: File name fullchip_tb.vcd is already in use as a VCD file.
+xcelium> database -open -shm -into xcelium.shm xcelium.shm -default
+Created default SHM database xcelium.shm
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.qmem_instance.Q fullchip_tb.fullchip_instance.core_instance.qmem_instance.D fullchip_tb.fullchip_instance.core_instance.qmem_instance.CLK fullchip_tb.fullchip_instance.core_instance.qmem_instance.A fullchip_tb.fullchip_instance.core_instance.qmem_instance.CEN fullchip_tb.fullchip_instance.core_instance.qmem_instance.WEN_BAR fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.WEN fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.Q fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.CEN fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.CLK fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.D fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.A fullchip_tb.fullchip_instance.core_instance.kmem_instance.WEN_BAR fullchip_tb.fullchip_instance.core_instance.kmem_instance.Q fullchip_tb.fullchip_instance.core_instance.kmem_instance.D fullchip_tb.fullchip_instance.core_instance.kmem_instance.CLK fullchip_tb.fullchip_instance.core_instance.kmem_instance.CEN fullchip_tb.fullchip_instance.core_instance.kmem_instance.A
+Created probe 1
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.fifo_out
+Created probe 2
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.fifo_wr
+Created probe 3
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.inst
+Created probe 4
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.ofifo_inst.out
+Created probe 5
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.ofifo_inst.clk fullchip_tb.fullchip_instance.core_instance.ofifo_inst.in fullchip_tb.fullchip_instance.core_instance.ofifo_inst.o_full fullchip_tb.fullchip_instance.core_instance.ofifo_inst.o_valid fullchip_tb.fullchip_instance.core_instance.ofifo_inst.rd fullchip_tb.fullchip_instance.core_instance.ofifo_inst.reset fullchip_tb.fullchip_instance.core_instance.ofifo_inst.wr
+Created probe 6
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.in fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_1__fifo_instance.in fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_2__fifo_instance.in fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_3__fifo_instance.in fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_4__fifo_instance.in fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.in fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_6__fifo_instance.in fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_7__fifo_instance.in
+Created probe 7
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.out fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.rd_clk fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.wr_clk fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.wr fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.rd fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.wr_ptr fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.rd_ptr
+Created probe 8
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.reset
+Created probe 9
+xcelium> probe -create -database xcelium.shm fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_5__fifo_instance.n11
+Created probe 10
+xcelium> 
+xcelium> simvision -input /home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/gls/synth_with_sram_netlist/.simvision/30314_mak025__autosave.tcl.svcf
+xcelium> reset
+Loaded snapshot worklib.fullchip_tb:v
 xcelium> run
+xmsim: *W,DFUSE: $dumpfile fullchip_tb.vcd is already in use (VCD file).
+                      Scope: fullchip_tb            Time: 0 FS + 0
+
+##### Q data txt reading #####
+##### K data txt reading #####
+##### Estimated multiplication result #####
+
+DBG: ======== BEGIN cycle number           0 ==========
+DBG: temp_sum and divisor:      364 ,          3 
+DBG: original prd @cycle 0: 00006fffa3000640000cfffa0fffe0fffea00003
+DBG: normalized prd @cycle 0: 000020001f0002100004000200000a0000700001
+DBG: ======== END cycle number           0 ==========
+
+
+DBG: ======== BEGIN cycle number           1 ==========
+DBG: temp_sum and divisor:      200 ,          2 
+DBG: original prd @cycle 1: 000230000100023fffe0ffffc00002ffff00004b
+DBG: normalized prd @cycle 1: 0001100000000110001000002000010000800025
+DBG: ======== END cycle number           1 ==========
+
+
+DBG: ======== BEGIN cycle number           2 ==========
+DBG: temp_sum and divisor:      385 ,          4 
+DBG: original prd @cycle 2: fffc6fffa50005400030fffde0000a0002cffff0
+DBG: normalized prd @cycle 2: 0000e00016000150000c00008000020000b00004
+DBG: ======== END cycle number           2 ==========
+
+
+DBG: ======== BEGIN cycle number           3 ==========
+DBG: temp_sum and divisor:      413 ,          4 
+DBG: original prd @cycle 3: 00005fffd000050fffe7fffabfffaffffeafffbd
+DBG: normalized prd @cycle 3: 000010000c000140000600015000140000500010
+DBG: ======== END cycle number           3 ==========
+
+
+DBG: ======== BEGIN cycle number           4 ==========
+DBG: temp_sum and divisor:      311 ,          3 
+DBG: original prd @cycle 4: 00028ffff80004b00038fffd6fffdffffd20000b
+DBG: normalized prd @cycle 4: 0000d0000200019000120000e0000b0000f00003
+DBG: ======== END cycle number           4 ==========
+
+
+DBG: ======== BEGIN cycle number           5 ==========
+DBG: temp_sum and divisor:      357 ,          3 
+DBG: original prd @cycle 5: 0004200040ffffd0002e000250005f00024ffff6
+DBG: normalized prd @cycle 5: 0001600015000010000f0000c0001f0000c00003
+DBG: ======== END cycle number           5 ==========
+
+
+DBG: ======== BEGIN cycle number           6 ==========
+DBG: temp_sum and divisor:      413 ,          4 
+DBG: original prd @cycle 6: 0006100075fffd60001d000260002bffffefffd3
+DBG: normalized prd @cycle 6: 000180001d0000a00007000090000a000000000b
+DBG: ======== END cycle number           6 ==========
+
+
+DBG: ======== BEGIN cycle number           7 ==========
+DBG: temp_sum and divisor:      108 ,          1 
+DBG: original prd @cycle 7: 00004fffef0001a0000b0000000008ffff40001e
+DBG: normalized prd @cycle 7: 00004000110001a0000b00000000080000c0001e
+DBG: ======== END cycle number           7 ==========
+
+##### Qmem writing  #####
+##### Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+##### sfp operation #####
+DBG: final output from pmem for @cycle 0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ ============ FINAL SIMULATION RESULT =============== 
+
+SUCCESS: all pmem values match :-)
+
+Simulation complete via $finish(1) at time 151 NS + 0
+/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v:499 
+xcelium> probe -create -shm fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.n224
+Created probe 11
+xcelium> reset
+Loaded snapshot worklib.fullchip_tb:v
+xcelium> run
+xmsim: *W,DFUSE: $dumpfile fullchip_tb.vcd is already in use (VCD file).
+                      Scope: fullchip_tb            Time: 0 FS + 0
+
+##### Q data txt reading #####
+##### K data txt reading #####
+##### Estimated multiplication result #####
+
+DBG: ======== BEGIN cycle number           0 ==========
+DBG: temp_sum and divisor:      364 ,          3 
+DBG: original prd @cycle 0: 00006fffa3000640000cfffa0fffe0fffea00003
+DBG: normalized prd @cycle 0: 000020001f0002100004000200000a0000700001
+DBG: ======== END cycle number           0 ==========
+
+
+DBG: ======== BEGIN cycle number           1 ==========
+DBG: temp_sum and divisor:      200 ,          2 
+DBG: original prd @cycle 1: 000230000100023fffe0ffffc00002ffff00004b
+DBG: normalized prd @cycle 1: 0001100000000110001000002000010000800025
+DBG: ======== END cycle number           1 ==========
+
+
+DBG: ======== BEGIN cycle number           2 ==========
+DBG: temp_sum and divisor:      385 ,          4 
+DBG: original prd @cycle 2: fffc6fffa50005400030fffde0000a0002cffff0
+DBG: normalized prd @cycle 2: 0000e00016000150000c00008000020000b00004
+DBG: ======== END cycle number           2 ==========
+
+
+DBG: ======== BEGIN cycle number           3 ==========
+DBG: temp_sum and divisor:      413 ,          4 
+DBG: original prd @cycle 3: 00005fffd000050fffe7fffabfffaffffeafffbd
+DBG: normalized prd @cycle 3: 000010000c000140000600015000140000500010
+DBG: ======== END cycle number           3 ==========
+
+
+DBG: ======== BEGIN cycle number           4 ==========
+DBG: temp_sum and divisor:      311 ,          3 
+DBG: original prd @cycle 4: 00028ffff80004b00038fffd6fffdffffd20000b
+DBG: normalized prd @cycle 4: 0000d0000200019000120000e0000b0000f00003
+DBG: ======== END cycle number           4 ==========
+
+
+DBG: ======== BEGIN cycle number           5 ==========
+DBG: temp_sum and divisor:      357 ,          3 
+DBG: original prd @cycle 5: 0004200040ffffd0002e000250005f00024ffff6
+DBG: normalized prd @cycle 5: 0001600015000010000f0000c0001f0000c00003
+DBG: ======== END cycle number           5 ==========
+
+
+DBG: ======== BEGIN cycle number           6 ==========
+DBG: temp_sum and divisor:      413 ,          4 
+DBG: original prd @cycle 6: 0006100075fffd60001d000260002bffffefffd3
+DBG: normalized prd @cycle 6: 000180001d0000a00007000090000a000000000b
+DBG: ======== END cycle number           6 ==========
+
+
+DBG: ======== BEGIN cycle number           7 ==========
+DBG: temp_sum and divisor:      108 ,          1 
+DBG: original prd @cycle 7: 00004fffef0001a0000b0000000008ffff40001e
+DBG: normalized prd @cycle 7: 00004000110001a0000b00000000080000c0001e
+DBG: ======== END cycle number           7 ==========
+
+##### Qmem writing  #####
+##### Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+##### sfp operation #####
+DBG: final output from pmem for @cycle 0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ ============ FINAL SIMULATION RESULT =============== 
+
+SUCCESS: all pmem values match :-)
+
+Simulation complete via $finish(1) at time 151 NS + 0
+/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v:499 
+xcelium> probe -create -shm fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.n19 fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.n31 fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.n32
+Created probe 12
+xcelium> reset
+Loaded snapshot worklib.fullchip_tb:v
+xcelium> run
+xmsim: *W,DFUSE: $dumpfile fullchip_tb.vcd is already in use (VCD file).
+                      Scope: fullchip_tb            Time: 0 FS + 0
+
+##### Q data txt reading #####
+##### K data txt reading #####
+##### Estimated multiplication result #####
+
+DBG: ======== BEGIN cycle number           0 ==========
+DBG: temp_sum and divisor:      364 ,          3 
+DBG: original prd @cycle 0: 00006fffa3000640000cfffa0fffe0fffea00003
+DBG: normalized prd @cycle 0: 000020001f0002100004000200000a0000700001
+DBG: ======== END cycle number           0 ==========
+
+
+DBG: ======== BEGIN cycle number           1 ==========
+DBG: temp_sum and divisor:      200 ,          2 
+DBG: original prd @cycle 1: 000230000100023fffe0ffffc00002ffff00004b
+DBG: normalized prd @cycle 1: 0001100000000110001000002000010000800025
+DBG: ======== END cycle number           1 ==========
+
+
+DBG: ======== BEGIN cycle number           2 ==========
+DBG: temp_sum and divisor:      385 ,          4 
+DBG: original prd @cycle 2: fffc6fffa50005400030fffde0000a0002cffff0
+DBG: normalized prd @cycle 2: 0000e00016000150000c00008000020000b00004
+DBG: ======== END cycle number           2 ==========
+
+
+DBG: ======== BEGIN cycle number           3 ==========
+DBG: temp_sum and divisor:      413 ,          4 
+DBG: original prd @cycle 3: 00005fffd000050fffe7fffabfffaffffeafffbd
+DBG: normalized prd @cycle 3: 000010000c000140000600015000140000500010
+DBG: ======== END cycle number           3 ==========
+
+
+DBG: ======== BEGIN cycle number           4 ==========
+DBG: temp_sum and divisor:      311 ,          3 
+DBG: original prd @cycle 4: 00028ffff80004b00038fffd6fffdffffd20000b
+DBG: normalized prd @cycle 4: 0000d0000200019000120000e0000b0000f00003
+DBG: ======== END cycle number           4 ==========
+
+
+DBG: ======== BEGIN cycle number           5 ==========
+DBG: temp_sum and divisor:      357 ,          3 
+DBG: original prd @cycle 5: 0004200040ffffd0002e000250005f00024ffff6
+DBG: normalized prd @cycle 5: 0001600015000010000f0000c0001f0000c00003
+DBG: ======== END cycle number           5 ==========
+
+
+DBG: ======== BEGIN cycle number           6 ==========
+DBG: temp_sum and divisor:      413 ,          4 
+DBG: original prd @cycle 6: 0006100075fffd60001d000260002bffffefffd3
+DBG: normalized prd @cycle 6: 000180001d0000a00007000090000a000000000b
+DBG: ======== END cycle number           6 ==========
+
+
+DBG: ======== BEGIN cycle number           7 ==========
+DBG: temp_sum and divisor:      108 ,          1 
+DBG: original prd @cycle 7: 00004fffef0001a0000b0000000008ffff40001e
+DBG: normalized prd @cycle 7: 00004000110001a0000b00000000080000c0001e
+DBG: ======== END cycle number           7 ==========
+
+##### Qmem writing  #####
+##### Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+##### sfp operation #####
+DBG: final output from pmem for @cycle 0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ ============ FINAL SIMULATION RESULT =============== 
+
+SUCCESS: all pmem values match :-)
+
+Simulation complete via $finish(1) at time 151 NS + 0
+/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v:499 
+xcelium> probe -create -shm fullchip_tb.fullchip_instance.core_instance.psum_mem_instance.n30
+Created probe 13
+xcelium> reset
+Loaded snapshot worklib.fullchip_tb:v
+xcelium> run
+xmsim: *W,DFUSE: $dumpfile fullchip_tb.vcd is already in use (VCD file).
+                      Scope: fullchip_tb            Time: 0 FS + 0
+
+##### Q data txt reading #####
+##### K data txt reading #####
+##### Estimated multiplication result #####
+
+DBG: ======== BEGIN cycle number           0 ==========
+DBG: temp_sum and divisor:      364 ,          3 
+DBG: original prd @cycle 0: 00006fffa3000640000cfffa0fffe0fffea00003
+DBG: normalized prd @cycle 0: 000020001f0002100004000200000a0000700001
+DBG: ======== END cycle number           0 ==========
+
+
+DBG: ======== BEGIN cycle number           1 ==========
+DBG: temp_sum and divisor:      200 ,          2 
+DBG: original prd @cycle 1: 000230000100023fffe0ffffc00002ffff00004b
+DBG: normalized prd @cycle 1: 0001100000000110001000002000010000800025
+DBG: ======== END cycle number           1 ==========
+
+
+DBG: ======== BEGIN cycle number           2 ==========
+DBG: temp_sum and divisor:      385 ,          4 
+DBG: original prd @cycle 2: fffc6fffa50005400030fffde0000a0002cffff0
+DBG: normalized prd @cycle 2: 0000e00016000150000c00008000020000b00004
+DBG: ======== END cycle number           2 ==========
+
+
+DBG: ======== BEGIN cycle number           3 ==========
+DBG: temp_sum and divisor:      413 ,          4 
+DBG: original prd @cycle 3: 00005fffd000050fffe7fffabfffaffffeafffbd
+DBG: normalized prd @cycle 3: 000010000c000140000600015000140000500010
+DBG: ======== END cycle number           3 ==========
+
+
+DBG: ======== BEGIN cycle number           4 ==========
+DBG: temp_sum and divisor:      311 ,          3 
+DBG: original prd @cycle 4: 00028ffff80004b00038fffd6fffdffffd20000b
+DBG: normalized prd @cycle 4: 0000d0000200019000120000e0000b0000f00003
+DBG: ======== END cycle number           4 ==========
+
+
+DBG: ======== BEGIN cycle number           5 ==========
+DBG: temp_sum and divisor:      357 ,          3 
+DBG: original prd @cycle 5: 0004200040ffffd0002e000250005f00024ffff6
+DBG: normalized prd @cycle 5: 0001600015000010000f0000c0001f0000c00003
+DBG: ======== END cycle number           5 ==========
+
+
+DBG: ======== BEGIN cycle number           6 ==========
+DBG: temp_sum and divisor:      413 ,          4 
+DBG: original prd @cycle 6: 0006100075fffd60001d000260002bffffefffd3
+DBG: normalized prd @cycle 6: 000180001d0000a00007000090000a000000000b
+DBG: ======== END cycle number           6 ==========
+
+
+DBG: ======== BEGIN cycle number           7 ==========
+DBG: temp_sum and divisor:      108 ,          1 
+DBG: original prd @cycle 7: 00004fffef0001a0000b0000000008ffff40001e
+DBG: normalized prd @cycle 7: 00004000110001a0000b00000000080000c0001e
+DBG: ======== END cycle number           7 ==========
+
+##### Qmem writing  #####
+##### Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+##### sfp operation #####
+DBG: final output from pmem for @cycle 0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DBG: final output from pmem for @cycle 7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ ============ FINAL SIMULATION RESULT =============== 
+
+SUCCESS: all pmem values match :-)
+
+Simulation complete via $finish(1) at time 151 NS + 0
+/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v:499 
+xcelium> probe -create -shm fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n3 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n4 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n5 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n6 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n7 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n8 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n9 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n10 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n11 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n12 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n13 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n14 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n15 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n16 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n17 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n18 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n19 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n20 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n21 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n22 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n23 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n24 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n25 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n26 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n27 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n28 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n29 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n30 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n31 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n32 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n33 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n34 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n35 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n36 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n37 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n38 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n39 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n40 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n41 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n42 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n43 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n44 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n45 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n46 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n47 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n48 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n49 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n50 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n51 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n52 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n53 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n54 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n55 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n56 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n57 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n58 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n59 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n60 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n61 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n62 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n63 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n64 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n65 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n66 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n67 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n68 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n69 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n70 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n71 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n72 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n73 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n74 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n75 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n76 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n77 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n78 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n79 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n80 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n81 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n82 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n83 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n84 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n85 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n86 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n87 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n88 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n89 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n90 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n91 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n92 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n93 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n94 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n95 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n96 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n97 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n98 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n99 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n100 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n101 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n102 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n103 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n104 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n105 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n106 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n107 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n108 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n109 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n110 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n111 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n112 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n113 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n114 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n115 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n116 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n117 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n118 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n119 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n120 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n121 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n122 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n123 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n124 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n125 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n126 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n127 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n128 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n129 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n130 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n131 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n132 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n133 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n134 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n135 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n136 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n137 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n138 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n139 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n140 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n141 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n142 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n143 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n144 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n145 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n146 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n147 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n148 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n149 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n150 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n151 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n152 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n153 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n154 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n155 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n156 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n157 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n158 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n159 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n160 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n161 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n162 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n163 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n164 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n165 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n166 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n167 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n168 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n169 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n170 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n171 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n172 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n173 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n174 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n175 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n176 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n177 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n178 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n179 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n180 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n181 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n182 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n183 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n184 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n185 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n186 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n187 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n188 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n189 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n190 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n191 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n192 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n193 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n194 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n195 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n196 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n197 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n198 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n199 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n200 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n201 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n202 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n203 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n204 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n205 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n206 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n207 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n208 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n209 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n210 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n211 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n212 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n213 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n214 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n215 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n216 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n217 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n218 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n219 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n220 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n221 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n222 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n223 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n224 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n225 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n226 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n227 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n228 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n229 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n230 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n231 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n232 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n233 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n234 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n235 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n236 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n237 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n238 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n239 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n240 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.n241 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.o_empty fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.o_full fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.out fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q0 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q1 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q2 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q3 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q4 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q5 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q6 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q7 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q8 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q9 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q10 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q11 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q12 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q13 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q14 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.q15 fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.rd fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.rd_clk fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.rd_ptr fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.reset fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.wr fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.wr_clk fullchip_tb.fullchip_instance.core_instance.ofifo_inst.col_idx_0__fifo_instance.wr_ptr
+Created probe 14
+xcelium> reset
+Loaded snapshot worklib.fullchip_tb:v
+xcelium> run
+xmsim: *W,DFUSE: $dumpfile fullchip_tb.vcd is already in use (VCD file).
+                      Scope: fullchip_tb            Time: 0 FS + 0
+
 ##### Q data txt reading #####
 ##### K data txt reading #####
 ##### Estimated multiplication result #####
@@ -301,6 +776,7 @@ Simulation complete via $finish(1) at time 151 NS + 0
 /home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/fullchip_tb.v:499 
 xcelium> ^C
 xcelium> exit
-xmsim: Memory Usage - Final: 133.8M, Peak: 133.8M, Peak virtual: 351.1M
-xmsim: CPU Usage - 1.8s system + 1.8s user = 3.7s total (96.3s, 3.8% cpu)
-TOOL:	xrun(64)	20.09-s017: Exiting on Mar 15, 2025 at 11:16:29 PDT  (total: 00:01:44)
+xmsim: Memory Usage - Final: 175.5M, Peak: 182.5M, Peak virtual: 745.8M
+xmsim: Main Thread CPU Usage - 149.6s system + 85.7s user = 235.3s total
+xmsim: CPU Usage - 149.6s system + 85.5s user = 235.1s total (8311.6s, 2.8% cpu)
+TOOL:	xrun(64)	20.09-s017: Exiting on Mar 15, 2025 at 22:11:49 PDT  (total: 02:18:39)
