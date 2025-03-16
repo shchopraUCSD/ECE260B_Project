@@ -6,7 +6,7 @@
 - note that in numerator also, absolute value is used, in both RTL and TB, as per the canvas discussion. 
 ### Synthesis
 - did two synth runs - with and without SRAM. The with SRAM run is what we will use for reporting synth power, area, timing
-- *typical* libraries are being used for all synthesis runs
+- *worst case* libraries are being used for all synthesis runs
 ### SRAM PNR
 - there is only one verilog fileset (in the rtl/ subdirectory) but for PNR, the gate-level netlist from synthesis is *copied* to the pnr's netlist/ subdirectory
 - had to remove filler/DCAP cells from SRAM PnR for it to work
@@ -34,16 +34,19 @@
 # LOGISTICS
 ## Next steps at this time
 - SRAM PnR (this plus core w/o SRAM PnR goes into core hierarchical PnR) --> DONE 
-- single core hierarchical PnR (also goes into single core GLS)
-- single core GLS: worth it to use synth netlist instead of PNR netlist? yes, let's run it and see
+- single core synthesis -- increase clock time period to get rid of timing violations, switch to WC libs --> WIP
+- single core hierarchical PnR (also goes into single core GLS) --> WIP
+- single core GLS: worth it to use synth netlist instead of PNR netlist? yes, let's run it and see --> debug WIP
 - dual core RTL/TB
+- norm X V calculations for single core
  
 ## Work Distribution
 - single core (without SRAMs) RTL, TB --> Shaurya --> DONE
 - SRAM PnR --> Shaurya --> DONE
-- single core hierarchical PnR --> Mayank, Soumil
-- single core GLS (synth/PnR) --> Shaurya
-- dual core RTL, TB --> Divyang, Navya
+- single core hierarchical PnR --> Mayank, Soumil --> WIP
+- single core GLS (synth/PnR) --> Shaurya, Mayank --> WIP
+- dual core RTL, TB --> Divyang, Navya --> WIP
+- single core norm X V calculations - Ishita --> Start Monday
 - dual core PnR --> LATER 
 - dual core GLS --> LATER 
 - optimizations --> LATER
