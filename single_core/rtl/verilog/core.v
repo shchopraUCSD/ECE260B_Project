@@ -118,7 +118,8 @@ sfp_row #(.bw(bw), .bw_psum(bw_psum), .col(col)) sfp_row_instance(
 		.sum_in(24'b0),
 		.sum_out(sum_out),
 		.sfp_in(pmem_out),
-		.sfp_out(sfp_out)
+		.sfp_out(sfp_out),
+        .reset(reset)
 );
 
 

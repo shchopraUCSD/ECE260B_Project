@@ -7,7 +7,7 @@ Report : power
         -analysis_effort low
 Design : core
 Version: K-2015.06-SP2
-Date   : Sat Mar 15 21:18:38 2025
+Date   : Sun Mar 16 14:33:36 2025
 ****************************************
 
 
@@ -128,8 +128,6 @@ fifo_mux_2_1_bw24_simd1_26
                        ZeroWireload      tcbn65gpluswc
 fifo_mux_2_1_bw24_simd1_27
                        ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw24_simd1_2
-                       ZeroWireload      tcbn65gpluswc
 fifo_mux_2_1_bw24_simd1_0
                        ZeroWireload      tcbn65gpluswc
 fifo_mux_2_1_bw24_simd1_1
@@ -158,37 +156,7 @@ fifo_mux_2_1_bw24_simd1_12
                        ZeroWireload      tcbn65gpluswc
 fifo_mux_2_1_bw24_simd1_13
                        ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_0
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_1
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_2
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_3
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_4
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_5
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_6
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_7
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_8
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_9
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_10
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_11
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_12
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_13
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw20_simd1_14
-                       ZeroWireload      tcbn65gpluswc
-fifo_mux_8_1_bw24_simd1_0
+fifo_mux_8_1_bw24_simd1_2
                        ZeroWireload      tcbn65gpluswc
 fifo_mux_2_1_bw20_simd1_0
                        ZeroWireload      tcbn65gpluswc
@@ -428,6 +396,38 @@ fifo_mux_2_1_bw20_simd1_117
                        ZeroWireload      tcbn65gpluswc
 fifo_mux_2_1_bw20_simd1_118
                        ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_0
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_1
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_2
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_3
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_4
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_5
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_6
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_7
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_8
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_9
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_10
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_11
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_12
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_13
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw20_simd1_14
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw24_simd1_0
+                       ZeroWireload      tcbn65gpluswc
 fifo_mux_16_1_bw20_simd1_0
                        ZeroWireload      tcbn65gpluswc
 fifo_mux_16_1_bw20_simd1_1
@@ -451,12 +451,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =  11.7144 mW   (97%)
-  Net Switching Power  = 332.2303 uW    (3%)
+  Cell Internal Power  =  11.6752 mW   (98%)
+  Net Switching Power  = 290.0916 uW    (2%)
                          ---------
-Total Dynamic Power    =  12.0466 mW  (100%)
+Total Dynamic Power    =  11.9653 mW  (100%)
 
-Cell Leakage Power     =   1.4715 mW
+Cell Leakage Power     =   1.5695 mW
 
 
                  Internal         Switching           Leakage            Total
@@ -466,9 +466,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          11.3423        2.3337e-02        4.0431e+05           11.7699  (  87.07%)
+register          11.3457        2.6079e-02        4.0525e+05           11.7770  (  87.01%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.3721            0.3089        1.0672e+06            1.7482  (  12.93%)
+combinational      0.3296            0.2640        1.1642e+06            1.7578  (  12.99%)
 --------------------------------------------------------------------------------------------------
-Total             11.7144 mW         0.3322 mW     1.4715e+06 nW        13.5181 mW
+Total             11.6753 mW         0.2901 mW     1.5695e+06 nW        13.5348 mW
 1

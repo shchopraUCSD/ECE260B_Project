@@ -1,5 +1,5 @@
 # Floorplan
-floorPlan -site core -r 1 0.40 10.0 10.0 10.0 10.0
+floorPlan -site core -r 1 0.50 10.0 10.0 10.0 10.0
 
 globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
 globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
@@ -12,18 +12,18 @@ setAddStripeMode -break_at {block_ring}
 # note that power stripes in SRAMs are VERTICAL
 addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit M1 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit M1 -number_of_sets 25 -ybottom_offset 5 -skip_via_on_pin Standardcell -stacked_via_top_layer M8 -padcore_ring_top_layer_limit M1 -spacing 1 -merge_stripes_value 0.1 -direction horizontal -layer M5 -block_ring_bottom_layer_limit M1 -ytop_offset 5 -width 1 -area {} -nets {VDD VSS} -stacked_via_bottom_layer M1
 
-setObjFPlanBox Instance qmem_instance 48.9515 579.2215 209.5515 742.6215
-setObjFPlanBox Instance kmem_instance 48.9515 379.2215 209.5515 542.6215
-setObjFPlanBox Instance psum_mem_instance 564.5235 43.8655 727.9235 204.4655
+setObjFPlanBox Instance qmem_instance 48.9515 379.2215 209.5515 542.6215
+setObjFPlanBox Instance kmem_instance 48.9515 179.2215 209.5515 342.6215
+setObjFPlanBox Instance psum_mem_instance 464.5235 65.8655 627.9235 226.4655
 
 
 flipOrRotateObject -rotate R90 -name qmem_instance
 flipOrRotateObject -rotate R90 -name kmem_instance
 flipOrRotateObject -flip MX -name psum_mem_instance
 
-createRouteBlk -exceptpgnet -cover -inst qmem_instance -layer {M1 M2 M3 M4}
-createRouteBlk -exceptpgnet -cover -inst kmem_instance -layer {M1 M2 M3 M4}
-createRouteBlk -exceptpgnet -cover -inst psum_mem_instance -layer {M1 M2 M3 M4}
+#createRouteBlk -exceptpgnet -cover -inst qmem_instance -layer {M1 M2 M3 M4}
+#createRouteBlk -exceptpgnet -cover -inst kmem_instance -layer {M1 M2 M3 M4}
+#createRouteBlk -exceptpgnet -cover -inst psum_mem_instance -layer {M1 M2 M3 M4}
 
 addHaloToBlock {3 3 3 3} qmem_instance 
 addHaloToBlock {3 3 3 3} kmem_instance 

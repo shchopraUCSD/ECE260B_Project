@@ -38,9 +38,11 @@ set compile_effort   "high"
 set compile_no_new_cells_at_top_level false
 set hdlin_enable_vpp true
 set hdlin_auto_save_templates false
+set hdlin_ff_always_sync_set_reset true
 
 define_design_lib WORK -path .template
 set verilogout_single_bit false
+
 
 # read RTL
 analyze -format verilog -lib WORK fifo_depth16_cp.v

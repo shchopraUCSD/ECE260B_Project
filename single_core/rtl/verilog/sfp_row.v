@@ -1,6 +1,6 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-module sfp_row (clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out);
+module sfp_row (clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out, reset);
 
   parameter col = 8;
   parameter bw = 8;
@@ -10,6 +10,7 @@ module sfp_row (clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out);
   input  clk, div, acc, fifo_ext_rd;
   input  [bw_psum+3:0] sum_in;
   input  [col*bw_psum-1:0] sfp_in;
+  input  reset;
   wire  [col*bw_psum-1:0] abs;
   reg    div_q;
   output [col*bw_psum-1:0] sfp_out;
