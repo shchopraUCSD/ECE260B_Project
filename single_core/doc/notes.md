@@ -13,6 +13,7 @@
 ### Single Core PNR
 - see suggested floorplan image, srams will need appropriate rotation, keep mem\_in on left, sum\_out on right (keeping 2 dual cores, left and right, in mind) and output at bottom (right below psum mem's Q port) 
 - for netlist/ subdirectory in hierarchical PNR, have copied the netlist from the synth run *without* the SRAMs (i.e. SRAMs are a black box) 
+- remove DCAPs for now since density was too high (same problem as SRAM) --> come back to this later
 ### Single Core GLS
 - TBD. 
 - should we use synth netlist? or directly PNR netlist? --> give a run with synth netlist and see

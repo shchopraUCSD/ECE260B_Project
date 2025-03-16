@@ -1,9 +1,10 @@
-set top_module sram_w8
-set rtlPath "/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog"
+set top_module sram_w8 
+set uname $tcl_platform(user)
+set rtlPath "/home/linux/ieng6/ee260bwi25/$uname/ECE260B_Project/single_core/rtl/verilog"
 
 # Target library
-# FIXME use typical corner
-set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db} 
+# FIXME use worst corner
+set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db} 
 set link_library $target_library
 set symbol_library {}
 set wire_load_mode enclosed

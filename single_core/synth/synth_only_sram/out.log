@@ -1,19 +1,19 @@
 Information: Variable 'hdlin_enable_vpp' is obsolete and is being ignored. (INFO-100)
 Running PRESTO HDLC
-Compiling source file /home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/sram_w8.v
+Compiling source file /home/linux/ieng6/ee260bwi25/shchopra/ECE260B_Project/single_core/rtl/verilog/sram_w8.v
 Presto compilation completed successfully.
-Loading db file '/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db'
+Loading db file '/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db'
 Warning: Detected use of obsolete/unsupported feature.  The following
 	will not be available in a future release of the application:
 	elaborate -update. Use plain elaborate instead (CMD-100)
 Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/gtech.db'
 Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/standard.sldb'
-  Loading link library 'tcbn65gplustc'
+  Loading link library 'tcbn65gpluswc'
   Loading link library 'gtech'
 Running PRESTO HDLC
 
 Statistics for case statements in always block at line 40 in file
-	'/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/sram_w8.v'
+	'/home/linux/ieng6/ee260bwi25/shchopra/ECE260B_Project/single_core/rtl/verilog/sram_w8.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -23,7 +23,7 @@ Statistics for case statements in always block at line 40 in file
 
 Inferred memory devices in process
 	in routine sram_w8 line 40 in file
-		'/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/rtl/verilog/sram_w8.v'.
+		'/home/linux/ieng6/ee260bwi25/shchopra/ECE260B_Project/single_core/rtl/verilog/sram_w8.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -45,8 +45,8 @@ Current design is 'sram_w8'.
   Linking design 'sram_w8'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  sram_w8                     /home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_only_sram/sram_w8.db
-  tcbn65gplustc (library)     /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db
+  sram_w8                     /home/linux/ieng6/ee260bwi25/shchopra/ECE260B_Project/single_core/synth/synth_only_sram/sram_w8.db
+  tcbn65gpluswc (library)     /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db
 
 
 Reading SDC version 2.0...
@@ -339,7 +339,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 
   Simplifying Design 'sram_w8'
 
-Loaded alib file './alib-52/tcbn65gplustc.db.alib'
+Loaded alib file './alib-52/tcbn65gpluswc.db.alib'
 Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
@@ -348,8 +348,8 @@ Information: State dependent leakage is now switched from on to off.
 
   Updating timing information
 Information: Updating design information... (UID-85)
-Information: The library cell 'TIEL' in the library 'tcbn65gplustc' is not characterized for internal power. (PWR-536)
-Information: The library cell 'TIEH' in the library 'tcbn65gplustc' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEL' in the library 'tcbn65gpluswc' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEH' in the library 'tcbn65gpluswc' is not characterized for internal power. (PWR-536)
 Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
 
   Beginning Mapping Optimizations  (Ultra High effort)
@@ -405,35 +405,35 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:08   12506.8      0.00       0.0       0.0                           56898.8398      0.00  
-    0:00:08   12506.8      0.00       0.0       0.0                           56898.8398      0.00  
-    0:00:08   12506.8      0.00       0.0       0.0                           56898.8398      0.00  
-    0:00:08   12506.8      0.00       0.0       0.0                           56898.8398      0.00  
+    0:00:09   12513.6      0.00       0.0       0.0                           78046.9062      0.00  
+    0:00:09   12513.6      0.00       0.0       0.0                           78046.9062      0.00  
+    0:00:09   12513.6      0.00       0.0       0.0                           78046.9062      0.00  
+    0:00:09   12513.6      0.00       0.0       0.0                           78046.9062      0.00  
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:09   12495.2      0.00       0.0       0.0                           56566.7031      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           77510.5938      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -443,7 +443,7 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:09   12495.2      0.00       0.0       0.0                           56039.1211      0.00  
+    0:00:10   12494.9      0.00       0.0       0.0                           76342.0625      0.00  
   Global Optimization (Phase 32)
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
@@ -455,44 +455,44 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
   Global Optimization (Phase 40)
   Global Optimization (Phase 41)
   Global Optimization (Phase 42)
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
 
                                   TOTAL                                                            
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:10   12492.7      0.00       0.0       0.0                           53253.4844      0.00  
-    0:00:10   12482.3      0.00       0.0       0.0                           53244.4688      0.00  
-    0:00:10   12482.3      0.00       0.0       0.0                           53244.4688      0.00  
-    0:00:10   12482.3      0.00       0.0       0.0                           53244.4688      0.00  
-    0:00:11   12482.3      0.00       0.0       0.0                           53244.4688      0.00  
-    0:00:11   12481.6      0.00       0.0       0.0                           53238.6523      0.00  
-    0:00:11   12481.6      0.00       0.0       0.0                           53238.6523      0.00  
-    0:00:11   12481.6      0.00       0.0       0.0                           53238.6523      0.00  
-    0:00:11   12481.6      0.00       0.0       0.0                           53238.6523      0.00  
-    0:00:11   12481.2      0.00       0.0       0.0                           53238.6250      0.00  
-Loading db file '/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db'
+    0:00:11   12494.2      0.00       0.0       0.0                           72122.9844      0.00  
+    0:00:11   12478.0      0.00       0.0       0.0                           71961.1719      0.00  
+    0:00:11   12478.0      0.00       0.0       0.0                           71961.1719      0.00  
+    0:00:11   12478.0      0.00       0.0       0.0                           71961.1719      0.00  
+    0:00:11   12478.0      0.00       0.0       0.0                           71961.1719      0.00  
+    0:00:12   12477.2      0.00       0.0       0.0                           71950.3359      0.00  
+    0:00:12   12477.2      0.00       0.0       0.0                           71950.3359      0.00  
+    0:00:12   12477.2      0.00       0.0       0.0                           71950.3359      0.00  
+    0:00:12   12477.2      0.00       0.0       0.0                           71950.3359      0.00  
+    0:00:12   12475.8      0.00       0.0       0.0                           71923.5781      0.00  
+Loading db file '/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db'
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -505,7 +505,7 @@ Warning: Design 'sram_w8' contains 1 high-fanout nets. A fanout number of 1000 w
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Current design is 'sram_w8'.
-Writing verilog file '/home/linux/ieng6/ee260bwi25/shchopra/project/single_core/synth/synth_only_sram/sram_w8.out.v'.
+Writing verilog file '/home/linux/ieng6/ee260bwi25/shchopra/ECE260B_Project/single_core/synth/synth_only_sram/sram_w8.out.v'.
 Error: couldn't open "log/sram_w8_area.rep": no such file or directory
 	Use error_info for more info. (CMD-013)
 Error: can't read "inFile": no such variable

@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version K-2015.06-SP2 for linux64 -- Aug 31, 2015
-#@ # Date:   Fri Mar 14 16:16:17 2025
-#@ # Run by: mak025@ieng6-ece-09.ucsd.edu
+#@ # Date:   Sat Mar 15 19:08:59 2025
+#@ # Run by: shchopra@ieng6-ece-05.ucsd.edu
 #@ 
 
 source /software/nonrdist64/dc-2015.06-64/admin/setup/.synopsys_dc.setup
@@ -3788,7 +3788,7 @@ source /software/nonrdist64/dc-2015.06-64/admin/setup/.synopsys_dc.setup
 #@ }
 #@ # -- End source /software/nonrdist64/dc-2015.06-64/admin/setup/.synopsys_dc.setup
 
-source run_dc.tcl
+source run_dc.tcl > out.log
 #@ # -- Starting source run_dc.tcl
 
 #@ set top_module core
@@ -3796,8 +3796,8 @@ source run_dc.tcl
 #@ set rtlPath "/home/linux/ieng6/ee260bwi25/$uname/ECE260B_Project/single_core/rtl/verilog"
 #@ 
 #@ # Target library
-#@ # FIXME use typical corner
-#@ set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db} 
+#@ # FIXME use worst corner
+#@ set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db} 
 #@ set link_library $target_library
 #@ set symbol_library {}
 #@ set wire_load_mode enclosed
@@ -3939,4 +3939,6 @@ source run_dc.tcl
 #@ 
 #@ # -- End source run_dc.tcl
 
+report_area > core_area.log
+report_reference > core_reference.log
 exit
