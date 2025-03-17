@@ -17,8 +17,8 @@ setObjFPlanBox Instance kmem_instance 48.9515 179.2215 209.5515 342.6215
 setObjFPlanBox Instance psum_mem_instance 464.5235 65.8655 627.9235 226.4655
 
 
-flipOrRotateObject -rotate R90 -name qmem_instance
-flipOrRotateObject -rotate R90 -name kmem_instance
+flipOrRotateObject -rotate R270 -name qmem_instance
+flipOrRotateObject -rotate R270 -name kmem_instance
 flipOrRotateObject -flip MX -name psum_mem_instance
 
 #createRouteBlk -exceptpgnet -cover -inst qmem_instance -layer {M1 M2 M3 M4}
