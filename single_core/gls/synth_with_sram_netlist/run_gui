@@ -9,6 +9,7 @@ xrun \
 -define GLS_RUN \
 -define INITIALIZE_MEMORY \
 -xminitialize 0 \
+-input probes.tcl \
 -v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v \
 -v ../../synth/synth_with_sram/core.out.v \
 -v ../../rtl/verilog/fullchip.v \
