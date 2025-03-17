@@ -2,7 +2,9 @@
 *.swo
 *.swn
 *.nfs*
+*.vcd
 **/*.vcd
+compiled
 **/compiled
 *.alib
 *.svf
