@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Ultra(TM) in wire load mode
 // Version   : K-2015.06-SP2
-// Date      : Sun Mar 16 23:43:12 2025
+// Date      : Mon Mar 17 14:14:23 2025
 /////////////////////////////////////////////////////////////
 
 
@@ -67332,12 +67332,12 @@ module core ( clk, sum_out, mem_in, out, inst, reset );
         inst[7:6]) );
   ofifo_col8_bw20 ofifo_inst ( .clk(clk), .in(array_out), .out(fifo_out), .rd(
         inst[16]), .wr(fifo_wr), .o_valid(), .reset(reset), .o_full() );
-  sram_w8 qmem_instance ( .CLK(clk), .D(mem_in), .Q(qmem_out), .CEN(n_0_net_), 
-        .WEN(n_1_net_), .A(inst[15:12]) );
-  sram_w8 kmem_instance ( .CLK(clk), .D(mem_in), .Q(kmem_out), .CEN(n_2_net_), 
-        .WEN(n_3_net_), .A(inst[15:12]) );
-  sram_w8 psum_mem_instance ( .CLK(clk), .D(pmem_in), .Q(out), .CEN(n_4_net_), 
-        .WEN(n_5_net_), .A(inst[11:8]) );
+  sram_w8_64b qmem_instance ( .CLK(clk), .D(mem_in), .Q(qmem_out), .CEN(
+        n_0_net_), .WEN(n_1_net_), .A(inst[15:12]) );
+  sram_w8_64b kmem_instance ( .CLK(clk), .D(mem_in), .Q(kmem_out), .CEN(
+        n_2_net_), .WEN(n_3_net_), .A(inst[15:12]) );
+  sram_w8_160b psum_mem_instance ( .CLK(clk), .D(pmem_in), .Q(out), .CEN(
+        n_4_net_), .WEN(n_5_net_), .A(inst[11:8]) );
   sfp_row_col8_bw8_bw_psum20 sfp_row_instance ( .clk(clk), .acc(inst[17]), 
         .div(inst[18]), .fifo_ext_rd(1'b0), .sum_in({1'b0, 1'b0, 1'b0, 1'b0, 
         1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 

@@ -9,7 +9,7 @@ Report : timing
         -capacitance
 Design : core
 Version: K-2015.06-SP2
-Date   : Sun Mar 16 23:31:55 2025
+Date   : Mon Mar 17 14:04:50 2025
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -32,7 +32,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -46,8 +46,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -331,7 +331,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -345,8 +345,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -626,7 +626,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -640,8 +640,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -925,7 +925,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -939,8 +939,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -1216,7 +1216,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -1230,8 +1230,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -1507,7 +1507,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -1521,8 +1521,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -1808,7 +1808,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -1822,8 +1822,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -2099,7 +2099,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -2113,8 +2113,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -2404,7 +2404,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -2418,8 +2418,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -2709,7 +2709,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -2723,8 +2723,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -3014,7 +3014,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -3028,8 +3028,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -3307,7 +3307,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -3321,8 +3321,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -3600,7 +3600,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -3614,8 +3614,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -3905,7 +3905,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -3919,8 +3919,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -4218,7 +4218,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -4232,8 +4232,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -4535,7 +4535,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -4549,8 +4549,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -4848,7 +4848,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -4862,8 +4862,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -5161,7 +5161,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -5175,8 +5175,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -5474,7 +5474,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -5488,8 +5488,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -5779,7 +5779,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -5793,8 +5793,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -6092,7 +6092,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -6106,8 +6106,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -6405,7 +6405,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -6419,8 +6419,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -6722,7 +6722,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -6736,8 +6736,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -7039,7 +7039,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -7053,8 +7053,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -7352,7 +7352,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -7366,8 +7366,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -7665,7 +7665,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -7679,8 +7679,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -7978,7 +7978,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -7992,8 +7992,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -8291,7 +8291,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -8305,8 +8305,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -8604,7 +8604,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -8618,8 +8618,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -8909,7 +8909,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -8923,8 +8923,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -9214,7 +9214,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -9228,8 +9228,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -9519,7 +9519,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -9533,8 +9533,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -9832,7 +9832,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -9846,8 +9846,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -10145,7 +10145,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -10159,8 +10159,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -10458,7 +10458,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -10472,8 +10472,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -10771,7 +10771,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -10785,8 +10785,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -11088,7 +11088,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -11102,8 +11102,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -11405,7 +11405,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -11419,8 +11419,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -11722,7 +11722,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -11736,8 +11736,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -12039,7 +12039,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -12053,8 +12053,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -12356,7 +12356,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -12370,8 +12370,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -12673,7 +12673,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -12687,8 +12687,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -12700,7 +12700,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -12952,7 +12952,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -12966,8 +12966,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -13261,7 +13261,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -13275,8 +13275,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -13288,7 +13288,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -13540,7 +13540,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -13554,8 +13554,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -13567,7 +13567,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -13813,7 +13813,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -13827,8 +13827,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -14140,7 +14140,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -14154,8 +14154,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -14441,7 +14441,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -14455,8 +14455,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -14742,7 +14742,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -14756,8 +14756,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -15043,7 +15043,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -15057,8 +15057,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -15344,7 +15344,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -15358,8 +15358,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -15645,7 +15645,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -15659,8 +15659,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -15946,7 +15946,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -15960,8 +15960,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -16247,7 +16247,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -16261,8 +16261,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -16564,7 +16564,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -16578,8 +16578,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -16873,7 +16873,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -16887,8 +16887,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -17182,7 +17182,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -17196,8 +17196,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -17491,7 +17491,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -17505,8 +17505,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -17800,7 +17800,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -17814,8 +17814,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -18109,7 +18109,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -18123,8 +18123,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -18418,7 +18418,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -18432,8 +18432,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -18445,7 +18445,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -18683,7 +18683,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -18697,8 +18697,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -19002,7 +19002,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -19016,8 +19016,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -19319,7 +19319,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -19333,8 +19333,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -19346,7 +19346,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -19598,7 +19598,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -19612,8 +19612,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -19915,7 +19915,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -19929,8 +19929,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -20226,7 +20226,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -20240,8 +20240,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -20537,7 +20537,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -20551,8 +20551,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -20858,7 +20858,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -20872,8 +20872,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -20885,7 +20885,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -21135,7 +21135,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -21149,8 +21149,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -21468,7 +21468,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -21482,8 +21482,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -21789,7 +21789,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -21803,8 +21803,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -22086,7 +22086,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -22100,8 +22100,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -22401,7 +22401,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -22415,8 +22415,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -22720,7 +22720,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -22734,8 +22734,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -23041,7 +23041,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -23055,8 +23055,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -23362,7 +23362,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -23376,8 +23376,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -23683,7 +23683,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -23697,8 +23697,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -23996,7 +23996,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -24010,8 +24010,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -24291,7 +24291,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -24305,8 +24305,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -24612,7 +24612,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -24626,8 +24626,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -24933,7 +24933,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -24947,8 +24947,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -24960,7 +24960,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -25202,7 +25202,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -25216,8 +25216,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -25523,7 +25523,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -25537,8 +25537,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -25832,7 +25832,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -25846,8 +25846,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -26141,7 +26141,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -26155,8 +26155,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -26450,7 +26450,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -26464,8 +26464,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -26759,7 +26759,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -26773,8 +26773,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -26786,7 +26786,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -27028,7 +27028,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -27042,8 +27042,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -27055,7 +27055,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -27297,7 +27297,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -27311,8 +27311,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -27324,7 +27324,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -27566,7 +27566,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -27580,8 +27580,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -27873,7 +27873,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -27887,8 +27887,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -28180,7 +28180,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -28194,8 +28194,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -28487,7 +28487,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -28501,8 +28501,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -28802,7 +28802,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -28816,8 +28816,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -29109,7 +29109,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -29123,8 +29123,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -29416,7 +29416,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -29430,8 +29430,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -29443,7 +29443,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -29685,7 +29685,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -29699,8 +29699,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -29712,7 +29712,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f
@@ -29954,7 +29954,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -29968,8 +29968,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -30275,7 +30275,7 @@ Wire Load Model Mode: segmented
   fifo_depth16_bw20_simd1_2 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_1 ZeroWireload   tcbn65gpluswc
   fifo_depth16_bw20_simd1_0 ZeroWireload   tcbn65gpluswc
-  sram_w8_sram_bit64_0 ZeroWireload        tcbn65gpluswc
+  sram_w8_64b_0      ZeroWireload          tcbn65gpluswc
   fifo_depth16_bw24_0 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw24_1 ZeroWireload         tcbn65gpluswc
   fifo_depth16_bw20_simd1_6 ZeroWireload   tcbn65gpluswc
@@ -30289,8 +30289,8 @@ Wire Load Model Mode: segmented
   mac_col_bw8_bw_psum20_pr8_col_id2 ZeroWireload tcbn65gpluswc
   mac_col_bw8_bw_psum20_pr8_col_id1 ZeroWireload tcbn65gpluswc
   sfp_row_col8_bw8_bw_psum20 ZeroWireload  tcbn65gpluswc
-  sram_w8_sram_bit160 ZeroWireload         tcbn65gpluswc
-  sram_w8_sram_bit64_1 ZeroWireload        tcbn65gpluswc
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+  sram_w8_64b_1      ZeroWireload          tcbn65gpluswc
   ofifo_col8_bw20    ZeroWireload          tcbn65gpluswc
   core               ZeroWireload          tcbn65gpluswc
   mac_array_col8_bw8_bw_psum20_pr8 ZeroWireload tcbn65gpluswc
@@ -30302,7 +30302,7 @@ Wire Load Model Mode: segmented
   psum_mem_instance/Q_reg_0_/CP (DFQD1)                            0.000     0.000 #    0.000 r
   psum_mem_instance/Q_reg_0_/Q (DFQD1)                             0.049     0.144      0.144 f
   psum_mem_instance/Q[0] (net)                  6        0.007               0.000      0.144 f
-  psum_mem_instance/Q[0] (sram_w8_sram_bit160)                               0.000      0.144 f
+  psum_mem_instance/Q[0] (sram_w8_160b)                                      0.000      0.144 f
   n310 (net)                                             0.007               0.000      0.144 f
   sfp_row_instance/sfp_in[0] (sfp_row_col8_bw8_bw_psum20)                    0.000      0.144 f
   sfp_row_instance/sfp_in[0] (net)                       0.007               0.000      0.144 f

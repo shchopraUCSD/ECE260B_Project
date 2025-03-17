@@ -12,9 +12,9 @@ setAddStripeMode -break_at {block_ring}
 # note that power stripes in SRAMs are VERTICAL
 addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit M1 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit M1 -number_of_sets 25 -ybottom_offset 5 -skip_via_on_pin Standardcell -stacked_via_top_layer M8 -padcore_ring_top_layer_limit M1 -spacing 1 -merge_stripes_value 0.1 -direction horizontal -layer M5 -block_ring_bottom_layer_limit M1 -ytop_offset 5 -width 1 -area {} -nets {VDD VSS} -stacked_via_bottom_layer M1
 
-setObjFPlanBox Instance qmem_instance 48.9515 379.2215 209.5515 542.6215
-setObjFPlanBox Instance kmem_instance 48.9515 179.2215 209.5515 342.6215
-setObjFPlanBox Instance psum_mem_instance 464.5235 65.8655 627.9235 226.4655
+setObjFPlanBox Instance qmem_instance 50 280 166.4 395.6
+setObjFPlanBox Instance kmem_instance 50 135 166.4 250.6
+setObjFPlanBox Instance psum_mem_instance 400 85 591.23 275.4
 
 
 flipOrRotateObject -rotate R270 -name qmem_instance

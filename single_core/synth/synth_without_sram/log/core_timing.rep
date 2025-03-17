@@ -1,4 +1,4 @@
-Warning: Design 'core' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'core' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : timing
@@ -10,7 +10,7 @@ Report : timing
         -capacitance
 Design : core
 Version: K-2015.06-SP2
-Date   : Sun Mar 16 23:43:21 2025
+Date   : Mon Mar 17 14:14:34 2025
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
