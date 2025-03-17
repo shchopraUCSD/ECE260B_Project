@@ -42,6 +42,7 @@ set hdlin_auto_save_templates false
 
 define_design_lib WORK -path .template
 set verilogout_single_bit false
+set verilogout_show_unconnected_pins true
 
 # read RTL
 analyze -format verilog -lib WORK sram_w8.v

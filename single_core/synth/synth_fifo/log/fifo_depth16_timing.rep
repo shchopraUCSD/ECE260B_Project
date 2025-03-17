@@ -9,7 +9,7 @@ Report : timing
         -capacitance
 Design : fifo_depth16
 Version: K-2015.06-SP2
-Date   : Sun Mar 16 11:57:49 2025
+Date   : Sun Mar 16 20:09:32 2025
 ****************************************
 
 Operating Conditions: NCCOM   Library: tcbn65gplustc

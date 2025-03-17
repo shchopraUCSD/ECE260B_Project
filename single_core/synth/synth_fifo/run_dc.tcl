@@ -42,6 +42,7 @@ set hdlin_ff_always_sync_set_reset true
 
 define_design_lib WORK -path .template
 set verilogout_single_bit false
+set verilogout_show_unconnected_pins true
 
 
 # read RTL
