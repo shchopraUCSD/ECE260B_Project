@@ -15,3 +15,5 @@ compiled
 **/simv*
 xcelium.d
 .template
+single_core/synth/synth_with_sram/command.log
+single_core/synth/synth_without_sram/command.log
