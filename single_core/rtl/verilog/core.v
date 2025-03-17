@@ -32,6 +32,8 @@ wire  ofifo_rd;
 wire [3:0] qkmem_add;
 wire [3:0] pmem_add;
 
+wire fifo_valid;
+
 wire  qmem_rd;
 wire  qmem_wr; 
 wire  kmem_rd;
@@ -127,8 +129,6 @@ sfp_row #(.bw(bw), .bw_psum(bw_psum), .col(col)) sfp_row_instance(
   always @(posedge clk) begin
 	  //if(sfp_div)
 		 //sfp_out_q <= sfp_out;
-      if(pmem_wr)
-         $display("Memory write to PSUM mem add %x %x ", pmem_add, pmem_in); 
   end
 
 

@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version K-2015.06-SP2 for linux64 -- Aug 31, 2015
-#@ # Date:   Sun Mar 16 12:11:05 2025
+#@ # Date:   Sun Mar 16 20:58:51 2025
 #@ # Run by: mak025@ieng6-ece-09.ucsd.edu
 #@ 
 
@@ -3836,6 +3836,7 @@ source run_dc.tcl
 #@ 
 #@ define_design_lib WORK -path .template
 #@ set verilogout_single_bit false
+#@ set verilogout_show_unconnected_pins true
 #@ 
 #@ # read RTL
 #@ analyze -format verilog -lib WORK core.v
@@ -3891,53 +3892,3 @@ source run_dc.tcl
 #@ # Source user compile options
 #@ # below command maintains RTL hierarchy
 #@ compile_ultra -no_autoungroup -timing_high_effort_script -exact_map
-#@ 
-#@ # Write Out Design - Hierarchical
-#@ current_design $top_module
-#@ 
-#@ change_names -rules verilog -hierarchy
-#@ 
-#@ write -format verilog -hier -output [format "%s%s" $top_module .out.v]
-#@ 
-#@ # Write Reports
-#@ redirect [format "%s%s" log/ $top_module _area.rep] { report_area }
-#@ # FIXME create a separate reference report to avoid appending issues
-#@ redirect [format "%s%s" log/ $top_module _reference.rep] { report_reference }
-#@ #redirect -append [format "%s%s%s" log/ $top_module _area.rep] { report_reference }
-#@ redirect [format "%s%s" log/ $top_module _area.rep] { report_area }
-#@ redirect [format "%s%s%s" log/ $top_module _power.rep] { report_power }
-#@ redirect [format "%s%s%s" log/ $top_module _timing.rep]   { report_timing -path full -max_paths 100 -nets -transition_time -capacitance -significant_digits 3 -nosplit}
-#@ 
-#@ set inFile  [open log/$top_module\_area.rep]
-#@ while { [gets $inFile line]>=0 } {
-#@     if { [regexp {Total cell area:} $line] } {
-#@         set AREA [lindex $line 3]
-#@     }
-#@ }
-#@ close $inFile
-#@ set inFile  [open log/$top_module\_power.rep]
-#@ while { [gets $inFile line]>=0 } {
-#@     if { [regexp {Total Dynamic Power} $line] } {
-#@         set PWR [lindex $line 4]
-#@     } elseif { [regexp {Cell Leakage Power} $line] } {  
-#@         set LEAK [lindex $line 4] 
-#@     }
-#@ }
-#@ close $inFile
-#@ 
-#@ set unmapped_designs [get_designs -filter "is_unmapped == true" $top_module]
-#@ if {  [sizeof_collection $unmapped_designs] != 0 } {
-#@ 	echo "****************************************************"
-#@ 	echo "* ERROR!!!! Compile finished with unmapped logic.  *"
-#@ 	echo "****************************************************"
-#@ }
-#@ # Done
-#@ sh date
-#@ sh uptime
-#@ 
-#@ # Done
-#@ echo "run.scr completed successfully"
-#@ 
-#@ # -- End source run_dc.tcl
-
-exit
