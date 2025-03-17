@@ -6,7 +6,7 @@
 **/*.vcd
 compiled
 **/compiled
-*.alib
+*.alib*
 *.svf
 *.cmd*
 *.log*
@@ -14,3 +14,4 @@ compiled
 **/waves.shm
 **/simv*
 xcelium.d
+.template
