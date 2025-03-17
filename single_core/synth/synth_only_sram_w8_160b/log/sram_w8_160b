@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : sram_w8_160b
+Version: K-2015.06-SP2
+Date   : Mon Mar 17 11:56:26 2025
+****************************************
+
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db)
+
+Number of ports:                          327
+Number of nets:                          2490
+Number of cells:                         2323
+Number of combinational cells:            883
+Number of sequential cells:              1440
+Number of macros/black boxes:               0
+Number of buf/inv:                         62
+Number of references:                      14
+
+Combinational area:               2147.039989
+Buf/Inv area:                       88.560004
+Noncombinational area:           13478.399506
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 15625.439495
+Total area:                 undefined
+1

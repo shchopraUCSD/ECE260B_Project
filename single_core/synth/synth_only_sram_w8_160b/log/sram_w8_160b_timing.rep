@@ -1,0 +1,2018 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 100
+        -transition_time
+        -capacitance
+Design : sram_w8_160b
+Version: K-2015.06-SP2
+Date   : Mon Mar 17 11:56:27 2025
+****************************************
+
+Operating Conditions: WCCOM   Library: tcbn65gpluswc
+Wire Load Model Mode: segmented
+
+  Startpoint: Q_reg_159_ (rising edge-triggered flip-flop)
+  Endpoint: Q[159] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_159_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_159_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[159] (net)                   1        0.050               0.000      0.430 r
+  Q[159] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_158_ (rising edge-triggered flip-flop)
+  Endpoint: Q[158] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_158_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_158_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[158] (net)                   1        0.050               0.000      0.430 r
+  Q[158] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_157_ (rising edge-triggered flip-flop)
+  Endpoint: Q[157] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_157_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_157_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[157] (net)                   1        0.050               0.000      0.430 r
+  Q[157] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_156_ (rising edge-triggered flip-flop)
+  Endpoint: Q[156] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_156_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_156_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[156] (net)                   1        0.050               0.000      0.430 r
+  Q[156] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_155_ (rising edge-triggered flip-flop)
+  Endpoint: Q[155] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_155_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_155_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[155] (net)                   1        0.050               0.000      0.430 r
+  Q[155] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_154_ (rising edge-triggered flip-flop)
+  Endpoint: Q[154] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_154_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_154_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[154] (net)                   1        0.050               0.000      0.430 r
+  Q[154] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_153_ (rising edge-triggered flip-flop)
+  Endpoint: Q[153] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_153_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_153_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[153] (net)                   1        0.050               0.000      0.430 r
+  Q[153] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_152_ (rising edge-triggered flip-flop)
+  Endpoint: Q[152] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_152_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_152_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[152] (net)                   1        0.050               0.000      0.430 r
+  Q[152] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_151_ (rising edge-triggered flip-flop)
+  Endpoint: Q[151] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_151_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_151_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[151] (net)                   1        0.050               0.000      0.430 r
+  Q[151] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_150_ (rising edge-triggered flip-flop)
+  Endpoint: Q[150] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_150_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_150_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[150] (net)                   1        0.050               0.000      0.430 r
+  Q[150] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_149_ (rising edge-triggered flip-flop)
+  Endpoint: Q[149] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_149_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_149_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[149] (net)                   1        0.050               0.000      0.430 r
+  Q[149] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_148_ (rising edge-triggered flip-flop)
+  Endpoint: Q[148] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_148_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_148_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[148] (net)                   1        0.050               0.000      0.430 r
+  Q[148] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_147_ (rising edge-triggered flip-flop)
+  Endpoint: Q[147] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_147_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_147_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[147] (net)                   1        0.050               0.000      0.430 r
+  Q[147] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_146_ (rising edge-triggered flip-flop)
+  Endpoint: Q[146] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_146_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_146_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[146] (net)                   1        0.050               0.000      0.430 r
+  Q[146] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_145_ (rising edge-triggered flip-flop)
+  Endpoint: Q[145] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_145_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_145_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[145] (net)                   1        0.050               0.000      0.430 r
+  Q[145] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_144_ (rising edge-triggered flip-flop)
+  Endpoint: Q[144] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_144_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_144_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[144] (net)                   1        0.050               0.000      0.430 r
+  Q[144] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_143_ (rising edge-triggered flip-flop)
+  Endpoint: Q[143] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_143_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_143_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[143] (net)                   1        0.050               0.000      0.430 r
+  Q[143] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_142_ (rising edge-triggered flip-flop)
+  Endpoint: Q[142] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_142_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_142_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[142] (net)                   1        0.050               0.000      0.430 r
+  Q[142] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_141_ (rising edge-triggered flip-flop)
+  Endpoint: Q[141] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_141_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_141_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[141] (net)                   1        0.050               0.000      0.430 r
+  Q[141] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_140_ (rising edge-triggered flip-flop)
+  Endpoint: Q[140] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_140_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_140_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[140] (net)                   1        0.050               0.000      0.430 r
+  Q[140] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_139_ (rising edge-triggered flip-flop)
+  Endpoint: Q[139] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_139_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_139_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[139] (net)                   1        0.050               0.000      0.430 r
+  Q[139] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_138_ (rising edge-triggered flip-flop)
+  Endpoint: Q[138] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_138_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_138_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[138] (net)                   1        0.050               0.000      0.430 r
+  Q[138] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_137_ (rising edge-triggered flip-flop)
+  Endpoint: Q[137] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_137_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_137_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[137] (net)                   1        0.050               0.000      0.430 r
+  Q[137] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_136_ (rising edge-triggered flip-flop)
+  Endpoint: Q[136] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_136_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_136_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[136] (net)                   1        0.050               0.000      0.430 r
+  Q[136] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_135_ (rising edge-triggered flip-flop)
+  Endpoint: Q[135] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_135_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_135_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[135] (net)                   1        0.050               0.000      0.430 r
+  Q[135] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_134_ (rising edge-triggered flip-flop)
+  Endpoint: Q[134] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_134_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_134_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[134] (net)                   1        0.050               0.000      0.430 r
+  Q[134] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_133_ (rising edge-triggered flip-flop)
+  Endpoint: Q[133] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_133_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_133_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[133] (net)                   1        0.050               0.000      0.430 r
+  Q[133] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_132_ (rising edge-triggered flip-flop)
+  Endpoint: Q[132] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_132_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_132_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[132] (net)                   1        0.050               0.000      0.430 r
+  Q[132] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_131_ (rising edge-triggered flip-flop)
+  Endpoint: Q[131] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_131_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_131_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[131] (net)                   1        0.050               0.000      0.430 r
+  Q[131] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_130_ (rising edge-triggered flip-flop)
+  Endpoint: Q[130] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_130_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_130_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[130] (net)                   1        0.050               0.000      0.430 r
+  Q[130] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_129_ (rising edge-triggered flip-flop)
+  Endpoint: Q[129] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_129_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_129_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[129] (net)                   1        0.050               0.000      0.430 r
+  Q[129] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_128_ (rising edge-triggered flip-flop)
+  Endpoint: Q[128] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_128_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_128_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[128] (net)                   1        0.050               0.000      0.430 r
+  Q[128] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_127_ (rising edge-triggered flip-flop)
+  Endpoint: Q[127] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_127_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_127_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[127] (net)                   1        0.050               0.000      0.430 r
+  Q[127] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_126_ (rising edge-triggered flip-flop)
+  Endpoint: Q[126] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_126_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_126_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[126] (net)                   1        0.050               0.000      0.430 r
+  Q[126] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_125_ (rising edge-triggered flip-flop)
+  Endpoint: Q[125] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_125_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_125_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[125] (net)                   1        0.050               0.000      0.430 r
+  Q[125] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_124_ (rising edge-triggered flip-flop)
+  Endpoint: Q[124] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_124_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_124_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[124] (net)                   1        0.050               0.000      0.430 r
+  Q[124] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_123_ (rising edge-triggered flip-flop)
+  Endpoint: Q[123] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_123_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_123_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[123] (net)                   1        0.050               0.000      0.430 r
+  Q[123] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_122_ (rising edge-triggered flip-flop)
+  Endpoint: Q[122] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_122_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_122_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[122] (net)                   1        0.050               0.000      0.430 r
+  Q[122] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_121_ (rising edge-triggered flip-flop)
+  Endpoint: Q[121] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_121_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_121_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[121] (net)                   1        0.050               0.000      0.430 r
+  Q[121] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_120_ (rising edge-triggered flip-flop)
+  Endpoint: Q[120] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_120_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_120_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[120] (net)                   1        0.050               0.000      0.430 r
+  Q[120] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_119_ (rising edge-triggered flip-flop)
+  Endpoint: Q[119] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_119_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_119_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[119] (net)                   1        0.050               0.000      0.430 r
+  Q[119] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_118_ (rising edge-triggered flip-flop)
+  Endpoint: Q[118] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_118_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_118_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[118] (net)                   1        0.050               0.000      0.430 r
+  Q[118] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_117_ (rising edge-triggered flip-flop)
+  Endpoint: Q[117] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_117_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_117_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[117] (net)                   1        0.050               0.000      0.430 r
+  Q[117] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_116_ (rising edge-triggered flip-flop)
+  Endpoint: Q[116] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_116_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_116_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[116] (net)                   1        0.050               0.000      0.430 r
+  Q[116] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_115_ (rising edge-triggered flip-flop)
+  Endpoint: Q[115] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_115_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_115_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[115] (net)                   1        0.050               0.000      0.430 r
+  Q[115] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_114_ (rising edge-triggered flip-flop)
+  Endpoint: Q[114] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_114_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_114_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[114] (net)                   1        0.050               0.000      0.430 r
+  Q[114] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_113_ (rising edge-triggered flip-flop)
+  Endpoint: Q[113] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_113_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_113_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[113] (net)                   1        0.050               0.000      0.430 r
+  Q[113] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_112_ (rising edge-triggered flip-flop)
+  Endpoint: Q[112] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_112_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_112_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[112] (net)                   1        0.050               0.000      0.430 r
+  Q[112] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_111_ (rising edge-triggered flip-flop)
+  Endpoint: Q[111] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_111_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_111_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[111] (net)                   1        0.050               0.000      0.430 r
+  Q[111] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_110_ (rising edge-triggered flip-flop)
+  Endpoint: Q[110] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_110_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_110_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[110] (net)                   1        0.050               0.000      0.430 r
+  Q[110] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_109_ (rising edge-triggered flip-flop)
+  Endpoint: Q[109] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_109_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_109_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[109] (net)                   1        0.050               0.000      0.430 r
+  Q[109] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_108_ (rising edge-triggered flip-flop)
+  Endpoint: Q[108] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_108_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_108_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[108] (net)                   1        0.050               0.000      0.430 r
+  Q[108] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_107_ (rising edge-triggered flip-flop)
+  Endpoint: Q[107] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_107_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_107_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[107] (net)                   1        0.050               0.000      0.430 r
+  Q[107] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_106_ (rising edge-triggered flip-flop)
+  Endpoint: Q[106] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_106_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_106_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[106] (net)                   1        0.050               0.000      0.430 r
+  Q[106] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_105_ (rising edge-triggered flip-flop)
+  Endpoint: Q[105] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_105_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_105_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[105] (net)                   1        0.050               0.000      0.430 r
+  Q[105] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_104_ (rising edge-triggered flip-flop)
+  Endpoint: Q[104] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_104_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_104_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[104] (net)                   1        0.050               0.000      0.430 r
+  Q[104] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_103_ (rising edge-triggered flip-flop)
+  Endpoint: Q[103] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_103_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_103_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[103] (net)                   1        0.050               0.000      0.430 r
+  Q[103] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_102_ (rising edge-triggered flip-flop)
+  Endpoint: Q[102] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_102_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_102_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[102] (net)                   1        0.050               0.000      0.430 r
+  Q[102] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_101_ (rising edge-triggered flip-flop)
+  Endpoint: Q[101] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_101_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_101_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[101] (net)                   1        0.050               0.000      0.430 r
+  Q[101] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_100_ (rising edge-triggered flip-flop)
+  Endpoint: Q[100] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_100_/CP (EDFQD1)                            0.684     0.000      0.000 r
+  Q_reg_100_/Q (EDFQD1)                             0.430     0.430      0.430 r
+  Q[100] (net)                   1        0.050               0.000      0.430 r
+  Q[100] (out)                                      0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_99_ (rising edge-triggered flip-flop)
+  Endpoint: Q[99] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_99_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_99_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[99] (net)                    1        0.050               0.000      0.430 r
+  Q[99] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_98_ (rising edge-triggered flip-flop)
+  Endpoint: Q[98] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_98_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_98_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[98] (net)                    1        0.050               0.000      0.430 r
+  Q[98] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_97_ (rising edge-triggered flip-flop)
+  Endpoint: Q[97] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_97_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_97_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[97] (net)                    1        0.050               0.000      0.430 r
+  Q[97] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_96_ (rising edge-triggered flip-flop)
+  Endpoint: Q[96] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_96_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_96_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[96] (net)                    1        0.050               0.000      0.430 r
+  Q[96] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_95_ (rising edge-triggered flip-flop)
+  Endpoint: Q[95] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_95_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_95_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[95] (net)                    1        0.050               0.000      0.430 r
+  Q[95] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_94_ (rising edge-triggered flip-flop)
+  Endpoint: Q[94] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_94_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_94_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[94] (net)                    1        0.050               0.000      0.430 r
+  Q[94] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_93_ (rising edge-triggered flip-flop)
+  Endpoint: Q[93] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_93_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_93_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[93] (net)                    1        0.050               0.000      0.430 r
+  Q[93] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_92_ (rising edge-triggered flip-flop)
+  Endpoint: Q[92] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_92_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_92_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[92] (net)                    1        0.050               0.000      0.430 r
+  Q[92] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_91_ (rising edge-triggered flip-flop)
+  Endpoint: Q[91] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_91_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_91_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[91] (net)                    1        0.050               0.000      0.430 r
+  Q[91] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_90_ (rising edge-triggered flip-flop)
+  Endpoint: Q[90] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_90_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_90_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[90] (net)                    1        0.050               0.000      0.430 r
+  Q[90] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_89_ (rising edge-triggered flip-flop)
+  Endpoint: Q[89] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_89_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_89_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[89] (net)                    1        0.050               0.000      0.430 r
+  Q[89] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_88_ (rising edge-triggered flip-flop)
+  Endpoint: Q[88] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_88_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_88_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[88] (net)                    1        0.050               0.000      0.430 r
+  Q[88] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_87_ (rising edge-triggered flip-flop)
+  Endpoint: Q[87] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_87_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_87_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[87] (net)                    1        0.050               0.000      0.430 r
+  Q[87] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_86_ (rising edge-triggered flip-flop)
+  Endpoint: Q[86] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_86_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_86_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[86] (net)                    1        0.050               0.000      0.430 r
+  Q[86] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_85_ (rising edge-triggered flip-flop)
+  Endpoint: Q[85] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_85_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_85_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[85] (net)                    1        0.050               0.000      0.430 r
+  Q[85] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_84_ (rising edge-triggered flip-flop)
+  Endpoint: Q[84] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_84_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_84_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[84] (net)                    1        0.050               0.000      0.430 r
+  Q[84] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_83_ (rising edge-triggered flip-flop)
+  Endpoint: Q[83] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_83_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_83_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[83] (net)                    1        0.050               0.000      0.430 r
+  Q[83] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_82_ (rising edge-triggered flip-flop)
+  Endpoint: Q[82] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_82_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_82_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[82] (net)                    1        0.050               0.000      0.430 r
+  Q[82] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_81_ (rising edge-triggered flip-flop)
+  Endpoint: Q[81] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_81_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_81_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[81] (net)                    1        0.050               0.000      0.430 r
+  Q[81] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_80_ (rising edge-triggered flip-flop)
+  Endpoint: Q[80] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_80_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_80_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[80] (net)                    1        0.050               0.000      0.430 r
+  Q[80] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_79_ (rising edge-triggered flip-flop)
+  Endpoint: Q[79] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_79_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_79_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[79] (net)                    1        0.050               0.000      0.430 r
+  Q[79] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_78_ (rising edge-triggered flip-flop)
+  Endpoint: Q[78] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_78_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_78_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[78] (net)                    1        0.050               0.000      0.430 r
+  Q[78] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_77_ (rising edge-triggered flip-flop)
+  Endpoint: Q[77] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_77_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_77_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[77] (net)                    1        0.050               0.000      0.430 r
+  Q[77] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_76_ (rising edge-triggered flip-flop)
+  Endpoint: Q[76] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_76_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_76_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[76] (net)                    1        0.050               0.000      0.430 r
+  Q[76] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_75_ (rising edge-triggered flip-flop)
+  Endpoint: Q[75] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_75_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_75_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[75] (net)                    1        0.050               0.000      0.430 r
+  Q[75] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_74_ (rising edge-triggered flip-flop)
+  Endpoint: Q[74] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_74_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_74_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[74] (net)                    1        0.050               0.000      0.430 r
+  Q[74] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_73_ (rising edge-triggered flip-flop)
+  Endpoint: Q[73] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_73_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_73_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[73] (net)                    1        0.050               0.000      0.430 r
+  Q[73] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_72_ (rising edge-triggered flip-flop)
+  Endpoint: Q[72] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_72_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_72_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[72] (net)                    1        0.050               0.000      0.430 r
+  Q[72] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_71_ (rising edge-triggered flip-flop)
+  Endpoint: Q[71] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_71_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_71_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[71] (net)                    1        0.050               0.000      0.430 r
+  Q[71] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_70_ (rising edge-triggered flip-flop)
+  Endpoint: Q[70] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_70_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_70_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[70] (net)                    1        0.050               0.000      0.430 r
+  Q[70] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_69_ (rising edge-triggered flip-flop)
+  Endpoint: Q[69] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_69_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_69_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[69] (net)                    1        0.050               0.000      0.430 r
+  Q[69] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_68_ (rising edge-triggered flip-flop)
+  Endpoint: Q[68] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_68_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_68_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[68] (net)                    1        0.050               0.000      0.430 r
+  Q[68] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_67_ (rising edge-triggered flip-flop)
+  Endpoint: Q[67] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_67_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_67_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[67] (net)                    1        0.050               0.000      0.430 r
+  Q[67] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_66_ (rising edge-triggered flip-flop)
+  Endpoint: Q[66] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_66_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_66_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[66] (net)                    1        0.050               0.000      0.430 r
+  Q[66] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_65_ (rising edge-triggered flip-flop)
+  Endpoint: Q[65] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_65_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_65_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[65] (net)                    1        0.050               0.000      0.430 r
+  Q[65] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_64_ (rising edge-triggered flip-flop)
+  Endpoint: Q[64] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_64_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_64_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[64] (net)                    1        0.050               0.000      0.430 r
+  Q[64] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_63_ (rising edge-triggered flip-flop)
+  Endpoint: Q[63] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_63_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_63_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[63] (net)                    1        0.050               0.000      0.430 r
+  Q[63] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_62_ (rising edge-triggered flip-flop)
+  Endpoint: Q[62] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_62_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_62_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[62] (net)                    1        0.050               0.000      0.430 r
+  Q[62] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_61_ (rising edge-triggered flip-flop)
+  Endpoint: Q[61] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_61_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_61_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[61] (net)                    1        0.050               0.000      0.430 r
+  Q[61] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Q_reg_60_ (rising edge-triggered flip-flop)
+  Endpoint: Q[60] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sram_w8_160b       ZeroWireload          tcbn65gpluswc
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  Q_reg_60_/CP (EDFQD1)                             0.684     0.000      0.000 r
+  Q_reg_60_/Q (EDFQD1)                              0.430     0.430      0.430 r
+  Q[60] (net)                    1        0.050               0.000      0.430 r
+  Q[60] (out)                                       0.430     0.000      0.430 r
+  data arrival time                                                      0.430
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
