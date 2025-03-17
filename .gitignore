@@ -2,9 +2,12 @@
 *.swo
 *.swn
 *.nfs*
-*.vcd
-compiled
+**/*.vcd
+**/compiled
 *.alib
 *.svf
 *.cmd*
 *.log*
+**/xrun*
+**/waves.shm
+**/simv*
