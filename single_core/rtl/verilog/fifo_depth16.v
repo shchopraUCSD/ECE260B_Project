@@ -2,7 +2,7 @@
 // Please do not spread this code without permission 
 module fifo_depth16 (rd_clk, wr_clk, in, out, rd, wr, o_full, o_empty, reset);
 
-  parameter bw = 4;
+  parameter bw = 8;
   parameter simd = 1;
 
   input  rd_clk;
@@ -47,7 +47,7 @@ module fifo_depth16 (rd_clk, wr_clk, in, out, rd, wr, o_full, o_empty, reset);
 
   fifo_mux_16_1 #(.bw(bw), .simd(simd)) fifo_mux_16_1a (.in0(q0), .in1(q1), .in2(q2), .in3(q3), .in4(q4), .in5(q5), .in6(q6), .in7(q7),
                                  .in8(q8), .in9(q9), .in10(q10), .in11(q11), .in12(q12), .in13(q13), .in14(q14), .in15(q15),
-	                         .sel(rd_ptr[3:0]), .out(out));
+                             .sel(rd_ptr[3:0]), .out(out));
 
 
  always @ (posedge rd_clk) begin

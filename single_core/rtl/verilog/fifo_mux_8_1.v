@@ -2,7 +2,7 @@
 // Please do not spread this code without permission 
 module fifo_mux_8_1 (out, sel, in0, in1, in2, in3, in4, in5, in6, in7 );
 
-  parameter bw = 4;
+  parameter bw = 8;
   parameter simd = 8;
 
   input  [2:0 ] sel ;

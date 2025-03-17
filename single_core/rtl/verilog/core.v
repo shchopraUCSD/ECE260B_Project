@@ -5,7 +5,7 @@ module core (clk, sum_out, mem_in, out, inst, reset);
 
 parameter col = 8;
 parameter bw = 8;
-parameter bw_psum = 2*bw+4;
+parameter bw_psum = 2*bw+4; //turns out to be 20
 parameter pr = 8;
 
 output [bw_psum+3:0] sum_out;
@@ -65,70 +65,70 @@ assign pmem_in = sfp_div ? sfp_out : fifo_out;
 assign out = pmem_out;
 
 mac_array #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) mac_array_instance (
-        .in(mac_in), 
-        .clk(clk), 
-        .reset(reset), 
-        .inst(inst[7:6]),     
-        .fifo_wr(fifo_wr),     
-	.out(array_out)
+    .in(mac_in), 
+    .clk(clk), 
+    .reset(reset), 
+    .inst(inst[7:6]),     
+    .fifo_wr(fifo_wr),     
+    .out(array_out)
 );
 
 ofifo #(.bw(bw_psum), .col(col))  ofifo_inst (
-        .reset(reset),
-        .clk(clk),
-        .in(array_out),
-        .wr(fifo_wr),
-        .rd(ofifo_rd),
-        .o_valid(fifo_valid),
-        .out(fifo_out)
+    .reset(reset),
+    .clk(clk),
+    .in(array_out),
+    .wr(fifo_wr),
+    .rd(ofifo_rd),
+    .o_valid(fifo_valid),
+    .out(fifo_out)
 );
 
 
-sram_w8 #(.sram_bit(pr*bw)) qmem_instance (
-        .CLK(clk),
-        .D(mem_in),
-        .Q(qmem_out),
-        .CEN(!(qmem_rd||qmem_wr)),
-        .WEN(!qmem_wr), 
-        .A(qkmem_add)
+sram_w8_64b qmem_instance (
+    .CLK(clk),
+    .D(mem_in),
+    .Q(qmem_out),
+    .CEN(!(qmem_rd||qmem_wr)),
+    .WEN(!qmem_wr), 
+    .A(qkmem_add)
 );
 
-sram_w8 #(.sram_bit(pr*bw)) kmem_instance (
-        .CLK(clk),
-        .D(mem_in),
-        .Q(kmem_out),
-        .CEN(!(kmem_rd||kmem_wr)),
-        .WEN(!kmem_wr), 
-        .A(qkmem_add)
+sram_w8_64b kmem_instance (
+    .CLK(clk),
+    .D(mem_in),
+    .Q(kmem_out),
+    .CEN(!(kmem_rd||kmem_wr)),
+    .WEN(!kmem_wr), 
+    .A(qkmem_add)
 );
 
-sram_w8 #(.sram_bit(col*bw_psum)) psum_mem_instance (
-        .CLK(clk),
-        .D(pmem_in),
-        .Q(pmem_out),
-        .CEN(!(pmem_rd||pmem_wr)),
-        .WEN(!pmem_wr), 
-        .A(pmem_add)
+sram_w8_160b psum_mem_instance (
+    .CLK(clk),
+    .D(pmem_in),
+    .Q(pmem_out),
+    .CEN(!(pmem_rd||pmem_wr)),
+    .WEN(!pmem_wr), 
+    .A(pmem_add)
 );
 
 sfp_row #(.bw(bw), .bw_psum(bw_psum), .col(col)) sfp_row_instance(
-		.clk(clk),
-		.acc(sfp_acc),
-		.div(sfp_div),
-		//FIXME fifo_ext_rd and sum_in only come into the picture in dual core design
-		.fifo_ext_rd(1'b0),
-		.sum_in(24'b0),
-		.sum_out(sum_out),
-		.sfp_in(pmem_out),
-		.sfp_out(sfp_out),
-        .reset(reset)
+    .clk(clk),
+    .acc(sfp_acc),
+    .div(sfp_div),
+    //FIXME fifo_ext_rd and sum_in only come into the picture in dual core design
+    .fifo_ext_rd(1'b0),
+    .sum_in(24'b0),
+    .sum_out(sum_out),
+    .sfp_in(pmem_out),
+    .sfp_out(sfp_out),
+    .reset(reset)
 );
 
 
   //////////// For printing purpose ////////////
   always @(posedge clk) begin
-	  //if(sfp_div)
-		 //sfp_out_q <= sfp_out;
+      //if(sfp_div)
+         //sfp_out_q <= sfp_out;
   end
 
 

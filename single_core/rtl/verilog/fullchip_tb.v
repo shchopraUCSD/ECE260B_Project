@@ -182,69 +182,69 @@ $display("##### Estimated multiplication result #####");
   end
 
   for (t=0; t<total_cycle; t=t+1) begin
-	 temp_sum = 0;
-	 $display("\nDBG: ======== BEGIN cycle number %d ==========", t);
+     temp_sum = 0;
+     $display("\nDBG: ======== BEGIN cycle number %d ==========", t);
      for (q=0; q<col; q=q+1) begin
          for (k=0; k<pr; k=k+1) begin
             result[t][q] = result[t][q] + Q[t][k] * K[q][k];
          end
 
          temp5b = result[t][q];
-		 temp5b_abs = temp5b[bw_psum-1] ? ~temp5b[bw_psum-1:0]+1 : temp5b[bw_psum-1:0];
-		 //$display("DBG: temp5b intermediate actual value: %h", temp5b);
-		 //$display("DBG: temp5b intermediate abs value: %h", temp5b_abs);
-		 temp_sum = temp_sum + temp5b_abs;
+         temp5b_abs = temp5b[bw_psum-1] ? ~temp5b[bw_psum-1:0]+1 : temp5b[bw_psum-1:0];
+         //$display("DBG: temp5b intermediate actual value: %h", temp5b);
+         //$display("DBG: temp5b intermediate abs value: %h", temp5b_abs);
+         temp_sum = temp_sum + temp5b_abs;
          temp16b = {temp16b[139:0], temp5b};
          temp16b_abs = {temp16b_abs[139:0], temp5b_abs};
      end
 
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
-	 //$display("DBG: temp_sum is %d",temp_sum);
+     //$display("DBG: temp_sum is %d",temp_sum);
      $display("DBG: temp_sum and divisor: %d , %d ",temp_sum, (temp_sum[bw_psum+3:7]+1));
      $display("DBG: original prd @cycle%2d: %40h", t, temp16b);
-	 
-	 //compute normalized vector 
-	 //FIXME the range [bw_psum+3:7] is same as was sfp_row is doing i.e. right shifting sum by 7 bits
-	 //FIXME 1 was also added to stabilize the value and avoid division by 0 case
-	 //NOTE: need to handle calculation carefully as these may be negative numbers!
+     
+     //compute normalized vector 
+     //FIXME the range [bw_psum+3:7] is same as was sfp_row is doing i.e. right shifting sum by 7 bits
+     //FIXME 1 was also added to stabilize the value and avoid division by 0 case
+     //NOTE: need to handle calculation carefully as these may be negative numbers!
 
-	 /*
+     /*
      for (idx=0; idx<col; idx=idx+1) begin : norm_idx
-	    	temp16b_norm[ (bw_psum*(idx+1))-1 : bw_psum*idx] = temp16b[ (bw_psum*(idx+1))-1 : bw_psum*idx ] / temp_sum;
-	 end
-  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = {temp16b[bw_psum*1 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*1 - 2: bw_psum*0] / temp_sum[bw_psum+3:7]}}};
-  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = {temp16b[bw_psum*2 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*2 - 2: bw_psum*1] / temp_sum[bw_psum+3:7]}}};
-  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = {temp16b[bw_psum*3 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*3 - 2: bw_psum*2] / temp_sum[bw_psum+3:7]}}};
-  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = {temp16b[bw_psum*4 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*4 - 2: bw_psum*3] / temp_sum[bw_psum+3:7]}}};
-  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = {temp16b[bw_psum*5 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*5 - 2: bw_psum*4] / temp_sum[bw_psum+3:7]}}};
-  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = {temp16b[bw_psum*6 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*6 - 2: bw_psum*5] / temp_sum[bw_psum+3:7]}}};
-  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = {temp16b[bw_psum*7 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*7 - 2: bw_psum*6] / temp_sum[bw_psum+3:7]}}};
-  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = {temp16b[bw_psum*8 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*8 - 2: bw_psum*7] / temp_sum[bw_psum+3:7]}}};
+            temp16b_norm[ (bw_psum*(idx+1))-1 : bw_psum*idx] = temp16b[ (bw_psum*(idx+1))-1 : bw_psum*idx ] / temp_sum;
+     end
+       temp16b_norm[bw_psum*1 - 1: bw_psum*0] = {temp16b[bw_psum*1 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*1 - 2: bw_psum*0] / temp_sum[bw_psum+3:7]}}};
+       temp16b_norm[bw_psum*2 - 1: bw_psum*1] = {temp16b[bw_psum*2 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*2 - 2: bw_psum*1] / temp_sum[bw_psum+3:7]}}};
+       temp16b_norm[bw_psum*3 - 1: bw_psum*2] = {temp16b[bw_psum*3 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*3 - 2: bw_psum*2] / temp_sum[bw_psum+3:7]}}};
+       temp16b_norm[bw_psum*4 - 1: bw_psum*3] = {temp16b[bw_psum*4 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*4 - 2: bw_psum*3] / temp_sum[bw_psum+3:7]}}};
+       temp16b_norm[bw_psum*5 - 1: bw_psum*4] = {temp16b[bw_psum*5 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*5 - 2: bw_psum*4] / temp_sum[bw_psum+3:7]}}};
+       temp16b_norm[bw_psum*6 - 1: bw_psum*5] = {temp16b[bw_psum*6 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*6 - 2: bw_psum*5] / temp_sum[bw_psum+3:7]}}};
+       temp16b_norm[bw_psum*7 - 1: bw_psum*6] = {temp16b[bw_psum*7 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*7 - 2: bw_psum*6] / temp_sum[bw_psum+3:7]}}};
+       temp16b_norm[bw_psum*8 - 1: bw_psum*7] = {temp16b[bw_psum*8 - 1] , {(bw_psum-1){temp16b_abs[bw_psum*8 - 2: bw_psum*7] / temp_sum[bw_psum+3:7]}}};
      */
      /*
-  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = $signed(temp16b[bw_psum*1 - 1: bw_psum*0]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = $signed(temp16b[bw_psum*2 - 1: bw_psum*1]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = $signed(temp16b[bw_psum*3 - 1: bw_psum*2]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = $signed(temp16b[bw_psum*4 - 1: bw_psum*3]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = $signed(temp16b[bw_psum*5 - 1: bw_psum*4]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = $signed(temp16b[bw_psum*6 - 1: bw_psum*5]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = $signed(temp16b[bw_psum*7 - 1: bw_psum*6]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = $signed(temp16b[bw_psum*8 - 1: bw_psum*7]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*1 - 1: bw_psum*0] = $signed(temp16b[bw_psum*1 - 1: bw_psum*0]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*2 - 1: bw_psum*1] = $signed(temp16b[bw_psum*2 - 1: bw_psum*1]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*3 - 1: bw_psum*2] = $signed(temp16b[bw_psum*3 - 1: bw_psum*2]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*4 - 1: bw_psum*3] = $signed(temp16b[bw_psum*4 - 1: bw_psum*3]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*5 - 1: bw_psum*4] = $signed(temp16b[bw_psum*5 - 1: bw_psum*4]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*6 - 1: bw_psum*5] = $signed(temp16b[bw_psum*6 - 1: bw_psum*5]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*7 - 1: bw_psum*6] = $signed(temp16b[bw_psum*7 - 1: bw_psum*6]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*8 - 1: bw_psum*7] = $signed(temp16b[bw_psum*8 - 1: bw_psum*7]) / $signed({1'b0,temp_sum[bw_psum+3:7]}+1);
      */
 
-	 //numerator must also be absolute value as per canvas discussion
-  	 temp16b_norm[bw_psum*1 - 1: bw_psum*0] = temp16b_abs[bw_psum*1 - 1: bw_psum*0] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*2 - 1: bw_psum*1] = temp16b_abs[bw_psum*2 - 1: bw_psum*1] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*3 - 1: bw_psum*2] = temp16b_abs[bw_psum*3 - 1: bw_psum*2] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*4 - 1: bw_psum*3] = temp16b_abs[bw_psum*4 - 1: bw_psum*3] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*5 - 1: bw_psum*4] = temp16b_abs[bw_psum*5 - 1: bw_psum*4] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b_abs[bw_psum*6 - 1: bw_psum*5] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b_abs[bw_psum*7 - 1: bw_psum*6] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-  	 temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b_abs[bw_psum*8 - 1: bw_psum*7] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+     //numerator must also be absolute value as per canvas discussion
+       temp16b_norm[bw_psum*1 - 1: bw_psum*0] = temp16b_abs[bw_psum*1 - 1: bw_psum*0] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*2 - 1: bw_psum*1] = temp16b_abs[bw_psum*2 - 1: bw_psum*1] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*3 - 1: bw_psum*2] = temp16b_abs[bw_psum*3 - 1: bw_psum*2] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*4 - 1: bw_psum*3] = temp16b_abs[bw_psum*4 - 1: bw_psum*3] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*5 - 1: bw_psum*4] = temp16b_abs[bw_psum*5 - 1: bw_psum*4] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b_abs[bw_psum*6 - 1: bw_psum*5] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b_abs[bw_psum*7 - 1: bw_psum*6] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+       temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b_abs[bw_psum*8 - 1: bw_psum*7] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
 
      $display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
-	 final_pmem_expected_result[t] = temp16b_norm[bw_psum*col-1:0];
-	 $display("DBG: ======== END cycle number %d ==========\n", t);
+     final_pmem_expected_result[t] = temp16b_norm[bw_psum*col-1:0];
+     $display("DBG: ======== END cycle number %d ==========\n", t);
   end
 
 //////////////////////////////////////////////
@@ -431,33 +431,33 @@ $display("##### move ofifo to pmem #####");
 
 $display("##### sfp operation #####");
 
-	for (q=0; q<total_cycle; q=q+1) begin
-    	#0.5 clk = 1'b0;  
-		pmem_rd = 1;		
-    	#0.5 clk = 1'b1;  		
-    	#0.5 clk = 1'b0;
-		//now pmem has spit out the data, so start the accumulation
- 		sfp_acc = 1; 
-    	#0.5 clk = 1'b1;  
-    	#0.5 clk = 1'b0;
-		//now accumulation is done, and the sum is stored in the internal FIFO
-		//start the division - FIXME hardcode to 2 cycle delay to match implementation
-		sfp_acc = 0;
-		sfp_div = 1;
-    	#0.5 clk = 1'b1;  
-    	#0.5 clk = 1'b0;
-    	#0.5 clk = 1'b1;  
-    	#0.5 clk = 1'b0;
-		//division is done - write this back to pmem at the same address
-		pmem_rd = 0; pmem_wr = 1;
-    	#0.5 clk = 1'b1;  
-    	#0.5 clk = 1'b0;
-		//write back to memory done
-		pmem_wr = 0; sfp_div = 0;
-		//now move to the next address 
-		pmem_add = pmem_add + 1;
-    	#0.5 clk = 1'b1;  	
-	end
+    for (q=0; q<total_cycle; q=q+1) begin
+        #0.5 clk = 1'b0;  
+        pmem_rd = 1;        
+        #0.5 clk = 1'b1;          
+        #0.5 clk = 1'b0;
+        //now pmem has spit out the data, so start the accumulation
+         sfp_acc = 1; 
+        #0.5 clk = 1'b1;  
+        #0.5 clk = 1'b0;
+        //now accumulation is done, and the sum is stored in the internal FIFO
+        //start the division - FIXME hardcode to 2 cycle delay to match implementation
+        sfp_acc = 0;
+        sfp_div = 1;
+        #0.5 clk = 1'b1;  
+        #0.5 clk = 1'b0;
+        #0.5 clk = 1'b1;  
+        #0.5 clk = 1'b0;
+        //division is done - write this back to pmem at the same address
+        pmem_rd = 0; pmem_wr = 1;
+        #0.5 clk = 1'b1;  
+        #0.5 clk = 1'b0;
+        //write back to memory done
+        pmem_wr = 0; sfp_div = 0;
+        //now move to the next address 
+        pmem_add = pmem_add + 1;
+        #0.5 clk = 1'b1;      
+    end
 
   #0.5 clk = 1'b0;  
   pmem_add = 0;
@@ -475,10 +475,10 @@ $display("##### sfp operation #####");
 
     pmem_add = pmem_add + 1;
     if(q>0)begin
-    	$display("DBG: final output from pmem for @cycle%2d: %40h", q-1, out_q);
-		if(out_q[bw_psum*col-1:0] != final_pmem_expected_result[q-1])begin
-			error_count = error_count + 1;
-		end
+        $display("DBG: final output from pmem for @cycle%2d: %40h", q-1, out_q);
+        if(out_q[bw_psum*col-1:0] != final_pmem_expected_result[q-1])begin
+            error_count = error_count + 1;
+        end
     end
 
     #0.5 clk = 1'b1;  
@@ -489,9 +489,9 @@ $display("##### sfp operation #####");
   #0.5 clk = 1'b1;  
   $display("\n\n ============ FINAL SIMULATION RESULT =============== \n");
   if(!error_count)begin
-		$display("SUCCESS: all pmem values match :-)\n");
+        $display("SUCCESS: all pmem values match :-)\n");
   end else begin
-		$display("ERROR: %d values did not match :-(\n",error_count);
+        $display("ERROR: %d values did not match :-(\n",error_count);
   end
 
 ///////////////////////////////////////////
@@ -501,7 +501,7 @@ $display("##### sfp operation #####");
 end
 
 always @ (posedge clk) begin
-	out_q <= out;
+    out_q <= out;
 end
 
 endmodule

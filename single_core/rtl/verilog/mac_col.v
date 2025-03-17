@@ -3,7 +3,7 @@
 module mac_col (clk, reset, out, q_in, q_out, i_inst, fifo_wr, o_inst);
 
 parameter bw = 8;
-parameter bw_psum = 2*bw+6;
+parameter bw_psum = 2*bw+4;
 parameter pr = 8;
 parameter col_id = 0;
 
@@ -32,7 +32,7 @@ assign out = psum;
 mac_8in #(.bw(bw), .bw_psum(bw_psum), .pr(pr)) mac_16in_instance (
         .a(query_q), 
         .b(key_q),
-	.out(psum)
+    .out(psum)
 ); 
 
 

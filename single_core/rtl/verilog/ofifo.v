@@ -2,9 +2,9 @@
 // Please do not spread this code without permission 
 module ofifo (clk, in, out, rd, wr, o_valid, reset, o_full);
 
-  parameter col  = 16;
+  parameter col  = 8;
   parameter simd = 1;
-  parameter bw = 24;
+  parameter bw = 20;
 
   input  clk;
   input  [col-1:0] wr;
@@ -26,14 +26,14 @@ module ofifo (clk, in, out, rd, wr, o_valid, reset, o_full);
 
   for (i=0; i < col ; i=i+1) begin : col_idx
       fifo_depth16 #(.bw(bw), .simd(simd)) fifo_instance (
-	 .rd_clk(clk),
-	 .wr_clk(clk),
-	 .rd(rd),
-	 .wr(wr[i]),
-	 .in(in[bw*simd*(i+1)-1:bw*simd*i]),
-	 .out(out[bw*simd*(i+1)-1:bw*simd*i]),
-	 .o_full(full[i]),
-	 .o_empty(empty[i]),
+     .rd_clk(clk),
+     .wr_clk(clk),
+     .rd(rd),
+     .wr(wr[i]),
+     .in(in[bw*simd*(i+1)-1:bw*simd*i]),
+     .out(out[bw*simd*(i+1)-1:bw*simd*i]),
+     .o_full(full[i]),
+     .o_empty(empty[i]),
          .reset(reset));
   end
 
