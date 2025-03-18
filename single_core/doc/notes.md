@@ -14,6 +14,7 @@
 - see suggested floorplan image, srams will need appropriate rotation, keep mem\_in on left, sum\_out on right (keeping 2 dual cores, left and right, in mind) and output at bottom (right below psum mem's Q port) 
 - for netlist/ subdirectory in hierarchical PNR, have copied the netlist from the synth run *without* the SRAMs (i.e. SRAMs are a black box) 
 - remove DCAPs for now since density was too high (same problem as SRAM) --> come back to this later
+- *timing violations after PNR are in the division path itself* - optimization needs to be multicycle division (?)
 ### Single Core GLS
 - TBD. 
 - should we use synth netlist? or directly PNR netlist? --> give a run with synth netlist and see
@@ -24,6 +25,7 @@
 ## Dual Core
 ### RTL
 - in dual core, use a req/ack interface for the individual sums. whoever is doing dual core RTL/TB needs to decide how the data movement happens
+- FIXME using async FIFO instead is under discussion
 
 ## Optimizations
 - there is a *high fanout net* found during synthesis - need to look at this during optimizations
@@ -36,18 +38,20 @@
 ## Next steps at this time
 - SRAM PnR (this plus core w/o SRAM PnR goes into core hierarchical PnR) --> DONE 
 - single core synthesis -- increase clock time period to get rid of timing violations, switch to WC libs --> WIP
-- single core hierarchical PnR (also goes into single core GLS) --> WIP
-- single core GLS: worth it to use synth netlist instead of PNR netlist? yes, let's run it and see --> debug WIP
-- dual core RTL/TB
+- single core hierarchical PnR (also goes into single core GLS) --> DONE 
+- single core GLS: worth it to use synth netlist instead of PNR netlist? yes, let's run it and see --> DONE
+- dual core RTL/TB and beyond
 - norm X V calculations for single core
+- optimize SFP, discuss if multicycle is the way out
  
 ## Work Distribution
 - single core (without SRAMs) RTL, TB --> Shaurya --> DONE
 - SRAM PnR --> Shaurya --> DONE
-- single core hierarchical PnR --> Mayank, Soumil --> WIP
-- single core GLS (synth/PnR) --> Shaurya, Mayank --> WIP
+- single core hierarchical PnR --> Mayank, Soumil --> DONE
+- single core GLS (synth/PnR) --> Shaurya, Mayank (most of the heavy lifting) --> DONE
 - dual core RTL, TB --> Divyang, Navya --> WIP
-- single core norm X V calculations - Ishita --> Start Monday
+- single core norm X V calculations --> Ishita --> Start Monday
+- SFP modifications (optimization) --> TBD
 - dual core PnR --> LATER 
 - dual core GLS --> LATER 
-- optimizations --> LATER
+- further optimizations --> LATER
