@@ -107,10 +107,10 @@ $display("##### Q data txt reading #####");
   qk_file = $fopen("qdata.txt", "r");
 
   //// To get rid of first 3 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
+  //qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
+  //qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
+  //qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
+  //qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
 
 
   for (q=0; q<total_cycle; q=q+1) begin
@@ -146,10 +146,10 @@ $display("##### K data txt reading #####");
   qk_file = $fopen("kdata.txt", "r");
 
   //// To get rid of first 4 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
+  //qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
+  //qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
+  //qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
+  //qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
 
 
 
@@ -321,6 +321,8 @@ $display("##### Kmem writing #####");
 //    mem_in[15*bw-1:14*bw] = K[q][14];
 //    mem_in[16*bw-1:15*bw] = K[q][15];
 
+
+ $display("DBG: mem_in = %h q \n", mem_in);
     #0.5 clk = 1'b1;  
 
   end
