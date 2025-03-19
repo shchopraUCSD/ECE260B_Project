@@ -40,14 +40,14 @@ module mac_8in (
 
 
     assign out = 
-         {{(4){product0[2*bw-1]}},product0    }
-    +    {{(4){product1[2*bw-1]}},product1    }
-    +    {{(4){product2[2*bw-1]}},product2    }
-    +    {{(4){product3[2*bw-1]}},product3    }
-    +    {{(4){product4[2*bw-1]}},product4    }
-    +    {{(4){product5[2*bw-1]}},product5    }
-    +    {{(4){product6[2*bw-1]}},product6    }
-    +    {{(4){product7[2*bw-1]}},product7    }
+         {{(4){product0[2*bw-1]}},product0}
+    +    {{(4){product1[2*bw-1]}},product1}
+    +    {{(4){product2[2*bw-1]}},product2}
+    +    {{(4){product3[2*bw-1]}},product3}
+    +    {{(4){product4[2*bw-1]}},product4}
+    +    {{(4){product5[2*bw-1]}},product5}
+    +    {{(4){product6[2*bw-1]}},product6}
+    +    {{(4){product7[2*bw-1]}},product7}
     ;
 
 

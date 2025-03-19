@@ -26,7 +26,6 @@ module sfp_row (
     reg    div_q;
     output [col*bw_psum-1:0] sfp_out;
     output [bw_psum_out-1:0] sum_out;
-    wire [bw_psum_out-1:0] sum_this_core;
     wire signed [bw_psum-1:0] sum_2core;
     wire signed [bw_psum-1:0] sfp_in_sign0;
     wire signed [bw_psum-1:0] sfp_in_sign1;
@@ -71,7 +70,8 @@ module sfp_row (
     assign sfp_out[bw_psum*8-1 : bw_psum*7] = sfp_out_sign7;
 
     //FIXME add 1 to stabilize since otherwise could have division by 0 case
-    assign sum_2core = sum_this_core[bw_psum_out-1:7] + sum_in[bw_psum_out-1:7] + 1;
+    assign sum_2core = sum_q[bw_psum_out-1:7] + sum_in[bw_psum_out-1:7] + 1;
+    assign sum_out = sum_in[bw_psum_out-1:0];
 
     assign abs[bw_psum*1-1 : bw_psum*0] = (sfp_in[bw_psum*1-1]) ?  (~sfp_in[bw_psum*1-1 : bw_psum*0] + 1)  :  sfp_in[bw_psum*1-1 : bw_psum*0];
     assign abs[bw_psum*2-1 : bw_psum*1] = (sfp_in[bw_psum*2-1]) ?  (~sfp_in[bw_psum*2-1 : bw_psum*1] + 1)  :  sfp_in[bw_psum*2-1 : bw_psum*1];
@@ -81,30 +81,6 @@ module sfp_row (
     assign abs[bw_psum*6-1 : bw_psum*5] = (sfp_in[bw_psum*6-1]) ?  (~sfp_in[bw_psum*6-1 : bw_psum*5] + 1)  :  sfp_in[bw_psum*6-1 : bw_psum*5];
     assign abs[bw_psum*7-1 : bw_psum*6] = (sfp_in[bw_psum*7-1]) ?  (~sfp_in[bw_psum*7-1 : bw_psum*6] + 1)  :  sfp_in[bw_psum*7-1 : bw_psum*6];
     assign abs[bw_psum*8-1 : bw_psum*7] = (sfp_in[bw_psum*8-1]) ?  (~sfp_in[bw_psum*8-1 : bw_psum*7] + 1)  :  sfp_in[bw_psum*8-1 : bw_psum*7];
-
-    fifo_depth16 #(
-        .bw(bw_psum + 4)
-    ) fifo_inst_int (
-        .rd_clk(clk),
-        .wr_clk(clk),
-        .in(sum_q),
-        .out(sum_this_core),
-        .rd(div_q),
-        .wr(fifo_wr),
-        .reset(reset)
-    );
-
-    fifo_depth16 #(
-        .bw(bw_psum + 4)
-    ) fifo_inst_ext (
-        .rd_clk(clk),
-        .wr_clk(clk),
-        .in(sum_q),
-        .out(sum_out),
-        .rd(fifo_ext_rd),
-        .wr(fifo_wr),
-        .reset(reset)
-    );
 
     always @(posedge clk) begin
         if (reset) begin
