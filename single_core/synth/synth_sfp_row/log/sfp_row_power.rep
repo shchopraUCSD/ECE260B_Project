@@ -1,0 +1,130 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : sfp_row
+Version: K-2015.06-SP2
+Date   : Tue Mar 18 23:51:04 2025
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65gpluswc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+sfp_row                ZeroWireload      tcbn65gpluswc
+fifo_depth16_bw24_1    ZeroWireload      tcbn65gpluswc
+fifo_depth16_bw24_0    ZeroWireload      tcbn65gpluswc
+fifo_mux_16_1_bw24_simd1_1
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_16_1_bw24_simd1_0
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw24_simd1_3
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_29
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw24_simd1_1
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_28
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw24_simd1_0
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_8_1_bw24_simd1_2
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_14
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_15
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_16
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_17
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_18
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_19
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_20
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_21
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_22
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_23
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_24
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_25
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_26
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_27
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_0
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_1
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_2
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_3
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_4
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_5
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_6
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_7
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_8
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_9
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_10
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_11
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_12
+                       ZeroWireload      tcbn65gpluswc
+fifo_mux_2_1_bw24_simd1_13
+                       ZeroWireload      tcbn65gpluswc
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   3.6805 mW   (64%)
+  Net Switching Power  =   2.0590 mW   (36%)
+                         ---------
+Total Dynamic Power    =   5.7395 mW  (100%)
+
+Cell Leakage Power     = 747.8705 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           1.4052        1.8522e-02        4.9971e+04            1.4737  (  22.72%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      2.2753            2.0405        6.9790e+05            5.0137  (  77.28%)
+--------------------------------------------------------------------------------------------------
+Total              3.6805 mW         2.0590 mW     7.4787e+05 nW         6.4874 mW
+1

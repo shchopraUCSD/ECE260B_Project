@@ -20,7 +20,7 @@ set_output_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports {o
 
  # ========== Multicycle constraints below ========== 
 
-set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign0_reg
+set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
@@ -40,7 +40,7 @@ set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
 
 
-set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign1_reg
+set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
@@ -60,7 +60,7 @@ set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
 
 
-set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign2_reg
+set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
@@ -80,7 +80,7 @@ set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
 
 
-set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign3_reg
+set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
@@ -100,7 +100,7 @@ set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
 
 
-set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign4_reg
+set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
@@ -120,7 +120,7 @@ set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
 
 
-set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign5_reg
+set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
@@ -140,7 +140,7 @@ set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
 
 
-set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign6_reg
+set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
@@ -160,7 +160,7 @@ set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
 
 
-set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign7_reg
+set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign7_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign7_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign7_reg[*]
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign7_reg[*]
@@ -180,7 +180,7 @@ set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to
 set_multicycle_path -setup 2 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign7_reg[*]
 
 
-set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign0_reg
+set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
@@ -200,7 +200,7 @@ set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to 
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign0_reg[*]
 
 
-set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign1_reg
+set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
@@ -220,7 +220,7 @@ set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to 
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign1_reg[*]
 
 
-set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign2_reg
+set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
@@ -240,7 +240,7 @@ set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to 
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign2_reg[*]
 
 
-set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign3_reg
+set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
@@ -260,7 +260,7 @@ set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to 
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign3_reg[*]
 
 
-set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign4_reg
+set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
@@ -280,7 +280,7 @@ set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to 
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign4_reg[*]
 
 
-set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign5_reg
+set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
@@ -300,7 +300,7 @@ set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to 
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign5_reg[*]
 
 
-set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign6_reg
+set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
@@ -320,7 +320,7 @@ set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q14_reg[*] -to 
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q15_reg[*] -to sfp_row_instance/sfp_out_sign6_reg[*]
 
 
-set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign7_reg
+set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign7_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign7_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q0_reg[*] -to sfp_row_instance/sfp_out_sign7_reg[*]
 set_multicycle_path -hold 1 -from sfp_row_instance/fifo_inst_int/q1_reg[*] -to sfp_row_instance/sfp_out_sign7_reg[*]
