@@ -40,7 +40,7 @@ module mac_8in (
 
 
     assign out = 
-                {{(4){product0[2*bw-1]}},product0    }
+         {{(4){product0[2*bw-1]}},product0    }
     +    {{(4){product1[2*bw-1]}},product1    }
     +    {{(4){product2[2*bw-1]}},product2    }
     +    {{(4){product3[2*bw-1]}},product3    }
