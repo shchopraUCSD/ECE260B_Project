@@ -26,7 +26,7 @@ module sfp_row (
     reg    div_q;
     output [col*bw_psum-1:0] sfp_out;
     output [bw_psum_out-1:0] sum_out;
-    wire signed [bw_psum-1:0] sum_2core;
+    wire signed [bw_psum_out-1:0] sum_2core;
     wire signed [bw_psum-1:0] sfp_in_sign0;
     wire signed [bw_psum-1:0] sfp_in_sign1;
     wire signed [bw_psum-1:0] sfp_in_sign2;
@@ -84,11 +84,18 @@ module sfp_row (
 
     always @(posedge clk) begin
         if (reset) begin
-            fifo_wr <= 0;
+            sum_q <= 0;
+            sfp_out_sign0 <= 0;
+            sfp_out_sign1 <= 0;
+            sfp_out_sign2 <= 0;
+            sfp_out_sign3 <= 0;
+            sfp_out_sign4 <= 0;
+            sfp_out_sign5 <= 0;
+            sfp_out_sign6 <= 0;
+            sfp_out_sign7 <= 0;
         end else begin
             div_q <= div;
             if (acc) begin
-
                 sum_q <= 
            {4'b0, abs[bw_psum*1-1 : bw_psum*0]} +
            {4'b0, abs[bw_psum*2-1 : bw_psum*1]} +
@@ -98,9 +105,7 @@ module sfp_row (
            {4'b0, abs[bw_psum*6-1 : bw_psum*5]} +
            {4'b0, abs[bw_psum*7-1 : bw_psum*6]} +
            {4'b0, abs[bw_psum*8-1 : bw_psum*7]} ;
-                fifo_wr <= 1;
             end else begin
-                fifo_wr <= 0;
 
                 if (div) begin
                     sfp_out_sign0 <= sfp_in_sign0 / sum_2core;
