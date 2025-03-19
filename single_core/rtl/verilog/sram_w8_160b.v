@@ -27,24 +27,6 @@ module sram_w8_160b (
     reg [sram_bit-1:0] memory6;
     reg [sram_bit-1:0] memory7;
 
-    /*
-  assign Q = (add_q == 0)  ? memory0 : (
-             (add_q == 1)  ? memory1 : (
-             (add_q == 2)  ? memory2 : (
-             (add_q == 3)  ? memory3 : (
-             (add_q == 4)  ? memory4 : (
-             (add_q == 5)  ? memory5 : (
-             (add_q == 6)  ? memory6 : (
-             (add_q == 7)  ? memory7 : (
-             (add_q == 8)  ? memory8 : (
-             (add_q == 9)  ? memory9 : (
-             (add_q == 10) ? memory10 : (
-             (add_q == 11) ? memory11 : (
-             (add_q == 12) ? memory12 : (
-             (add_q == 13) ? memory13 : (
-             (add_q == 14) ? memory14 : memory15))))))))))))));
-*/
-
     always @(posedge CLK) begin
 
         if (!CEN && WEN) begin  // read 

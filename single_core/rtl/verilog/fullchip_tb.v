@@ -319,14 +319,6 @@ module fullchip_tb;
             mem_in[6*bw-1:5*bw] = K[q][5];
             mem_in[7*bw-1:6*bw] = K[q][6];
             mem_in[8*bw-1:7*bw] = K[q][7];
-            //    mem_in[9*bw-1:8*bw] = K[q][8];
-            //    mem_in[10*bw-1:9*bw] = K[q][9];
-            //    mem_in[11*bw-1:10*bw] = K[q][10];
-            //    mem_in[12*bw-1:11*bw] = K[q][11];
-            //    mem_in[13*bw-1:12*bw] = K[q][12];
-            //    mem_in[14*bw-1:13*bw] = K[q][13];
-            //    mem_in[15*bw-1:14*bw] = K[q][14];
-            //    mem_in[16*bw-1:15*bw] = K[q][15];
 
 
             $display("DBG: mem_in = %h q \n", mem_in);
@@ -380,10 +372,6 @@ module fullchip_tb;
             #0.5 clk = 1'b1;
         end
 
-
-
-
-
         ///// execution  /////
         $display("##### execute #####");
 
@@ -413,48 +401,18 @@ module fullchip_tb;
             #0.5 clk = 1'b1;
         end
 
-
-
-
         ////////////// output fifo rd and wb to psum mem ///////////////////
 
-        $display("##### move ofifo to pmem #####");
+        $display("##### move ofifo to sfp, normalize it in sfp and then write it to pmem #####");
 
         for (q = 0; q < total_cycle; q = q + 1) begin
             #0.5 clk = 1'b0;
-            ofifo_rd = 1;
-            pmem_wr  = 1;
-
-            if (q > 0) begin
-                pmem_add = pmem_add + 1;
-            end
-
-            #0.5 clk = 1'b1;
-        end
-
-        #0.5 clk = 1'b0;
-        pmem_wr  = 0;
-        pmem_add = 0;
-        ofifo_rd = 0;
-        #0.5 clk = 1'b1;
-
-        ///////////////////////////////////////////
-
-
-        ////////////// read from pmem, normalize in sfp, write back to pmem ///////////////////
-
-        $display("##### sfp operation #####");
-
-        for (q = 0; q < total_cycle; q = q + 1) begin
-            #0.5 clk = 1'b0;
-            pmem_rd = 1;
-            #0.5 clk = 1'b1;
-            #0.5 clk = 1'b0;
-            //now pmem has spit out the data, so start the accumulation
+            //now ofifo has spit out the data, so start the accumulation
+            ofifo_rd = 0;
             sfp_acc = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
-            //now accumulation is done, and the sum is stored in the internal FIFO
+            //now accumulation is done, and the sum is stored in the internal n FIFO
             //start the division - FIXME hardcode to 2 cycle delay to match implementation
             sfp_acc = 0;
             sfp_div = 1;
@@ -463,7 +421,6 @@ module fullchip_tb;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             //division is done - write this back to pmem at the same address
-            pmem_rd = 0;
             pmem_wr = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
@@ -473,8 +430,11 @@ module fullchip_tb;
             //now move to the next address 
             pmem_add = pmem_add + 1;
             #0.5 clk = 1'b1;
+            #0.5 clk = 1'b0;
+            ofifo_rd = 1;
+            #0.5 clk = 1'b1;
         end
-
+    
         #0.5 clk = 1'b0;
         pmem_add = 0;
         #0.5 clk = 1'b1;
@@ -486,22 +446,19 @@ module fullchip_tb;
         pmem_rd = 1;
         #0.5 clk = 1'b1;
 
-        for (q = 0; q < total_cycle + 1; q = q + 1) begin
+        for (q = 0; q < total_cycle; q = q + 1) begin
             #0.5 clk = 1'b0;
 
-            pmem_add = pmem_add + 1;
-            if (q > 0) begin
-                $display("DBG: final output from pmem for @cycle%2d: %40h", q - 1, out_q);
-                if (out_q[bw_psum*col-1:0] != final_pmem_expected_result[q-1]) begin
-                    error_count = error_count + 1;
-                end
+            $display("DBG: final output from pmem for @cycle%2d: %40h, expected_out %40h", q, out[bw_psum*col-1:0], final_pmem_expected_result[q]);
+            if (out[bw_psum*col-1:0] != final_pmem_expected_result[q]) begin
+                error_count = error_count + 1;
             end
+            pmem_add = pmem_add + 1;
 
             #0.5 clk = 1'b1;
         end
 
         #0.5 clk = 1'b0;
-        pmem_wr  = 0;
         pmem_add = 0;
         #0.5 clk = 1'b1;
         $display("\n\n ============ FINAL SIMULATION RESULT =============== \n");

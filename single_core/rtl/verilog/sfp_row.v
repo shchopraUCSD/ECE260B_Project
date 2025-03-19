@@ -14,18 +14,19 @@ module sfp_row (
 
     parameter col = 8;
     parameter bw = 8;
-    parameter bw_psum = 2 * bw + 4;
+    parameter bw_psum = 20;
+    parameter bw_psum_out = 24;
 
 
     input clk, div, acc, fifo_ext_rd;
-    input [bw_psum+3:0] sum_in;
+    input [bw_psum_out-1:0] sum_in;
     input [col*bw_psum-1:0] sfp_in;
     input reset;
     wire  [col*bw_psum-1:0] abs;
     reg    div_q;
     output [col*bw_psum-1:0] sfp_out;
-    output [bw_psum+3:0] sum_out;
-    wire [bw_psum+3:0] sum_this_core;
+    output [bw_psum_out-1:0] sum_out;
+    wire [bw_psum_out-1:0] sum_this_core;
     wire signed [bw_psum-1:0] sum_2core;
     wire signed [bw_psum-1:0] sfp_in_sign0;
     wire signed [bw_psum-1:0] sfp_in_sign1;
@@ -46,7 +47,7 @@ module sfp_row (
     reg signed [bw_psum-1:0] sfp_out_sign6;
     reg signed [bw_psum-1:0] sfp_out_sign7;
 
-    reg [bw_psum+3:0] sum_q;
+    reg [bw_psum_out-1:0] sum_q;
     reg fifo_wr;
 
     //numerator must also use absolute value as per canvas discussion 
@@ -70,7 +71,7 @@ module sfp_row (
     assign sfp_out[bw_psum*8-1 : bw_psum*7] = sfp_out_sign7;
 
     //FIXME add 1 to stabilize since otherwise could have division by 0 case
-    assign sum_2core = sum_this_core[bw_psum+3:7] + sum_in[bw_psum+3:7] + 1;
+    assign sum_2core = sum_this_core[bw_psum_out-1:7] + sum_in[bw_psum_out-1:7] + 1;
 
     assign abs[bw_psum*1-1 : bw_psum*0] = (sfp_in[bw_psum*1-1]) ?  (~sfp_in[bw_psum*1-1 : bw_psum*0] + 1)  :  sfp_in[bw_psum*1-1 : bw_psum*0];
     assign abs[bw_psum*2-1 : bw_psum*1] = (sfp_in[bw_psum*2-1]) ?  (~sfp_in[bw_psum*2-1 : bw_psum*1] + 1)  :  sfp_in[bw_psum*2-1 : bw_psum*1];
@@ -134,9 +135,6 @@ module sfp_row (
                     sfp_out_sign5 <= sfp_in_sign5 / sum_2core;
                     sfp_out_sign6 <= sfp_in_sign6 / sum_2core;
                     sfp_out_sign7 <= sfp_in_sign7 / sum_2core;
-
-
-
                 end
             end
         end
