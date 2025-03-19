@@ -1,9 +1,10 @@
 set top_module sfp_row
-set rtlPath "/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/rtl/verilog"
+set uname $tcl_platform(user)
+set rtlPath "/home/linux/ieng6/ee260bwi25/$uname/ECE260B_Project/single_core/rtl/verilog"
 
 # Target library
-# FIXME use typical corner
-set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db} 
+# FIXME use worst corner
+set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db} 
 set link_library $target_library
 set symbol_library {}
 set wire_load_mode enclosed
@@ -40,13 +41,15 @@ set hdlin_enable_vpp true
 set hdlin_auto_save_templates false
 set hdlin_ff_always_sync_set_reset true
 
+define_design_lib WORK -path .template
 set verilogout_single_bit false
 set verilogout_show_unconnected_pins true
 
-define_design_lib WORK -path .template
-
-
 # read RTL
+analyze -format verilog -lib WORK fifo_depth16.v
+analyze -format verilog -lib WORK fifo_mux_16_1.v
+analyze -format verilog -lib WORK fifo_mux_2_1.v
+analyze -format verilog -lib WORK fifo_mux_8_1.v
 analyze -format verilog -lib WORK sfp_row.v
 
 elaborate $top_module -lib WORK -update

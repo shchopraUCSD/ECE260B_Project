@@ -1,9 +1,10 @@
-set top_module mac_col
-set rtlPath "/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/single_core/rtl/verilog"
+set top_module mac_col 
+set uname $tcl_platform(user)
+set rtlPath "/home/linux/ieng6/ee260bwi25/$uname/ECE260B_Project/single_core/rtl/verilog"
 
 # Target library
-# FIXME use typical corner
-set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db} 
+# FIXME use worst corner
+set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db} 
 set link_library $target_library
 set symbol_library {}
 set wire_load_mode enclosed
@@ -40,15 +41,13 @@ set hdlin_enable_vpp true
 set hdlin_auto_save_templates false
 set hdlin_ff_always_sync_set_reset true
 
+define_design_lib WORK -path .template
 set verilogout_single_bit false
 set verilogout_show_unconnected_pins true
 
-define_design_lib WORK -path .template
-
-
 # read RTL
-analyze -format verilog -lib WORK mac_col.v
 analyze -format verilog -lib WORK mac_8in.v
+analyze -format verilog -lib WORK mac_col.v
 
 elaborate $top_module -lib WORK -update
 current_design $top_module

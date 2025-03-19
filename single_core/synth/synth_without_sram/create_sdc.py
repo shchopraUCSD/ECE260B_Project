@@ -31,7 +31,7 @@ with open("core.sdc", 'w') as file:
 	file.write("\n\n # ========== Multicycle constraints below ========== \n\n")
 	for condition in conditions:
 		for i in sfp_out_range:
-			line = "set_multicycle_path " + str(condition) + " -from sfp_row_instance/fifo_inst_int/rd_ptr_reg -to sfp_row_instance/sfp_out_sign" + str(i) + "_reg"  
+			line = "set_multicycle_path " + str(condition) + " -from sfp_row_instance/fifo_inst_int/rd_ptr_reg[*] -to sfp_row_instance/sfp_out_sign" + str(i) + "_reg[*]"  
 			file.write(line + "\n")
 			line = "set_multicycle_path " + str(condition) + " -from sfp_row_instance/sum_q_reg[*] -to sfp_row_instance/sfp_out_sign" +str(i) + "_reg[*]" 
 			file.write(line + "\n")

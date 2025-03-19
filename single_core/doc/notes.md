@@ -22,6 +22,24 @@
 #### Warnings
 - ports not connected : cnt\_q in mac\_col (expected), o\_full/o\_valid in ofifo --> expected, shouldn't matter
 - Bit-select or part-select index out of declared bounds : for mem\_in assignments from the K/Q 2D arrays. --> values at mem\_in seem to match RTL sims. 
+### MCP Experiments
+#### clk 4ns, sfp div path 2-cycle mcp
+- timing met in synthesis of core without SRAM (slack +0.002ns)
+- core (hierarchical) PNR run --> meets timing
+- note: mac\_col synth with 4ns, without any MCP in mac\_col, meets timing comfortably (slack +3ns)
+#### clk 4ns, sfp\_row, no MCP
+- synthesis --> run is done, it's only the division path that is the problem. Need to re-design/pipeline it
+- TODO analyze failing paths to try out SFP architecture optimizations
+#### clk 1ns, mac\_col, no MCP
+- comfortably meets timing in synthesis (slack +0.085ns)   
+- note: mac\_col synth with 4ns, without any MCP in mac\_col, meets timing comfortably (slack +3ns)
+#### clk 1ns, core without SRAM, 8-cycle MCP
+- timing violated, WNS -0.67
+- note: this is an experiment. The RTL itself is probably not functionally correct as it is with this. But here we're just trying to see if it will meet timing
+#### clk 1ns, core without SRAM, 16-cycle MCP
+- timing violated, WNS -0.639
+- note: this is an experiment. The RTL itself is probably not functionally correct as it is with this. But here we're just trying to see if it will meet timing
+
 ## Dual Core
 ### RTL
 - in dual core, use a req/ack interface for the individual sums. whoever is doing dual core RTL/TB needs to decide how the data movement happens
