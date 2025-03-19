@@ -47,10 +47,10 @@ define_design_lib WORK -path .template
 
 
 # read RTL
-analyze -format verilog -lib WORK fifo_depth16_cp.v
-analyze -format verilog -lib WORK fifo_mux_16_1.v
 analyze -format verilog -lib WORK fifo_mux_2_1.v
 analyze -format verilog -lib WORK fifo_mux_8_1.v
+analyze -format verilog -lib WORK fifo_mux_16_1.v
+analyze -format verilog -lib WORK fifo_depth16_cp.v
 
 elaborate $top_module -lib WORK -update
 current_design $top_module
