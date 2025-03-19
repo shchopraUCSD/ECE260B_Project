@@ -51,6 +51,7 @@ module core (
 
     wire sfp_div;
     wire sfp_acc;
+    wire sfp_vld;
 
     //FIXME extend inst for sfp instructions
     assign sfp_div = inst[18];
@@ -64,7 +65,7 @@ module core (
     assign kmem_rd = inst[3];
     assign kmem_wr = inst[2];
     assign pmem_rd = inst[1];
-    assign pmem_wr = inst[0];
+    assign pmem_wr = inst[0] & sfp_vld;
 
     assign mac_in = inst[6] ? kmem_out : qmem_out;
     assign pmem_in = sfp_out ;
@@ -132,6 +133,7 @@ module core (
         .sum_out(sum_out),
         .sfp_in(fifo_out),
         .sfp_out(sfp_out),
+        .valid(sfp_vld),
         .reset(reset)
     );
 

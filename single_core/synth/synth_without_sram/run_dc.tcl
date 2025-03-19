@@ -56,6 +56,7 @@ analyze -format verilog -lib WORK fifo_mux_2_1.v
 analyze -format verilog -lib WORK fifo_mux_8_1.v
 analyze -format verilog -lib WORK ofifo.v
 analyze -format verilog -lib WORK sfp_row.v
+analyze -format verilog -lib WORK sfp_custom_div.v
 
 elaborate $top_module -lib WORK -update
 current_design $top_module

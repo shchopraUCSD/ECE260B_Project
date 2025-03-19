@@ -1,10 +1,6 @@
 # FIXME first try with a relaxed clock cycle so that timing can be met. 
 # we will optimize the final dual core design at the end
-<<<<<<< HEAD
 set clock_cycle 1.0 
-=======
-set clock_cycle 4.0 
->>>>>>> 3476684 (PNR meets timing with multicycle of 2 in SFP division)
 set io_delay 0.2 
 
 set clock_port clk

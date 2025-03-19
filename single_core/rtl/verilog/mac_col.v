@@ -42,7 +42,7 @@ module mac_col (
         .bw(bw),
         .bw_psum(bw_psum),
         .pr(pr)
-    ) mac_16in_instance (
+    ) mac_8in_instance (
         .a  (query_q),
         .b  (key_q),
         .out(psum)

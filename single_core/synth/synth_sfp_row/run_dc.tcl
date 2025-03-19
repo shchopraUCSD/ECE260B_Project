@@ -2,6 +2,8 @@ set top_module sfp_row
 set uname $tcl_platform(user)
 set rtlPath "/home/linux/ieng6/ee260bwi25/$uname/ECE260B_Project/single_core/rtl/verilog"
 
+
+set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db} 
 set link_library $target_library
 set symbol_library {}
 set wire_load_mode enclosed
@@ -46,6 +48,7 @@ define_design_lib WORK -path .template
 
 # read RTL
 analyze -format verilog -lib WORK sfp_row.v
+analyze -format verilog -lib WORK sfp_custom_div.v
 
 elaborate $top_module -lib WORK -update
 current_design $top_module

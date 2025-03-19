@@ -3,6 +3,7 @@
 ./verilog/core.v
 ./verilog/sync.v
 ./verilog/sfp_row.v
+./verilog/sfp_custom_div.v
 ./verilog/mac_col.v
 ./verilog/mac_16in.v
 ./verilog/mac_8in.v

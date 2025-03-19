@@ -413,20 +413,22 @@ module fullchip_tb;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             //now accumulation is done, and the sum is stored in the internal n FIFO
-            //start the division - FIXME hardcode to 2 cycle delay to match implementation
+            //start the division - FIXME hardcode to 10 cycle delay to match implementation
             sfp_acc = 0;
             sfp_div = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
-            #0.5 clk = 1'b1;
-            #0.5 clk = 1'b0;
+            sfp_div = 0;
+            repeat(13) begin
+                #0.5 clk = 1'b1;
+                #0.5 clk = 1'b0;
+            end
             //division is done - write this back to pmem at the same address
             pmem_wr = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             //write back to memory done
             pmem_wr  = 0;
-            sfp_div  = 0;
             //now move to the next address 
             pmem_add = pmem_add + 1;
             #0.5 clk = 1'b1;
