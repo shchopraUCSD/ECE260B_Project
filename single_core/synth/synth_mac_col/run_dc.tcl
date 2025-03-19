@@ -5,6 +5,7 @@ set rtlPath "/home/linux/ieng6/ee260bwi25/$uname/ECE260B_Project/single_core/rtl
 # Target library
 # FIXME use worst corner
 set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db} 
+
 set link_library $target_library
 set symbol_library {}
 set wire_load_mode enclosed
