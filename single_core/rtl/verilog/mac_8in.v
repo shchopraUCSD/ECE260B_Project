@@ -19,55 +19,99 @@ module mac_8in (
     input [pr*bw-1:0] b;
 
 
+    reg [2*bw-1:0] l_product0;
+    reg [2*bw-1:0] l_product1;
+    reg [2*bw-1:0] l_product2;
+    reg [2*bw-1:0] l_product3;
+    reg [2*bw-1:0] l_product4;
+    reg [2*bw-1:0] l_product5;
+    reg [2*bw-1:0] l_product6;
+    reg [2*bw-1:0] l_product7;
 
-    reg [2*bw-1:0] product0;
-    reg [2*bw-1:0] product1;
-    reg [2*bw-1:0] product2;
-    reg [2*bw-1:0] product3;
-    reg [2*bw-1:0] product4;
-    reg [2*bw-1:0] product5;
-    reg [2*bw-1:0] product6;
-    reg [2*bw-1:0] product7;
+    reg [2*bw-1:0] h_product0;
+    reg [2*bw-1:0] h_product1;
+    reg [2*bw-1:0] h_product2;
+    reg [2*bw-1:0] h_product3;
+    reg [2*bw-1:0] h_product4;
+    reg [2*bw-1:0] h_product5;
+    reg [2*bw-1:0] h_product6;
+    reg [2*bw-1:0] h_product7;
 
-    reg [bw_psum-1:0] out1;
-    reg [bw_psum-1:0] out2;
+    reg [bw_psum-1:0] out0_stg1;
+    reg [bw_psum-1:0] out1_stg1;
+    reg [bw_psum-1:0] out2_stg1;
+    reg [bw_psum-1:0] out3_stg1;
 
+    reg [bw_psum-1:0] out0_stg2;
+    reg [bw_psum-1:0] out1_stg2;
 
     genvar i;
 
     always @(posedge clk) begin
         if (reset) begin
-            product0 <= 0;
-            product1 <= 0;
-            product2 <= 0;
-            product3 <= 0;
-            product4 <= 0;
-            product5 <= 0;
-            product6 <= 0;
-            product7 <= 0;
+            l_product0 <= 0;
+            l_product1 <= 0;
+            l_product2 <= 0;
+            l_product3 <= 0;
+            l_product4 <= 0;
+            l_product5 <= 0;
+            l_product6 <= 0;
+            l_product7 <= 0;
+
+            h_product0 <= 0;
+            h_product1 <= 0;
+            h_product2 <= 0;
+            h_product3 <= 0;
+            h_product4 <= 0;
+            h_product5 <= 0;
+            h_product6 <= 0;
+            h_product7 <= 0;
+
+            out0_stg1 <= 0;
+            out1_stg1 <= 0;
+            out2_stg1 <= 0;
+            out3_stg1 <= 0;
+
+            out0_stg2 <= 0;
+            out1_stg2 <= 0;
 
             out <= 0;
         end else begin 
-            product0 <= {{(bw) {a[bw*1-1]}}, a[bw*1-1:bw*0]} * {{(bw) {b[bw*1-1]}}, b[bw*1-1:bw*0]};
-            product1 <= {{(bw) {a[bw*2-1]}}, a[bw*2-1:bw*1]} * {{(bw) {b[bw*2-1]}}, b[bw*2-1:bw*1]};
-            product2 <= {{(bw) {a[bw*3-1]}}, a[bw*3-1:bw*2]} * {{(bw) {b[bw*3-1]}}, b[bw*3-1:bw*2]};
-            product3 <= {{(bw) {a[bw*4-1]}}, a[bw*4-1:bw*3]} * {{(bw) {b[bw*4-1]}}, b[bw*4-1:bw*3]};
-            product4 <= {{(bw) {a[bw*5-1]}}, a[bw*5-1:bw*4]} * {{(bw) {b[bw*5-1]}}, b[bw*5-1:bw*4]};
-            product5 <= {{(bw) {a[bw*6-1]}}, a[bw*6-1:bw*5]} * {{(bw) {b[bw*6-1]}}, b[bw*6-1:bw*5]};
-            product6 <= {{(bw) {a[bw*7-1]}}, a[bw*7-1:bw*6]} * {{(bw) {b[bw*7-1]}}, b[bw*7-1:bw*6]};
-            product7 <= {{(bw) {a[bw*8-1]}}, a[bw*8-1:bw*7]} * {{(bw) {b[bw*8-1]}}, b[bw*8-1:bw*7]};
+            l_product0 <= {{(bw) {a[bw*1-1]}}, a[bw*1-1:bw*0]} * {12'b0, b[bw*1-1-4:bw*0]};
+            l_product1 <= {{(bw) {a[bw*2-1]}}, a[bw*2-1:bw*1]} * {12'b0, b[bw*2-1-4:bw*1]};
+            l_product2 <= {{(bw) {a[bw*3-1]}}, a[bw*3-1:bw*2]} * {12'b0, b[bw*3-1-4:bw*2]};
+            l_product3 <= {{(bw) {a[bw*4-1]}}, a[bw*4-1:bw*3]} * {12'b0, b[bw*4-1-4:bw*3]};
+            l_product4 <= {{(bw) {a[bw*5-1]}}, a[bw*5-1:bw*4]} * {12'b0, b[bw*5-1-4:bw*4]};
+            l_product5 <= {{(bw) {a[bw*6-1]}}, a[bw*6-1:bw*5]} * {12'b0, b[bw*6-1-4:bw*5]};
+            l_product6 <= {{(bw) {a[bw*7-1]}}, a[bw*7-1:bw*6]} * {12'b0, b[bw*7-1-4:bw*6]};
+            l_product7 <= {{(bw) {a[bw*8-1]}}, a[bw*8-1:bw*7]} * {12'b0, b[bw*8-1-4:bw*7]};
+
+            h_product0 <= {{(bw) {a[bw*1-1]}}, a[bw*1-1:bw*0]} * {{(12) {b[bw*1-1]}}, b[bw*1-1:bw*0 + 4]};
+            h_product1 <= {{(bw) {a[bw*2-1]}}, a[bw*2-1:bw*1]} * {{(12) {b[bw*2-1]}}, b[bw*2-1:bw*1 + 4]};
+            h_product2 <= {{(bw) {a[bw*3-1]}}, a[bw*3-1:bw*2]} * {{(12) {b[bw*3-1]}}, b[bw*3-1:bw*2 + 4]};
+            h_product3 <= {{(bw) {a[bw*4-1]}}, a[bw*4-1:bw*3]} * {{(12) {b[bw*4-1]}}, b[bw*4-1:bw*3 + 4]};
+            h_product4 <= {{(bw) {a[bw*5-1]}}, a[bw*5-1:bw*4]} * {{(12) {b[bw*5-1]}}, b[bw*5-1:bw*4 + 4]};
+            h_product5 <= {{(bw) {a[bw*6-1]}}, a[bw*6-1:bw*5]} * {{(12) {b[bw*6-1]}}, b[bw*6-1:bw*5 + 4]};
+            h_product6 <= {{(bw) {a[bw*7-1]}}, a[bw*7-1:bw*6]} * {{(12) {b[bw*7-1]}}, b[bw*7-1:bw*6 + 4]};
+            h_product7 <= {{(bw) {a[bw*8-1]}}, a[bw*8-1:bw*7]} * {{(12) {b[bw*8-1]}}, b[bw*8-1:bw*7 + 4]};
             
-            out1 <= {{(4){product0[2*bw-1]}},product0}
-                + {{(4){product1[2*bw-1]}},product1}
-                + {{(4){product2[2*bw-1]}},product2}
-                + {{(4){product3[2*bw-1]}},product3}
+            out0_stg1 <= {{(4){l_product0[2*bw-1]}},l_product0} + {h_product0, 4'b0000}
+                        + {{(4){l_product1[2*bw-1]}},l_product1} + {h_product1, 4'b0000}
             ;
-            out2 <= {{(4){product4[2*bw-1]}},product4}
-                + {{(4){product5[2*bw-1]}},product5}
-                + {{(4){product6[2*bw-1]}},product6}
-                + {{(4){product7[2*bw-1]}},product7}
+            out1_stg1 <= {{(4){l_product2[2*bw-1]}},l_product2} + {h_product2, 4'b0000}
+                        + {{(4){l_product3[2*bw-1]}},l_product3} + {h_product3, 4'b0000}
             ;
-            out <= out1 + out2;
+            out2_stg1 <= {{(4){l_product4[2*bw-1]}},l_product4} + {h_product4, 4'b0000}
+                        + {{(4){l_product5[2*bw-1]}},l_product5} + {h_product5, 4'b0000}
+            ;
+            out3_stg1 <= {{(4){l_product6[2*bw-1]}},l_product6} + {h_product6, 4'b0000}
+                        + {{(4){l_product7[2*bw-1]}},l_product7} + {h_product7, 4'b0000}
+            ;
+
+            out0_stg2 <= out0_stg1 + out1_stg1;
+            out1_stg2 <= out2_stg1 + out3_stg1;
+
+            out <= out0_stg2 + out1_stg2;
         end
     end
 endmodule

@@ -71,9 +71,6 @@ module sfp_row (
     assign sfp_out[bw_psum*7-1 : bw_psum*6] = pass_through ? sfp_in[bw_psum*7-1 : bw_psum*6] : sfp_out_sign6;
     assign sfp_out[bw_psum*8-1 : bw_psum*7] = pass_through ? sfp_in[bw_psum*8-1 : bw_psum*7] : sfp_out_sign7;
 
-    //Driving the sum of individual columns to ouput that will be collected by the async FIFO 
-    assign sum_out = sum_q;
-
     //FIXME add 1 to stabilize since otherwise could have division by 0 case
     assign sum_2core = sum_q[bw_psum_out-1:7] + sum_in[bw_psum_out-1:7] + 1;
 
@@ -170,8 +167,12 @@ module sfp_row (
 
     always @(posedge clk) begin
         if (reset) begin
-            sum_q <= 0;
+            valid <= 0;
             div_q <= 0;
+            strt_pulse <= 0;
+            sum_q <= 0;
+            sum_1 <= 0;
+            sum_2 <= 0;
             sfp_in_sign0 <= 0;
             sfp_in_sign1 <= 0;
             sfp_in_sign2 <= 0;

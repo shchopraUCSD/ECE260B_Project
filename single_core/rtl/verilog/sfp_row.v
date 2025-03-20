@@ -167,8 +167,12 @@ module sfp_row (
 
     always @(posedge clk) begin
         if (reset) begin
-            sum_q <= 0;
+            valid <= 0;
             div_q <= 0;
+            strt_pulse <= 0;
+            sum_q <= 0;
+            sum_1 <= 0;
+            sum_2 <= 0;
             sfp_in_sign0 <= 0;
             sfp_in_sign1 <= 0;
             sfp_in_sign2 <= 0;
