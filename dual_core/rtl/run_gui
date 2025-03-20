@@ -1,0 +1,26 @@
+xrun \
++gui \
++access+rwc \
++xm64bit \
++xmstatus \
++xmtimescale+1ns/1ps \
++xmoveride_timescale \
++xmseq_udp_delay+20ps \
+-define INITIALIZE_MEMORY \
+-xminitialize 0 \
+-input probes.tcl \
+-v ./verilog/fullchip.v \
+-v ./verilog/core.v \
+-v ./verilog/sync.v \
+-v ./verilog/sfp_row.v \
+-v ./verilog/mac_col.v \
+-v ./verilog/mac_8in.v \
+-v ./verilog/mac_array.v \
+-v ./verilog/sram_w8_64b.v \
+-v ./verilog/sram_w8_160b.v \
+-v ./verilog/ofifo.v \
+-v ./verilog/fifo_depth16.v \
+-v ./verilog/fifo_mux_16_1.v \
+-v ./verilog/fifo_mux_8_1.v \
+-v ./verilog/fifo_mux_2_1.v \
+./verilog/fullchip_tb.v

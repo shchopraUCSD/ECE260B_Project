@@ -1,0 +1,16 @@
+xrun \
++gui \
++access+rwc \
++xm64bit \
++xmstatus \
++xmtimescale+1ns/1ps \
++xmoveride_timescale \
++xmseq_udp_delay+20ps \
+-define GLS_RUN \
+-define INITIALIZE_MEMORY \
+-xminitialize 0 \
+-input probes.tcl \
+-v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v \
+-v ../../synth/synth_with_sram/core.out.v \
+-v ../../rtl/verilog/fullchip.v \
+../../rtl/verilog/fullchip_tb.v

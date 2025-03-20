@@ -1,0 +1,56 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : sfp_custom_div
+Version: K-2015.06-SP2
+Date   : Wed Mar 19 12:31:48 2025
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65gpluswc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+sfp_custom_div         ZeroWireload      tcbn65gpluswc
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 663.0410 uW   (94%)
+  Net Switching Power  =  41.4181 uW    (6%)
+                         ---------
+Total Dynamic Power    = 704.4590 uW  (100%)
+
+Cell Leakage Power     =  18.5884 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.6152        6.8655e-03        6.4402e+03            0.6285  (  86.93%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  4.7805e-02        3.4553e-02        1.2147e+04        9.4505e-02  (  13.07%)
+--------------------------------------------------------------------------------------------------
+Total              0.6630 mW     4.1418e-02 mW     1.8588e+04 nW         0.7230 mW
+1
