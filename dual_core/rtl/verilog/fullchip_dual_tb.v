@@ -10,7 +10,7 @@ module fullchip_tb;
     parameter bw_psum = 2 * bw + 4;  // partial sum bit precision
     parameter pr = 8;  // how many products added in each dot product 
     parameter col = 16;  // how many dot product units are equipped
-    parameter core_col = 8;
+    parameter core_col = 8;  
 
     integer qk_file;  // file handler
     integer qk_scan_file;  // file handler
@@ -59,7 +59,7 @@ module fullchip_tb;
     assign inst[17] = sfp_acc;
     assign inst[16] = ofifo_rd;
     assign inst[15:12] = qkmem_add;
-    assign inst[11:8]  = pmem_add;
+    assign inst[11:8] = pmem_add;
     assign inst[7] = execute;
     assign inst[6] = load;
     assign inst[5] = qmem_rd;
@@ -69,6 +69,7 @@ module fullchip_tb;
     assign inst[1] = pmem_rd;
     assign inst[0] = pmem_wr;
     assign inst[37:19] = inst[18:0]; //FIXME : add instructions for core 2
+
     wire [bw_psum*col-1:0] out;
     reg [bw_psum*col-1:0] out_q;
 
@@ -160,12 +161,12 @@ module fullchip_tb;
 
 
 
-        for (q=0; q<col/2; q=q+1) begin
-          for (j=0; j<pr; j=j+1) begin
+        for (q = 0; q < col/2; q = q + 1) begin
+            for (j = 0; j < pr; j = j + 1) begin
                 qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
                 K[q][j] = captured_data;
-                $display("##### %h\n", K[q][j]);
-          end
+                $display("##### %d\n core0", K[q][j]);
+            end
         end
 
         qk_file = $fopen("kdata_core1.txt", "r");
@@ -179,13 +180,15 @@ module fullchip_tb;
 
 
 
-        for (q=col/2; q<col; q=q+1) begin
-          for (j=0; j<pr; j=j+1) begin
+        for (q = col/2; q < col; q = q + 1) begin
+            for (j = 0; j < pr; j = j + 1) begin
                 qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
                 K[q][j] = captured_data;
-                $display("##### %h core 1 q=%d j=%d\n", K[q][j], q,j);
-          end
+                $display("##### %d\n", K[q][j]);
+            end
         end
+
+        /////////////////////////////////
 
 
 
@@ -214,14 +217,12 @@ module fullchip_tb;
                 end
 
                 temp5b = result[t][q];
-                temp5b_abs = temp5b[bw_psum-1] ? ~temp5b[bw_psum-1:0]+1 : temp5b[bw_psum-1:0];
+                temp5b_abs = temp5b[bw_psum-1] ? ~temp5b[bw_psum-1:0] + 1 : temp5b[bw_psum-1:0];
                 //$display("DBG: temp5b intermediate actual value: %h", temp5b);
                 //$display("DBG: temp5b intermediate abs value: %h", temp5b_abs);
                 temp_sum = temp_sum + temp5b_abs;
                 temp16b = {temp16b[299:0], temp5b};
-                temp16b_abs = {temp16b_abs[299:0], temp5b_abs};
-                //$display("DBG: temp16b intermediate actual value: %h", temp16b);
-                //$display("DBG: temp16b intermediate abs value: %h", temp16b_abs);
+                temp16b_abs = {temp16b_abs[2999:0], temp5b_abs};
             end
 
             //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
@@ -259,262 +260,27 @@ module fullchip_tb;
      */
 
             //numerator must also be absolute value as per canvas discussion
-           temp16b_norm[bw_psum*1 - 1: bw_psum*0] = temp16b_abs[bw_psum*1 - 1: bw_psum*0] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*2 - 1: bw_psum*1] = temp16b_abs[bw_psum*2 - 1: bw_psum*1] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*3 - 1: bw_psum*2] = temp16b_abs[bw_psum*3 - 1: bw_psum*2] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*4 - 1: bw_psum*3] = temp16b_abs[bw_psum*4 - 1: bw_psum*3] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*5 - 1: bw_psum*4] = temp16b_abs[bw_psum*5 - 1: bw_psum*4] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b_abs[bw_psum*6 - 1: bw_psum*5] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b_abs[bw_psum*7 - 1: bw_psum*6] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b_abs[bw_psum*8 - 1: bw_psum*7] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*9 - 1: bw_psum*8] = temp16b_abs[bw_psum*9 - 1: bw_psum*8] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*10 - 1: bw_psum*9] = temp16b_abs[bw_psum*10 - 1: bw_psum*9] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*11 - 1: bw_psum*10] = temp16b_abs[bw_psum*11 - 1: bw_psum*10] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*12 - 1: bw_psum*11] = temp16b_abs[bw_psum*12 - 1: bw_psum*11] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*13 - 1: bw_psum*12] = temp16b_abs[bw_psum*13 - 1: bw_psum*12] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*14 - 1: bw_psum*13] = temp16b_abs[bw_psum*14 - 1: bw_psum*13] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*15 - 1: bw_psum*14] = temp16b_abs[bw_psum*15 - 1: bw_psum*14] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-           temp16b_norm[bw_psum*16 - 1: bw_psum*15] = temp16b_abs[bw_psum*16 - 1: bw_psum*15] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
-    
-    
-         $display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
-         final_pmem_expected_result[t] = temp16b_norm[bw_psum*col-1:0];
-         $display("DBG: ======== END cycle number %d ==========\n", t);
-      end
-
-
-
-
-
-
-
-///// Qmem writing  /////
-
-$display("##### Qmem writing  #####");
-
-  for (q=0; q<total_cycle; q=q+1) begin
-
-    #0.5 clk = 1'b0;  
-    qmem_wr = 1;  if (q>0) qkmem_add = qkmem_add + 1; 
-    
-    mem_in[1*bw-1:0*bw] = Q[q][0];
-    mem_in[2*bw-1:1*bw] = Q[q][1];
-    mem_in[3*bw-1:2*bw] = Q[q][2];
-    mem_in[4*bw-1:3*bw] = Q[q][3];
-    mem_in[5*bw-1:4*bw] = Q[q][4];
-    mem_in[6*bw-1:5*bw] = Q[q][5];
-    mem_in[7*bw-1:6*bw] = Q[q][6];
-    mem_in[8*bw-1:7*bw] = Q[q][7];
-    mem_in[9*bw-1:8*bw] = Q[q][0];
-    mem_in[10*bw-1:9*bw] = Q[q][1];
-    mem_in[11*bw-1:10*bw] = Q[q][2];
-    mem_in[12*bw-1:11*bw] = Q[q][3];
-    mem_in[13*bw-1:12*bw] = Q[q][4];
-    mem_in[14*bw-1:13*bw] = Q[q][5];
-    mem_in[15*bw-1:14*bw] = Q[q][6];
-    mem_in[16*bw-1:15*bw] = Q[q][7];
-
-    
-    #0.5 clk = 1'b1;  
-
-  end
-
-
-  #0.5 clk = 1'b0;  
-  qmem_wr = 0; 
-  qkmem_add = 0;
-  #0.5 clk = 1'b1;  
-///////////////////////////////////////////
-
-
-
-
-
-///// Kmem writing  /////
-
-$display("##### Kmem writing #####");
-
-  for (q=0; q<core_col; q=q+1) begin
-
-    #0.5 clk = 1'b0;  
-    kmem_wr = 1; if (q>0) qkmem_add = qkmem_add + 1; 
-    
-    mem_in[1*bw-1:0*bw] = K[q][0];
-    mem_in[2*bw-1:1*bw] = K[q][1];
-    mem_in[3*bw-1:2*bw] = K[q][2];
-    mem_in[4*bw-1:3*bw] = K[q][3];
-    mem_in[5*bw-1:4*bw] = K[q][4];
-    mem_in[6*bw-1:5*bw] = K[q][5];
-    mem_in[7*bw-1:6*bw] = K[q][6];
-    mem_in[8*bw-1:7*bw] = K[q][7];
-    mem_in[9*bw-1:8*bw] = K[q+core_col][0];
-    mem_in[10*bw-1:9*bw] = K[q+core_col][1];
-    mem_in[11*bw-1:10*bw] = K[q+core_col][2];
-    mem_in[12*bw-1:11*bw] = K[q+core_col][3];
-    mem_in[13*bw-1:12*bw] = K[q+core_col][4];
-    mem_in[14*bw-1:13*bw] = K[q+core_col][5];
-    mem_in[15*bw-1:14*bw] = K[q+core_col][6];
-    mem_in[16*bw-1:15*bw] = K[q+core_col][7];
-
-    //$display("DBG: mem_in = %h q \n", mem_in);
-    
-    #0.5 clk = 1'b1;  
-
-  end
-
-  #0.5 clk = 1'b0;  
-  kmem_wr = 0;  
-  qkmem_add = 0;
-  #0.5 clk = 1'b1;  
-///////////////////////////////////////////
-
-
-
-  for (q=0; q<2; q=q+1) begin
-    #0.5 clk = 1'b0;  
-    #0.5 clk = 1'b1;   
-  end
-
-
-
-
-/////  K data loading  /////
-$display("##### K data loading to processor #####");
-
-  for (q=0; q<col+1; q=q+1) begin
-    #0.5 clk = 1'b0;  
-    load = 1; 
-    if (q==1) kmem_rd = 1;
-    if (q>1) begin
-       qkmem_add = qkmem_add + 1;
-    end
-
-    #0.5 clk = 1'b1;  
-  end
-
-  #0.5 clk = 1'b0;  
-  kmem_rd = 0; qkmem_add = 0;
-  #0.5 clk = 1'b1;  
-
-  #0.5 clk = 1'b0;  
-  load = 0; 
-  #0.5 clk = 1'b1;  
-
-///////////////////////////////////////////
-
- for (q=0; q<10; q=q+1) begin
-    #0.5 clk = 1'b0;   
-    #0.5 clk = 1'b1;   
- end
-
-
-
-
-
-///// execution  /////
-$display("##### execute #####");
-
-  for (q=0; q<total_cycle; q=q+1) begin
-    #0.5 clk = 1'b0;  
-    execute = 1; 
-    qmem_rd = 1;
-
-    if (q>0) begin
-       qkmem_add = qkmem_add + 1;
-    end
-
-    #0.5 clk = 1'b1;  
-  end
-
-  #0.5 clk = 1'b0;  
-  qmem_rd = 0; qkmem_add = 0; execute = 0;
-  #0.5 clk = 1'b1;  
-
-
-///////////////////////////////////////////
-
- for (q=0; q<10; q=q+1) begin
-    #0.5 clk = 1'b0;   
-    #0.5 clk = 1'b1;   
- end
-
-
-
-
-////////////// output fifo rd and wb to psum mem ///////////////////
-
-$display("##### move ofifo to pmem #####");
-
-  for (q=0; q<total_cycle; q=q+1) begin
-    #0.5 clk = 1'b0;  
-    ofifo_rd = 1; 
-    pmem_wr = 1; 
-
-    if (q>0) begin
-       pmem_add = pmem_add + 1;
-    end
-
-    #0.5 clk = 1'b1;  
-  end
-
-  #0.5 clk = 1'b0;  
-  pmem_wr = 0; pmem_add = 0; ofifo_rd = 0;
-  #0.5 clk = 1'b1;  
-
-///////////////////////////////////////////
-
-
-////////////// read from pmem, normalize in sfp, write back to pmem ///////////////////
-
-$display("##### sfp operation #####");
-
-    for (q=0; q<total_cycle; q=q+1) begin
-        #0.5 clk = 1'b0;  
-        pmem_rd = 1;        
-        #0.5 clk = 1'b1;          
-        #0.5 clk = 1'b0;
-        //now pmem has spit out the data, so start the accumulation
-         sfp_acc = 1; 
-        #0.5 clk = 1'b1;  
-        #0.5 clk = 1'b0;
-        //now accumulation is done, and the sum is stored in the internal FIFO
-        //start the division - FIXME hardcode to 2 cycle delay to match implementation
-        sfp_acc = 0;
-        sfp_div = 1;
-        #0.5 clk = 1'b1;  
-        #0.5 clk = 1'b0;
-        #0.5 clk = 1'b1;  
-        #0.5 clk = 1'b0;
-        //division is done - write this back to pmem at the same address
-        pmem_rd = 0; pmem_wr = 1;
-        #0.5 clk = 1'b1;  
-        #0.5 clk = 1'b0;
-        //write back to memory done
-        pmem_wr = 0; sfp_div = 0;
-        //now move to the next address 
-        pmem_add = pmem_add + 1;
-        #0.5 clk = 1'b1;      
-    end
-
-  #0.5 clk = 1'b0;  
-  pmem_add = 0;
-  #0.5 clk = 1'b1;  
-///////////////////////////////////////////
-
-////////////// final data validation by reading pmem ///////////////////
-
-  #0.5 clk = 1'b0;  
-  pmem_rd = 1;
-  #0.5 clk = 1'b1;  
-
-  for (q=0; q<total_cycle+1; q=q+1) begin
-    #0.5 clk = 1'b0;  
-
-    pmem_add = pmem_add + 1;
-    if(q>0)begin
-        $display("DBG: final output from pmem for @cycle%2d: %40h", q-1, out_q);
-        if(out_q[bw_psum*col-1:0] != final_pmem_expected_result[q-1])begin
-            error_count = error_count + 1;
+            temp16b_norm[bw_psum*1 - 1: bw_psum*0] = temp16b_abs[bw_psum*1 - 1: bw_psum*0] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*2 - 1: bw_psum*1] = temp16b_abs[bw_psum*2 - 1: bw_psum*1] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*3 - 1: bw_psum*2] = temp16b_abs[bw_psum*3 - 1: bw_psum*2] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*4 - 1: bw_psum*3] = temp16b_abs[bw_psum*4 - 1: bw_psum*3] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*5 - 1: bw_psum*4] = temp16b_abs[bw_psum*5 - 1: bw_psum*4] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*6 - 1: bw_psum*5] = temp16b_abs[bw_psum*6 - 1: bw_psum*5] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*7 - 1: bw_psum*6] = temp16b_abs[bw_psum*7 - 1: bw_psum*6] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*8 - 1: bw_psum*7] = temp16b_abs[bw_psum*8 - 1: bw_psum*7] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*9 - 1: bw_psum*8] = temp16b_abs[bw_psum*9 - 1: bw_psum*8] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*10 - 1: bw_psum*9] = temp16b_abs[bw_psum*10 - 1: bw_psum*9] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*11 - 1: bw_psum*10] = temp16b_abs[bw_psum*11 - 1: bw_psum*10] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*12 - 1: bw_psum*11] = temp16b_abs[bw_psum*12 - 1: bw_psum*11] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*13 - 1: bw_psum*12] = temp16b_abs[bw_psum*13 - 1: bw_psum*12] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*14 - 1: bw_psum*13] = temp16b_abs[bw_psum*14 - 1: bw_psum*13] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*15 - 1: bw_psum*14] = temp16b_abs[bw_psum*15 - 1: bw_psum*14] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+            temp16b_norm[bw_psum*16 - 1: bw_psum*15] = temp16b_abs[bw_psum*16 - 1: bw_psum*15] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
+ 
+
+            $display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
+            final_pmem_expected_result[t] = temp16b_norm[bw_psum*col-1:0];
+            $display("DBG: ======== END cycle number %d ==========\n", t);
         end
 
         //////////////////////////////////////////////
@@ -542,14 +308,14 @@ $display("##### sfp operation #####");
             mem_in[6*bw-1:5*bw] = Q[q][5];
             mem_in[7*bw-1:6*bw] = Q[q][6];
             mem_in[8*bw-1:7*bw] = Q[q][7];
-            //    mem_in[9*bw-1:8*bw] = Q[q][8];
-            //    mem_in[10*bw-1:9*bw] = Q[q][9];
-            //    mem_in[11*bw-1:10*bw] = Q[q][10];
-            //    mem_in[12*bw-1:11*bw] = Q[q][11];
-            //    mem_in[13*bw-1:12*bw] = Q[q][12];
-            //    mem_in[14*bw-1:13*bw] = Q[q][13];
-            //    mem_in[15*bw-1:14*bw] = Q[q][14];
-            //    mem_in[16*bw-1:15*bw] = Q[q][15];
+            mem_in[9*bw-1:8*bw] = Q[q][0];
+            mem_in[10*bw-1:9*bw] = Q[q][1];
+            mem_in[11*bw-1:10*bw] = Q[q][2];
+            mem_in[12*bw-1:11*bw] = Q[q][3];
+            mem_in[13*bw-1:12*bw] = Q[q][4];
+            mem_in[14*bw-1:13*bw] = Q[q][5];
+            mem_in[15*bw-1:14*bw] = Q[q][6];
+            mem_in[16*bw-1:15*bw] = Q[q][7];
 
             #0.5 clk = 1'b1;
 
@@ -570,7 +336,7 @@ $display("##### sfp operation #####");
 
         $display("##### Kmem writing #####");
 
-        for (q = 0; q < col; q = q + 1) begin
+        for (q = 0; q < core_col; q = q + 1) begin
 
             #0.5 clk = 1'b0;
             kmem_wr = 1;
@@ -584,7 +350,14 @@ $display("##### sfp operation #####");
             mem_in[6*bw-1:5*bw] = K[q][5];
             mem_in[7*bw-1:6*bw] = K[q][6];
             mem_in[8*bw-1:7*bw] = K[q][7];
-
+            mem_in[9*bw-1:8*bw] = K[q+core_col][0];
+            mem_in[10*bw-1:9*bw] = K[q+core_col][1];
+            mem_in[11*bw-1:10*bw] = K[q+core_col][2];
+            mem_in[12*bw-1:11*bw] = K[q+core_col][3];
+            mem_in[13*bw-1:12*bw] = K[q+core_col][4];
+            mem_in[14*bw-1:13*bw] = K[q+core_col][5];
+            mem_in[15*bw-1:14*bw] = K[q+core_col][6];
+            mem_in[16*bw-1:15*bw] = K[q+core_col][7];
 
             $display("DBG: mem_in = %h q \n", mem_in);
             #0.5 clk = 1'b1;
@@ -672,23 +445,29 @@ $display("##### sfp operation #####");
 
         for (q = 0; q < total_cycle; q = q + 1) begin
             #0.5 clk = 1'b0;
+            
+            ofifo_rd = 1;
+            #0.5 clk = 1'b1;
+            #0.5 clk = 1'b0;
             //now ofifo has spit out the data, so start the accumulation
             ofifo_rd = 0;
             sfp_acc = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
+            #0.5 clk = 1'b1;
+            #0.5 clk = 1'b0;
             //now accumulation is done, and the sum is stored in the internal n FIFO
-            //start the division - FIXME hardcode to 10 cycle delay to match implementation
+            //start the division - FIXME hardcode to X cycle delay to match implementation
             sfp_acc = 0;
             sfp_div = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             sfp_div = 0;
-            repeat(13) begin
+            repeat(20+3) begin
                 #0.5 clk = 1'b1;
                 #0.5 clk = 1'b0;
             end
-            //division is done - write this back to pmem at the same address
+            //division is done - write this to pmem
             pmem_wr = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
@@ -698,8 +477,6 @@ $display("##### sfp operation #####");
             pmem_add = pmem_add + 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
-            ofifo_rd = 1;
-            #0.5 clk = 1'b1;
         end
     
         #0.5 clk = 1'b0;
