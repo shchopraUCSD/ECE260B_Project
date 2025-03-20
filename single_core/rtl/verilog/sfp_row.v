@@ -51,7 +51,6 @@ module sfp_row (
 
     wire [col-1:0] div_vld_out;
     wire [col-1:0] div_busy_out;
-    wire [col-1:0] div_done_out;
 
     reg strt_pulse;
 
@@ -88,7 +87,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[0],
-        div_done_out[0],
         div_vld_out[0],
         sfp_in_sign0,
         sum_2core,
@@ -99,7 +97,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[1],
-        div_done_out[1],
         div_vld_out[1],
         sfp_in_sign1,
         sum_2core,
@@ -110,7 +107,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[2],
-        div_done_out[2],
         div_vld_out[2],
         sfp_in_sign2,
         sum_2core,
@@ -121,7 +117,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[3],
-        div_done_out[3],
         div_vld_out[3],
         sfp_in_sign3,
         sum_2core,
@@ -132,7 +127,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[4],
-        div_done_out[4],
         div_vld_out[4],
         sfp_in_sign4,
         sum_2core,
@@ -143,7 +137,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[5],
-        div_done_out[5],
         div_vld_out[5],
         sfp_in_sign5,
         sum_2core,
@@ -154,7 +147,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[6],
-        div_done_out[6],
         div_vld_out[6],
         sfp_in_sign6,
         sum_2core,
@@ -165,7 +157,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[7],
-        div_done_out[7],
         div_vld_out[7],
         sfp_in_sign7,
         sum_2core,

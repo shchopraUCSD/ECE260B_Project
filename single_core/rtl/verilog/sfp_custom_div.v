@@ -1,16 +1,15 @@
-// radix-4 implementation, should take 10 cycles
-// module sfp_custom_div ( // width of numbers in bits
-//     input wire clk,              // clock
-//     input wire rst,              // reset
-//     input wire start,            // start calculation
-//     output reg busy,             // calculation in progress
-//     output reg done,             // calculation is complete (high for one tick)
-//     output reg valid,            // result is valid
-//     input wire [19:0] a,    // dividend (numerator)
-//     input wire [19:0] b,    // divisor (denominator)
-//     output reg [19:0] val  // result value: quotient
-// );
+module sfp_custom_div ( 
+    input wire clk,              // clock
+    input wire rst,              // reset
+    input wire start,            // start calculation
+    output reg busy,             // calculation in progress
+    output reg valid,            // result is valid
+    input wire [19:0] a,    // dividend (numerator)
+    input wire [19:0] b,    // divisor (denominator)
+    output reg [19:0] val  // result value: quotient
+);
 
+// // radix-4 implementation, should take 10 cycles
 //     reg [19:0] b1;             // copy of divisor
 //     reg [19:0] quo, quo_next;  // intermediate quotient
 //     reg [20:0] acc, acc_next;    // accumulator (1 bit wider)
@@ -40,7 +39,6 @@
         
 //         if (rst) begin
 //             busy <= 0;
-//             done <= 0;
 //             valid <= 0;
 //             val <= 0;
 //         end else begin
@@ -49,17 +47,14 @@
 //                 i <= 0;
 //                 if (b == 0) begin  // catch divide by zero
 //                     busy <= 0;
-//                     done <= 1;
 //                 end else begin
 //                     busy <= 1;
 //                     b1 <= b;
-//                     done <= 0;
 //                     {acc, quo} <= {{20{1'b0}}, a, 2'b0};  // initialize calculation
 //                 end
 //             end else if (busy) begin
 //                 if (i == 9) begin  // we're done
 //                     busy <= 0;
-//                     done <= 1;
 //                     valid <= 1;
 //                     val <= quo_next;
 //                 end else begin
@@ -70,25 +65,13 @@
 //             end
 //         end
 //     end
-// endmodule
 
 // radix-2 implementation, takes 20 cycles
-module sfp_custom_div ( // width of numbers in bits
-    input wire clk,              // clock
-    input wire rst,              // reset
-    input wire start,            // start calculation
-    output reg busy,             // calculation in progress
-    output reg done,             // calculation is complete (high for one tick)
-    output reg valid,            // result is valid
-    input wire [19:0] a,    // dividend (numerator)
-    input wire [19:0] b,    // divisor (denominator)
-    output reg [19:0] val  // result value: quotient
-    );
 
-    reg [19:0] b1;             // copy of divisor
-    reg [19:0] quo, quo_next;  // intermediate quotient
-    reg [20:0] acc, acc_next;    // accumulator (1 bit wider)
-    reg [$clog2(20)-1:0] i;      // iteration counter
+    reg [19:0] b1;              // copy of divisor
+    reg [19:0] quo, quo_next;             // intermediate quotient
+    reg [20:0] acc, acc_next;             // accumulator (1 bit wider)
+    reg [$clog2(20)-1:0] i;     // iteration counter
 
     // division algorithm iteration
     always @(*) begin
@@ -105,26 +88,25 @@ module sfp_custom_div ( // width of numbers in bits
         
         if (rst) begin
             busy <= 0;
-            done <= 0;
             valid <= 0;
             val <= 0;
+            b1  <= 0;
+            acc <= 0;
+            quo <= 0;
         end else begin
             if (start) begin
                 valid <= 0;
                 i <= 0;
                 if (b == 0) begin  // catch divide by zero
                     busy <= 0;
-                    done <= 1;
                 end else begin
                     busy <= 1;
                     b1 <= b;
-                    done <= 0;
                     {acc, quo} <= {{20{1'b0}}, a, 1'b0};  // initialize calculation
                 end
             end else if (busy) begin
                 if (i == 19) begin  // we're done
                     busy <= 0;
-                    done <= 1;
                     valid <= 1;
                     val <= quo_next;
                 end else begin

@@ -11,9 +11,9 @@ module sfp_custom_div_tb;
     wire [19:0] ans;
 
     reg strt_pulse;
-    wire busy, done, valid;
+    wire busy, valid;
 
-    sfp_custom_div cus_div_inst(clk, rst, strt_pulse, busy, done, valid, div, dis, ans);
+    sfp_custom_div cus_div_inst(clk, rst, strt_pulse, busy, valid, div, dis, ans);
 
     always clk = #0.5 ~clk;
 
