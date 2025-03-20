@@ -93,6 +93,7 @@ module sfp_custom_div (
             b1 <= 0;
             acc <= 0;
             quo <= 0;
+            i <= 0;
         end else begin
             if (start) begin
                 valid <= 0;

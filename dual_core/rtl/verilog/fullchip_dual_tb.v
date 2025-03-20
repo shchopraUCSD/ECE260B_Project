@@ -228,7 +228,7 @@ module fullchip_tb;
                 //$display("DBG: temp5b intermediate abs value: %h", temp5b_abs);
                 temp_sum = temp_sum + temp5b_abs;
                 temp16b = {temp16b[299:0], temp5b};
-                temp16b_abs = {temp16b_abs[2999:0], temp5b_abs};
+                temp16b_abs = {temp16b_abs[299:0], temp5b_abs};
             end
 
             //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
@@ -458,10 +458,10 @@ module fullchip_tb;
             //now ofifo has spit out the data, so start the accumulation
             ofifo_rd = 0;
             sfp_acc  = 1;
-            #0.5 clk = 1'b1;
-            #0.5 clk = 1'b0;
-            #0.5 clk = 1'b1;
-            #0.5 clk = 1'b0;
+            repeat (3) begin
+                #0.5 clk = 1'b1;
+                #0.5 clk = 1'b0;
+            end
             //now accumulation is done, and the sum is stored in the internal n FIFO
             //start the division - FIXME hardcode to X cycle delay to match implementation
             sfp_acc = 0;

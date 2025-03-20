@@ -412,10 +412,10 @@ module fullchip_tb;
             //now ofifo has spit out the data, so start the accumulation
             ofifo_rd = 0;
             sfp_acc  = 1;
-            #0.5 clk = 1'b1;
-            #0.5 clk = 1'b0;
-            #0.5 clk = 1'b1;
-            #0.5 clk = 1'b0;
+            repeat (3) begin
+                #0.5 clk = 1'b1;
+                #0.5 clk = 1'b0;
+            end
             //now accumulation is done, and the sum is stored in the internal n FIFO
             //start the division - FIXME hardcode to X cycle delay to match implementation
             sfp_acc = 0;
