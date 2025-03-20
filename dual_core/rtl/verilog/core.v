@@ -4,6 +4,7 @@
 module core (
     clk,
     sum_out,
+    sum_in,
     mem_in,
     out,
     inst,
@@ -17,12 +18,13 @@ module core (
     parameter pr = 8;
 
     output [bw_psum+3:0] sum_out;
+    input [bw_psum+3:0] sum_in;
     output [bw_psum*col-1:0] out;
     wire [bw_psum*col-1:0] pmem_out;
     input [pr*bw-1:0] mem_in;
     input clk;
     //FIXME extend inst for sfp instructions
-    input [18:0] inst;
+    input [21:0] inst;
     input reset;
 
     //latch the final normalized output
@@ -129,7 +131,7 @@ module core (
         .div(sfp_div),
         //FIXME fifo_ext_rd and sum_in only come into the picture in dual core design
         .fifo_ext_rd(1'b0),
-        .sum_in(24'b0),
+        .sum_in(sum_in),
         .sum_out(sum_out),
         .sfp_in(fifo_out),
         .sfp_out(sfp_out),

@@ -1,0 +1,338 @@
+Information: Variable 'hdlin_enable_vpp' is obsolete and is being ignored. (INFO-100)
+Running PRESTO HDLC
+Compiling source file /home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/single_core/rtl/verilog/async_fifo.v
+Warning:  /home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/single_core/rtl/verilog/async_fifo.v:94: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  /home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/single_core/rtl/verilog/async_fifo.v:105: A unnamed generate block with an LRM-defined name 'genblk2' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Loading db file '/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db'
+Warning: Detected use of obsolete/unsupported feature.  The following
+	will not be available in a future release of the application:
+	elaborate -update. Use plain elaborate instead (CMD-100)
+Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/gtech.db'
+Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/standard.sldb'
+  Loading link library 'tcbn65gpluswc'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine async_fifo line 44 in file
+		'/home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/single_core/rtl/verilog/async_fifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     wr_ptr_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  192  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine async_fifo line 55 in file
+		'/home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/single_core/rtl/verilog/async_fifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rd_ptr_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rd_data_reg     | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine async_fifo line 67 in file
+		'/home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/single_core/rtl/verilog/async_fifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rd_ptr_meta_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   rd_ptr_sync_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine async_fifo line 78 in file
+		'/home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/single_core/rtl/verilog/async_fifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   wr_ptr_meta_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   wr_ptr_sync_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|  async_fifo/61   |   8    |   24    |      3       |
+======================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'async_fifo'.
+Current design is 'async_fifo'.
+
+  Linking design 'async_fifo'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  async_fifo                  /home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/single_core/synth/synth_async_fifo/async_fifo.db
+  tcbn65gpluswc (library)     /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db
+
+
+Reading SDC version 2.0...
+Current design is 'async_fifo'.
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Current design is 'async_fifo'.
+Current design is 'async_fifo'.
+Warning: The -timing_high_effort_script option is ignored.  (OPT-1342)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.2 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.2 |     *     |
+============================================================================
+
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'async_fifo'
+
+Loaded alib file './alib-52/tcbn65gpluswc.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'async_fifo'
+Information: Added key list 'DesignWare' to design 'async_fifo'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIEL' in the library 'tcbn65gpluswc' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEH' in the library 'tcbn65gpluswc' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:05    2747.9      0.09       8.0       0.0                           17131.8809      0.00  
+    0:00:05    2751.5      0.00       0.0       0.0                           17306.7480      0.00  
+    0:00:05    2751.5      0.00       0.0       0.0                           17306.7480      0.00  
+    0:00:05    2751.5      0.00       0.0       0.0                           17306.7480      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:06    2748.6      0.00       0.0       0.0                           17185.7383      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06    2748.6      0.00       0.0       0.0                           17121.0156      0.00  
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+    0:00:06    2749.0      0.00       0.0       0.0                           17132.4824      0.00  
+    0:00:06    2749.0      0.00       0.0       0.0                           17132.4824      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06    2749.0      0.00       0.0       0.0                           17132.4824      0.00  
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06    2752.6      0.00       0.0       0.0                           15982.9131      0.00  
+    0:00:06    2752.2      0.00       0.0       0.0                           15967.6670      0.00  
+    0:00:06    2752.2      0.00       0.0       0.0                           15967.6670      0.00  
+    0:00:06    2752.2      0.00       0.0       0.0                           15967.6670      0.00  
+    0:00:07    2752.2      0.00       0.0       0.0                           15967.6670      0.00  
+    0:00:07    2750.8      0.00       0.0       0.0                           15914.8242      0.00  
+    0:00:07    2750.8      0.00       0.0       0.0                           15914.8242      0.00  
+    0:00:07    2750.8      0.00       0.0       0.0                           15914.8242      0.00  
+    0:00:07    2750.8      0.00       0.0       0.0                           15914.8242      0.00  
+    0:00:07    2748.2      0.00       0.0       0.0                           15846.7285      0.00  
+Loading db file '/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Current design is 'async_fifo'.
+Writing verilog file '/home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/single_core/synth/synth_async_fifo/async_fifo.out.v'.
+Error: couldn't open "log/async_fifo_area.rep": no such file or directory
+	Use error_info for more info. (CMD-013)
+Error: can't read "inFile": no such variable
+	Use error_info for more info. (CMD-013)
+Error: can't read "inFile": no such variable
+	Use error_info for more info. (CMD-013)
+run.scr completed successfully

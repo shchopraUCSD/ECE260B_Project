@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : async_fifo
+Version: K-2015.06-SP2
+Date   : Wed Mar 19 19:46:51 2025
+****************************************
+
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db)
+
+Number of ports:                           55
+Number of nets:                           462
+Number of cells:                          433
+Number of combinational cells:            193
+Number of sequential cells:               240
+Number of macros/black boxes:               0
+Number of buf/inv:                         16
+Number of references:                      38
+
+Combinational area:                477.360001
+Buf/Inv area:                       20.520001
+Noncombinational area:            2270.879944
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  2748.239945
+Total area:                 undefined
+1

@@ -39,7 +39,7 @@ module fullchip_tb;
     reg [pr*bw*2-1:0] mem_in;
     reg ofifo_rd = 0;
     //FIXME extend inst for sfp instructions
-    wire [37:0] inst;
+    wire [43:0] inst;
     reg qmem_rd = 0;
     reg qmem_wr = 0;
     reg kmem_rd = 0;
@@ -53,8 +53,12 @@ module fullchip_tb;
 
     reg sfp_acc = 0;
     reg sfp_div = 0;
+    reg send_sum = 0;
+    reg rec_sum = 0;
 
     //FIXME extend inst for sfp instructions
+    assign inst[21] = rec_sum;
+    assign inst[20] = send_sum;
     assign inst[18] = sfp_div;
     assign inst[17] = sfp_acc;
     assign inst[16] = ofifo_rd;
@@ -68,7 +72,7 @@ module fullchip_tb;
     assign inst[2] = kmem_wr;
     assign inst[1] = pmem_rd;
     assign inst[0] = pmem_wr;
-    assign inst[37:19] = inst[18:0]; //FIXME : add instructions for core 2
+    assign inst[43:22] = inst[21:0]; //FIXME : add instructions for core 2
 
     wire [bw_psum*col-1:0] out;
     reg [bw_psum*col-1:0] out_q;
