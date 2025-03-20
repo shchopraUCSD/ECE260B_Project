@@ -7,7 +7,7 @@ Report : power
         -analysis_effort low
 Design : mac_array
 Version: K-2015.06-SP2
-Date   : Wed Mar 19 09:25:48 2025
+Date   : Wed Mar 19 16:38:00 2025
 ****************************************
 
 
@@ -65,12 +65,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =  10.8538 mW   (91%)
-  Net Switching Power  =   1.0629 mW    (9%)
+  Cell Internal Power  =  21.1393 mW   (94%)
+  Net Switching Power  =   1.4026 mW    (6%)
                          ---------
-Total Dynamic Power    =  11.9167 mW  (100%)
+Total Dynamic Power    =  22.5418 mW  (100%)
 
-Cell Leakage Power     = 259.2741 uW
+Cell Leakage Power     = 349.0678 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -80,9 +80,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           8.5459        8.8685e-02        4.0041e+04            8.6746  (  71.24%)
+register          18.6516            0.6302        8.0414e+04           19.3622  (  84.58%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      2.3079            0.9742        2.1923e+05            3.5014  (  28.76%)
+combinational      2.4877            0.7723        2.6865e+05            3.5287  (  15.42%)
 --------------------------------------------------------------------------------------------------
-Total             10.8538 mW         1.0629 mW     2.5927e+05 nW        12.1760 mW
+Total             21.1393 mW         1.4026 mW     3.4907e+05 nW        22.8909 mW
 1
