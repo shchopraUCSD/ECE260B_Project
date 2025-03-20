@@ -29,16 +29,12 @@ module fullchip_tb;
 
     integer i, j, k, t, p, q, s, u, m;
 
-
-
-
-
     reg reset = 1;
     reg clk = 0;
     reg [pr*bw-1:0] mem_in;
     reg ofifo_rd = 0;
     //FIXME extend inst for sfp instructions
-    wire [18:0] inst;
+    wire [19:0] inst;
     reg qmem_rd = 0;
     reg qmem_wr = 0;
     reg kmem_rd = 0;
@@ -52,8 +48,10 @@ module fullchip_tb;
 
     reg sfp_acc = 0;
     reg sfp_div = 0;
+    reg sfp_pass = 0;
 
     //FIXME extend inst for sfp instructions
+    assign inst[19] = sfp_pass;
     assign inst[18] = sfp_div;
     assign inst[17] = sfp_acc;
     assign inst[16] = ofifo_rd;

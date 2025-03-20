@@ -4,6 +4,7 @@ module sfp_row (
     clk,
     acc,
     div,
+    pass_through,
     fifo_ext_rd,
     sum_in,
     sum_out,
@@ -17,7 +18,7 @@ module sfp_row (
     parameter bw = 8;
     parameter bw_psum = 20;
     parameter bw_psum_out = 24;
-    input  clk, div, acc, fifo_ext_rd;
+    input  clk, div, acc, fifo_ext_rd, pass_through;
     input  [bw_psum_out-1:0] sum_in;
     input  [col*bw_psum-1:0] sfp_in;
     input  reset;
@@ -61,14 +62,14 @@ module sfp_row (
 
     //numerator must also use absolute value as per canvas discussion
 
-    assign sfp_out[bw_psum*1-1 : bw_psum*0] = sfp_out_sign0;
-    assign sfp_out[bw_psum*2-1 : bw_psum*1] = sfp_out_sign1;
-    assign sfp_out[bw_psum*3-1 : bw_psum*2] = sfp_out_sign2;
-    assign sfp_out[bw_psum*4-1 : bw_psum*3] = sfp_out_sign3;
-    assign sfp_out[bw_psum*5-1 : bw_psum*4] = sfp_out_sign4;
-    assign sfp_out[bw_psum*6-1 : bw_psum*5] = sfp_out_sign5;
-    assign sfp_out[bw_psum*7-1 : bw_psum*6] = sfp_out_sign6;
-    assign sfp_out[bw_psum*8-1 : bw_psum*7] = sfp_out_sign7;
+    assign sfp_out[bw_psum*1-1 : bw_psum*0] = pass_through ? sfp_in[bw_psum*1-1 : bw_psum*0] : sfp_out_sign0;
+    assign sfp_out[bw_psum*2-1 : bw_psum*1] = pass_through ? sfp_in[bw_psum*2-1 : bw_psum*1] : sfp_out_sign1;
+    assign sfp_out[bw_psum*3-1 : bw_psum*2] = pass_through ? sfp_in[bw_psum*3-1 : bw_psum*2] : sfp_out_sign2;
+    assign sfp_out[bw_psum*4-1 : bw_psum*3] = pass_through ? sfp_in[bw_psum*4-1 : bw_psum*3] : sfp_out_sign3;
+    assign sfp_out[bw_psum*5-1 : bw_psum*4] = pass_through ? sfp_in[bw_psum*5-1 : bw_psum*4] : sfp_out_sign4;
+    assign sfp_out[bw_psum*6-1 : bw_psum*5] = pass_through ? sfp_in[bw_psum*6-1 : bw_psum*5] : sfp_out_sign5;
+    assign sfp_out[bw_psum*7-1 : bw_psum*6] = pass_through ? sfp_in[bw_psum*7-1 : bw_psum*6] : sfp_out_sign6;
+    assign sfp_out[bw_psum*8-1 : bw_psum*7] = pass_through ? sfp_in[bw_psum*8-1 : bw_psum*7] : sfp_out_sign7;
 
     //FIXME add 1 to stabilize since otherwise could have division by 0 case
     assign sum_2core = sum_q[bw_psum_out-1:7] + sum_in[bw_psum_out-1:7] + 1;

@@ -22,7 +22,7 @@ module core (
     input [pr*bw-1:0] mem_in;
     input clk;
     //FIXME extend inst for sfp instructions
-    input [18:0] inst;
+    input [19:0] inst;
     input reset;
 
     //latch the final normalized output
@@ -54,8 +54,10 @@ module core (
     wire sfp_div;
     wire sfp_acc;
     wire sfp_vld;
+    wire sfp_pass;
 
     //FIXME extend inst for sfp instructions
+    assign sfp_pass = inst[19];
     assign sfp_div = inst[18];
     assign sfp_acc = inst[17];
     assign ofifo_rd = inst[16];
@@ -129,6 +131,7 @@ module core (
         .clk(clk),
         .acc(sfp_acc),
         .div(sfp_div),
+	.pass_through(sfp_pass),
         //FIXME fifo_ext_rd and sum_in only come into the picture in dual core design
         .fifo_ext_rd(1'b0),
         .sum_in(24'b0),
