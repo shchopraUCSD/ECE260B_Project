@@ -226,6 +226,7 @@ module fullchip_tb;
                 temp5b_abs = temp5b[bw_psum-1] ? ~temp5b[bw_psum-1:0] + 1 : temp5b[bw_psum-1:0];
                 //$display("DBG: temp5b intermediate actual value: %h", temp5b);
                 //$display("DBG: temp5b intermediate abs value: %h", temp5b_abs);
+                //$display("DBG: temp5b intermediate sum value: %h", temp_sum);
                 temp_sum = temp_sum + temp5b_abs;
                 temp16b = {temp16b[299:0], temp5b};
                 temp16b_abs = {temp16b_abs[299:0], temp5b_abs};
@@ -463,8 +464,24 @@ module fullchip_tb;
                 #0.5 clk = 1'b0;
             end
             //now accumulation is done, and the sum is stored in the internal n FIFO
-            //start the division - FIXME hardcode to X cycle delay to match implementation
+            send_sum = 1'b1;
             sfp_acc = 0;
+            #0.5 clk = 1'b1;
+            #0.5 clk = 1'b0;
+            send_sum = 1'b0;
+            #0.5 clk = 1'b1;
+            #0.5 clk = 1'b0;
+            #0.5 clk = 1'b1;
+            #0.5 clk = 1'b0;
+            #0.5 clk = 1'b1;
+            #0.5 clk = 1'b0;
+            rec_sum = 1'b1;
+            #0.5 clk = 1'b1;
+            #0.5 clk = 1'b0;
+            rec_sum = 1'b0;
+            #0.5 clk = 1'b1;
+            #0.5 clk = 1'b0;
+            //start the division - FIXME hardcode to X cycle delay to match implementation
             sfp_div = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
@@ -483,6 +500,7 @@ module fullchip_tb;
             pmem_add = pmem_add + 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
+            #0.5 clk = 1'b1;
         end
 
         #0.5 clk = 1'b0;

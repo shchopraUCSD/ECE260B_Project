@@ -57,6 +57,7 @@ module sfp_row (
 
     reg [bw_psum_out-1:0] sum_q;
 
+    wire [bw_psum_out-1:0] sum_2core_temp;
     reg [bw_psum_out-1:0] sum_1;
     reg [bw_psum_out-1:0] sum_2;
 
@@ -73,7 +74,8 @@ module sfp_row (
 
     assign sum_out = sum_q[bw_psum_out-1:0];
     //FIXME add 1 to stabilize since otherwise could have division by 0 case
-    assign sum_2core = sum_q[bw_psum_out-1:7] + sum_in[bw_psum_out-1:7] + 1;
+    assign sum_2core_temp = sum_q + sum_in;
+    assign sum_2core = sum_2core_temp[bw_psum_out-1:7]  + 1;
 
     assign abs[bw_psum*1-1 : bw_psum*0] = (sfp_in[bw_psum*1-1]) ?  (~sfp_in[bw_psum*1-1 : bw_psum*0] + 1)  :  sfp_in[bw_psum*1-1 : bw_psum*0];
     assign abs[bw_psum*2-1 : bw_psum*1] = (sfp_in[bw_psum*2-1]) ?  (~sfp_in[bw_psum*2-1 : bw_psum*1] + 1)  :  sfp_in[bw_psum*2-1 : bw_psum*1];
