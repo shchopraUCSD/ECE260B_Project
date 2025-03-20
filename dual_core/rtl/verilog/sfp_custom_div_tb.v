@@ -11,23 +11,32 @@ module sfp_custom_div_tb;
     wire [19:0] ans;
 
     reg strt_pulse;
-    wire busy, done, valid;
+    wire busy, valid;
 
-    sfp_custom_div cus_div_inst(clk, rst, strt_pulse, busy, done, valid, div, dis, ans);
+    sfp_custom_div cus_div_inst (
+        clk,
+        rst,
+        strt_pulse,
+        busy,
+        valid,
+        div,
+        dis,
+        ans
+    );
 
     always clk = #0.5 ~clk;
 
-    
+
 
     initial begin
 
         $dumpfile("sfp_custom_div_tb.vcd");
         $dumpvars(0, sfp_custom_div_tb);
-        
+
         @(negedge clk);
         div = 86;
         dis = 4;
-        
+
         @(negedge clk);
         @(negedge clk);
         rst = 0;
@@ -35,7 +44,7 @@ module sfp_custom_div_tb;
 
         @(negedge clk);
         strt_pulse = 0;
-            
+
 
         #40 $finish;
 

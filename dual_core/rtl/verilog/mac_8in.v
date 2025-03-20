@@ -11,7 +11,7 @@ module mac_8in (
     parameter bw = 8;
     parameter bw_psum = 2 * bw + 4;
     parameter pr = 8;  // parallel factor: number of inputs = 8
-    
+
     input clk;
     input reset;
     output reg [bw_psum-1:0] out;
@@ -76,7 +76,7 @@ module mac_8in (
             out1_stg2 <= 0;
 
             out <= 0;
-        end else begin 
+        end else begin
             l_product0 <= {{(bw) {a[bw*1-1]}}, a[bw*1-1:bw*0]} * {12'b0, b[bw*1-1-4:bw*0]};
             l_product1 <= {{(bw) {a[bw*2-1]}}, a[bw*2-1:bw*1]} * {12'b0, b[bw*2-1-4:bw*1]};
             l_product2 <= {{(bw) {a[bw*3-1]}}, a[bw*3-1:bw*2]} * {12'b0, b[bw*3-1-4:bw*2]};
@@ -94,7 +94,7 @@ module mac_8in (
             h_product5 <= {{(bw) {a[bw*6-1]}}, a[bw*6-1:bw*5]} * {{(12) {b[bw*6-1]}}, b[bw*6-1:bw*5 + 4]};
             h_product6 <= {{(bw) {a[bw*7-1]}}, a[bw*7-1:bw*6]} * {{(12) {b[bw*7-1]}}, b[bw*7-1:bw*6 + 4]};
             h_product7 <= {{(bw) {a[bw*8-1]}}, a[bw*8-1:bw*7]} * {{(12) {b[bw*8-1]}}, b[bw*8-1:bw*7 + 4]};
-            
+
             out0_stg1 <= {{(4){l_product0[2*bw-1]}},l_product0} + {h_product0, 4'b0000}
                         + {{(4){l_product1[2*bw-1]}},l_product1} + {h_product1, 4'b0000}
             ;

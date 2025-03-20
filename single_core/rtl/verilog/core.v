@@ -4,6 +4,7 @@
 module core (
     clk,
     sum_out,
+    sum_in,
     mem_in,
     out,
     inst,
@@ -17,12 +18,13 @@ module core (
     parameter pr = 8;
 
     output [bw_psum+3:0] sum_out;
+    input [bw_psum+3:0] sum_in;
     output [bw_psum*col-1:0] out;
     wire [bw_psum*col-1:0] pmem_out;
     input [pr*bw-1:0] mem_in;
     input clk;
     //FIXME extend inst for sfp instructions
-    input [19:0] inst;
+    input [21:0] inst;
     input reset;
 
     //latch the final normalized output
@@ -32,12 +34,12 @@ module core (
     wire [pr*bw-1:0] kmem_out;
     wire [pr*bw-1:0] qmem_out;
     wire [bw_psum*col-1:0] array_out;
-    reg  [bw_psum*col-1:0] array_out_q;
+    reg [bw_psum*col-1:0] array_out_q;
     wire [bw_psum*col-1:0] fifo_out;
     wire [bw_psum*col-1:0] pmem_in;
     wire [bw_psum*col-1:0] sfp_out;
     wire [col-1:0] fifo_wr;
-    reg  [col-1:0] fifo_wr_q;
+    reg [col-1:0] fifo_wr_q;
     wire ofifo_rd;
     wire [3:0] qkmem_add;
     wire [3:0] pmem_add;
@@ -72,7 +74,7 @@ module core (
     assign pmem_wr = inst[0] & sfp_vld;
 
     assign mac_in = inst[6] ? kmem_out : qmem_out;
-    assign pmem_in = sfp_out ;
+    assign pmem_in = sfp_out;
 
     //final output of core - pmem out for final verification
     assign out = pmem_out;
@@ -131,10 +133,10 @@ module core (
         .clk(clk),
         .acc(sfp_acc),
         .div(sfp_div),
-	.pass_through(sfp_pass),
+        .pass_through(sfp_pass),
         //FIXME fifo_ext_rd and sum_in only come into the picture in dual core design
         .fifo_ext_rd(1'b0),
-        .sum_in(24'b0),
+        .sum_in(sum_in),
         .sum_out(sum_out),
         .sfp_in(fifo_out),
         .sfp_out(sfp_out),
@@ -154,7 +156,7 @@ module core (
     //////////// For printing purpose ////////////
     always @(posedge clk) begin
         array_out_q <= array_out;
-        fifo_wr_q <= fifo_wr;
+        fifo_wr_q   <= fifo_wr;
         //if(sfp_div)
         //sfp_out_q <= sfp_out;
     end

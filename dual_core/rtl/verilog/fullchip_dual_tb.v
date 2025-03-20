@@ -10,7 +10,7 @@ module fullchip_tb;
     parameter bw_psum = 2 * bw + 4;  // partial sum bit precision
     parameter pr = 8;  // how many products added in each dot product 
     parameter col = 16;  // how many dot product units are equipped
-    parameter core_col = 8;  
+    parameter core_col = 8;
 
     integer qk_file;  // file handler
     integer qk_scan_file;  // file handler
@@ -74,7 +74,7 @@ module fullchip_tb;
     assign inst[2] = kmem_wr;
     assign inst[1] = pmem_rd;
     assign inst[0] = pmem_wr;
-    assign inst[43:22] = inst[21:0]; //FIXME : add instructions for core 2
+    assign inst[43:22] = inst[21:0];  //FIXME : add instructions for core 2
 
     wire [bw_psum*col-1:0] out;
     reg [bw_psum*col-1:0] out_q;
@@ -167,7 +167,7 @@ module fullchip_tb;
 
 
 
-        for (q = 0; q < col/2; q = q + 1) begin
+        for (q = 0; q < col / 2; q = q + 1) begin
             for (j = 0; j < pr; j = j + 1) begin
                 qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
                 K[q][j] = captured_data;
@@ -186,7 +186,7 @@ module fullchip_tb;
 
 
 
-        for (q = col/2; q < col; q = q + 1) begin
+        for (q = col / 2; q < col; q = q + 1) begin
             for (j = 0; j < pr; j = j + 1) begin
                 qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
                 K[q][j] = captured_data;
@@ -282,7 +282,7 @@ module fullchip_tb;
             temp16b_norm[bw_psum*14 - 1: bw_psum*13] = temp16b_abs[bw_psum*14 - 1: bw_psum*13] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
             temp16b_norm[bw_psum*15 - 1: bw_psum*14] = temp16b_abs[bw_psum*15 - 1: bw_psum*14] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
             temp16b_norm[bw_psum*16 - 1: bw_psum*15] = temp16b_abs[bw_psum*16 - 1: bw_psum*15] / ({1'b0,temp_sum[bw_psum+3:7]}+1);
- 
+
 
             $display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
             final_pmem_expected_result[t] = temp16b_norm[bw_psum*col-1:0];
@@ -306,16 +306,16 @@ module fullchip_tb;
             qmem_wr = 1;
             if (q > 0) qkmem_add = qkmem_add + 1;
 
-            mem_in[1*bw-1:0*bw] = Q[q][0];
-            mem_in[2*bw-1:1*bw] = Q[q][1];
-            mem_in[3*bw-1:2*bw] = Q[q][2];
-            mem_in[4*bw-1:3*bw] = Q[q][3];
-            mem_in[5*bw-1:4*bw] = Q[q][4];
-            mem_in[6*bw-1:5*bw] = Q[q][5];
-            mem_in[7*bw-1:6*bw] = Q[q][6];
-            mem_in[8*bw-1:7*bw] = Q[q][7];
-            mem_in[9*bw-1:8*bw] = Q[q][0];
-            mem_in[10*bw-1:9*bw] = Q[q][1];
+            mem_in[1*bw-1:0*bw]   = Q[q][0];
+            mem_in[2*bw-1:1*bw]   = Q[q][1];
+            mem_in[3*bw-1:2*bw]   = Q[q][2];
+            mem_in[4*bw-1:3*bw]   = Q[q][3];
+            mem_in[5*bw-1:4*bw]   = Q[q][4];
+            mem_in[6*bw-1:5*bw]   = Q[q][5];
+            mem_in[7*bw-1:6*bw]   = Q[q][6];
+            mem_in[8*bw-1:7*bw]   = Q[q][7];
+            mem_in[9*bw-1:8*bw]   = Q[q][0];
+            mem_in[10*bw-1:9*bw]  = Q[q][1];
             mem_in[11*bw-1:10*bw] = Q[q][2];
             mem_in[12*bw-1:11*bw] = Q[q][3];
             mem_in[13*bw-1:12*bw] = Q[q][4];
@@ -348,16 +348,16 @@ module fullchip_tb;
             kmem_wr = 1;
             if (q > 0) qkmem_add = qkmem_add + 1;
 
-            mem_in[1*bw-1:0*bw] = K[q][0];
-            mem_in[2*bw-1:1*bw] = K[q][1];
-            mem_in[3*bw-1:2*bw] = K[q][2];
-            mem_in[4*bw-1:3*bw] = K[q][3];
-            mem_in[5*bw-1:4*bw] = K[q][4];
-            mem_in[6*bw-1:5*bw] = K[q][5];
-            mem_in[7*bw-1:6*bw] = K[q][6];
-            mem_in[8*bw-1:7*bw] = K[q][7];
-            mem_in[9*bw-1:8*bw] = K[q+core_col][0];
-            mem_in[10*bw-1:9*bw] = K[q+core_col][1];
+            mem_in[1*bw-1:0*bw]   = K[q][0];
+            mem_in[2*bw-1:1*bw]   = K[q][1];
+            mem_in[3*bw-1:2*bw]   = K[q][2];
+            mem_in[4*bw-1:3*bw]   = K[q][3];
+            mem_in[5*bw-1:4*bw]   = K[q][4];
+            mem_in[6*bw-1:5*bw]   = K[q][5];
+            mem_in[7*bw-1:6*bw]   = K[q][6];
+            mem_in[8*bw-1:7*bw]   = K[q][7];
+            mem_in[9*bw-1:8*bw]   = K[q+core_col][0];
+            mem_in[10*bw-1:9*bw]  = K[q+core_col][1];
             mem_in[11*bw-1:10*bw] = K[q+core_col][2];
             mem_in[12*bw-1:11*bw] = K[q+core_col][3];
             mem_in[13*bw-1:12*bw] = K[q+core_col][4];
@@ -451,13 +451,13 @@ module fullchip_tb;
 
         for (q = 0; q < total_cycle; q = q + 1) begin
             #0.5 clk = 1'b0;
-            
+
             ofifo_rd = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             //now ofifo has spit out the data, so start the accumulation
             ofifo_rd = 0;
-            sfp_acc = 1;
+            sfp_acc  = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             #0.5 clk = 1'b1;
@@ -469,7 +469,7 @@ module fullchip_tb;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             sfp_div = 0;
-            repeat(20+3) begin
+            repeat (20 + 3) begin
                 #0.5 clk = 1'b1;
                 #0.5 clk = 1'b0;
             end
@@ -484,7 +484,7 @@ module fullchip_tb;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
         end
-    
+
         #0.5 clk = 1'b0;
         pmem_add = 0;
         #0.5 clk = 1'b1;
@@ -499,7 +499,8 @@ module fullchip_tb;
         for (q = 0; q < total_cycle; q = q + 1) begin
             #0.5 clk = 1'b0;
 
-            $display("DBG: final output from pmem for @cycle%2d: %40h, expected_out %40h", q, out[bw_psum*col-1:0], final_pmem_expected_result[q]);
+            $display("DBG: final output from pmem for @cycle%2d: %40h, expected_out %40h", q,
+                     out[bw_psum*col-1:0], final_pmem_expected_result[q]);
             if (out[bw_psum*col-1:0] != final_pmem_expected_result[q]) begin
                 error_count = error_count + 1;
             end

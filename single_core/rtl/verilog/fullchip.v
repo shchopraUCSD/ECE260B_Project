@@ -9,7 +9,7 @@ parameter pr = 8;
 
 input  clk; 
 input  [pr*bw-1:0] mem_in; 
-input  [19:0] inst; 
+input  [21:0] inst; 
 input  reset;
 output [bw_psum*col-1:0] out;
 
@@ -19,7 +19,8 @@ core core_instance (
 core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance (
 `endif
       .reset(reset), 
-      .clk(clk), 
+      .clk(clk),
+      .sum_in (24'b0),
       .mem_in(mem_in), 
       .out(out),
       .inst(inst)

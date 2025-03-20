@@ -18,10 +18,10 @@ module sfp_row (
     parameter bw = 8;
     parameter bw_psum = 20;
     parameter bw_psum_out = 24;
-    input  clk, div, acc, fifo_ext_rd, pass_through;
-    input  [bw_psum_out-1:0] sum_in;
-    input  [col*bw_psum-1:0] sfp_in;
-    input  reset;
+    input clk, div, acc, fifo_ext_rd, pass_through;
+    input [bw_psum_out-1:0] sum_in;
+    input [col*bw_psum-1:0] sfp_in;
+    input reset;
     wire   [col*bw_psum-1:0] abs;
     reg    div_q;
     output [col*bw_psum-1:0] sfp_out;

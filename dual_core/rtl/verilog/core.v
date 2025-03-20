@@ -34,10 +34,12 @@ module core (
     wire [pr*bw-1:0] kmem_out;
     wire [pr*bw-1:0] qmem_out;
     wire [bw_psum*col-1:0] array_out;
+    reg [bw_psum*col-1:0] array_out_q;
     wire [bw_psum*col-1:0] fifo_out;
     wire [bw_psum*col-1:0] pmem_in;
     wire [bw_psum*col-1:0] sfp_out;
     wire [col-1:0] fifo_wr;
+    reg [col-1:0] fifo_wr_q;
     wire ofifo_rd;
     wire [3:0] qkmem_add;
     wire [3:0] pmem_add;
@@ -72,7 +74,7 @@ module core (
     assign pmem_wr = inst[0] & sfp_vld;
 
     assign mac_in = inst[6] ? kmem_out : qmem_out;
-    assign pmem_in = sfp_out ;
+    assign pmem_in = sfp_out;
 
     //final output of core - pmem out for final verification
     assign out = pmem_out;
@@ -115,8 +117,8 @@ module core (
     ) ofifo_inst (
         .reset(reset),
         .clk(clk),
-        .in(array_out),
-        .wr(fifo_wr),
+        .in(array_out_q),
+        .wr(fifo_wr_q),
         .rd(ofifo_rd),
         .o_valid(fifo_valid),
         .out(fifo_out)
@@ -153,6 +155,8 @@ module core (
 
     //////////// For printing purpose ////////////
     always @(posedge clk) begin
+        array_out_q <= array_out;
+        fifo_wr_q   <= fifo_wr;
         //if(sfp_div)
         //sfp_out_q <= sfp_out;
     end

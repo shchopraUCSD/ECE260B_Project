@@ -23,9 +23,10 @@ module fifo_depth16 (
     output o_full;
     output o_empty;
     input [simd*bw-1:0] in;
-    output [simd*bw-1:0] out;
+    output reg [simd*bw-1:0] out;
 
     wire full, empty;
+    wire [simd*bw-1:0] mux_out;
 
     reg [4:0] rd_ptr;
     reg [4:0] wr_ptr;
@@ -76,15 +77,17 @@ module fifo_depth16 (
         .in14(q14),
         .in15(q15),
         .sel (rd_ptr[3:0]),
-        .out (out)
+        .out (mux_out)
     );
 
 
     always @(posedge rd_clk) begin
         if (reset) begin
             rd_ptr <= 5'b00000;
+            out <= 0;
         end else if ((rd == 1) && (empty == 0)) begin
             rd_ptr <= rd_ptr + 1;
+            out <= mux_out;
         end
     end
 

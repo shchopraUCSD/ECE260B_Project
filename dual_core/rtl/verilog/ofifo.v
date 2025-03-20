@@ -50,7 +50,4 @@ module ofifo (
         );
     end
 
-
-
-
 endmodule

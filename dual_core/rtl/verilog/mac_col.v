@@ -47,11 +47,11 @@ module mac_col (
         .bw_psum(bw_psum),
         .pr(pr)
     ) mac_8in_instance (
-        .clk    (clk),
-        .reset  (reset),
-        .a      (query_q),
-        .b      (key_q),
-        .out    (psum)
+        .clk  (clk),
+        .reset(reset),
+        .a    (query_q),
+        .b    (key_q),
+        .out  (psum)
     );
 
 

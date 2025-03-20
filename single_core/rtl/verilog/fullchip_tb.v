@@ -34,7 +34,7 @@ module fullchip_tb;
     reg [pr*bw-1:0] mem_in;
     reg ofifo_rd = 0;
     //FIXME extend inst for sfp instructions
-    wire [19:0] inst;
+    wire [21:0] inst;
     reg qmem_rd = 0;
     reg qmem_wr = 0;
     reg kmem_rd = 0;
@@ -405,13 +405,13 @@ module fullchip_tb;
 
         for (q = 0; q < total_cycle; q = q + 1) begin
             #0.5 clk = 1'b0;
-            
+
             ofifo_rd = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             //now ofifo has spit out the data, so start the accumulation
             ofifo_rd = 0;
-            sfp_acc = 1;
+            sfp_acc  = 1;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             #0.5 clk = 1'b1;
@@ -423,7 +423,7 @@ module fullchip_tb;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
             sfp_div = 0;
-            repeat(20+3) begin
+            repeat (20 + 3) begin
                 #0.5 clk = 1'b1;
                 #0.5 clk = 1'b0;
             end
@@ -438,7 +438,7 @@ module fullchip_tb;
             #0.5 clk = 1'b1;
             #0.5 clk = 1'b0;
         end
-    
+
         #0.5 clk = 1'b0;
         pmem_add = 0;
         #0.5 clk = 1'b1;
@@ -453,7 +453,8 @@ module fullchip_tb;
         for (q = 0; q < total_cycle; q = q + 1) begin
             #0.5 clk = 1'b0;
 
-            $display("DBG: final output from pmem for @cycle%2d: %40h, expected_out %40h", q, out[bw_psum*col-1:0], final_pmem_expected_result[q]);
+            $display("DBG: final output from pmem for @cycle%2d: %40h, expected_out %40h", q,
+                     out[bw_psum*col-1:0], final_pmem_expected_result[q]);
             if (out[bw_psum*col-1:0] != final_pmem_expected_result[q]) begin
                 error_count = error_count + 1;
             end
