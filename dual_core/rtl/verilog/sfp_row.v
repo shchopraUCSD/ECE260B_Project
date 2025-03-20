@@ -4,6 +4,7 @@ module sfp_row (
     clk,
     acc,
     div,
+    pass_through,
     fifo_ext_rd,
     sum_in,
     sum_out,
@@ -17,11 +18,11 @@ module sfp_row (
     parameter bw = 8;
     parameter bw_psum = 20;
     parameter bw_psum_out = 24;
-    input clk, div, acc, fifo_ext_rd;
-    input [bw_psum_out-1:0] sum_in;
-    input [col*bw_psum-1:0] sfp_in;
-    input reset;
-    wire  [col*bw_psum-1:0] abs;
+    input  clk, div, acc, fifo_ext_rd, pass_through;
+    input  [bw_psum_out-1:0] sum_in;
+    input  [col*bw_psum-1:0] sfp_in;
+    input  reset;
+    wire   [col*bw_psum-1:0] abs;
     reg    div_q;
     output [col*bw_psum-1:0] sfp_out;
     output [bw_psum_out-1:0] sum_out;
@@ -30,14 +31,15 @@ module sfp_row (
 
     wire [bw_psum_out-1:0] sum_this_core;
     wire signed [bw_psum-1:0] sum_2core;
-    wire signed [bw_psum-1:0] sfp_in_sign0;
-    wire signed [bw_psum-1:0] sfp_in_sign1;
-    wire signed [bw_psum-1:0] sfp_in_sign2;
-    wire signed [bw_psum-1:0] sfp_in_sign3;
-    wire signed [bw_psum-1:0] sfp_in_sign4;
-    wire signed [bw_psum-1:0] sfp_in_sign5;
-    wire signed [bw_psum-1:0] sfp_in_sign6;
-    wire signed [bw_psum-1:0] sfp_in_sign7;
+
+    reg signed [bw_psum-1:0] sfp_in_sign0;
+    reg signed [bw_psum-1:0] sfp_in_sign1;
+    reg signed [bw_psum-1:0] sfp_in_sign2;
+    reg signed [bw_psum-1:0] sfp_in_sign3;
+    reg signed [bw_psum-1:0] sfp_in_sign4;
+    reg signed [bw_psum-1:0] sfp_in_sign5;
+    reg signed [bw_psum-1:0] sfp_in_sign6;
+    reg signed [bw_psum-1:0] sfp_in_sign7;
 
     wire signed [bw_psum-1:0] sfp_out_sign0;
     wire signed [bw_psum-1:0] sfp_out_sign1;
@@ -50,35 +52,27 @@ module sfp_row (
 
     wire [col-1:0] div_vld_out;
     wire [col-1:0] div_busy_out;
-    wire [col-1:0] div_done_out;
 
     reg strt_pulse;
 
     reg [bw_psum_out-1:0] sum_q;
 
-    //numerator must also use absolute value as per canvas discussion 
+    reg [bw_psum_out-1:0] sum_1;
+    reg [bw_psum_out-1:0] sum_2;
 
-    assign sfp_in_sign0 = abs[bw_psum*1-1 : bw_psum*0];
-    assign sfp_in_sign1 = abs[bw_psum*2-1 : bw_psum*1];
-    assign sfp_in_sign2 = abs[bw_psum*3-1 : bw_psum*2];
-    assign sfp_in_sign3 = abs[bw_psum*4-1 : bw_psum*3];
-    assign sfp_in_sign4 = abs[bw_psum*5-1 : bw_psum*4];
-    assign sfp_in_sign5 = abs[bw_psum*6-1 : bw_psum*5];
-    assign sfp_in_sign6 = abs[bw_psum*7-1 : bw_psum*6];
-    assign sfp_in_sign7 = abs[bw_psum*8-1 : bw_psum*7];
+    //numerator must also use absolute value as per canvas discussion
 
-    assign sfp_out[bw_psum*1-1 : bw_psum*0] = sfp_out_sign0;
-    assign sfp_out[bw_psum*2-1 : bw_psum*1] = sfp_out_sign1;
-    assign sfp_out[bw_psum*3-1 : bw_psum*2] = sfp_out_sign2;
-    assign sfp_out[bw_psum*4-1 : bw_psum*3] = sfp_out_sign3;
-    assign sfp_out[bw_psum*5-1 : bw_psum*4] = sfp_out_sign4;
-    assign sfp_out[bw_psum*6-1 : bw_psum*5] = sfp_out_sign5;
-    assign sfp_out[bw_psum*7-1 : bw_psum*6] = sfp_out_sign6;
-    assign sfp_out[bw_psum*8-1 : bw_psum*7] = sfp_out_sign7;
+    assign sfp_out[bw_psum*1-1 : bw_psum*0] = pass_through ? sfp_in[bw_psum*1-1 : bw_psum*0] : sfp_out_sign0;
+    assign sfp_out[bw_psum*2-1 : bw_psum*1] = pass_through ? sfp_in[bw_psum*2-1 : bw_psum*1] : sfp_out_sign1;
+    assign sfp_out[bw_psum*3-1 : bw_psum*2] = pass_through ? sfp_in[bw_psum*3-1 : bw_psum*2] : sfp_out_sign2;
+    assign sfp_out[bw_psum*4-1 : bw_psum*3] = pass_through ? sfp_in[bw_psum*4-1 : bw_psum*3] : sfp_out_sign3;
+    assign sfp_out[bw_psum*5-1 : bw_psum*4] = pass_through ? sfp_in[bw_psum*5-1 : bw_psum*4] : sfp_out_sign4;
+    assign sfp_out[bw_psum*6-1 : bw_psum*5] = pass_through ? sfp_in[bw_psum*6-1 : bw_psum*5] : sfp_out_sign5;
+    assign sfp_out[bw_psum*7-1 : bw_psum*6] = pass_through ? sfp_in[bw_psum*7-1 : bw_psum*6] : sfp_out_sign6;
+    assign sfp_out[bw_psum*8-1 : bw_psum*7] = pass_through ? sfp_in[bw_psum*8-1 : bw_psum*7] : sfp_out_sign7;
 
     //FIXME add 1 to stabilize since otherwise could have division by 0 case
     assign sum_2core = sum_q[bw_psum_out-1:7] + sum_in[bw_psum_out-1:7] + 1;
-
 
     assign abs[bw_psum*1-1 : bw_psum*0] = (sfp_in[bw_psum*1-1]) ?  (~sfp_in[bw_psum*1-1 : bw_psum*0] + 1)  :  sfp_in[bw_psum*1-1 : bw_psum*0];
     assign abs[bw_psum*2-1 : bw_psum*1] = (sfp_in[bw_psum*2-1]) ?  (~sfp_in[bw_psum*2-1 : bw_psum*1] + 1)  :  sfp_in[bw_psum*2-1 : bw_psum*1];
@@ -94,7 +88,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[0],
-        div_done_out[0],
         div_vld_out[0],
         sfp_in_sign0,
         sum_2core,
@@ -105,7 +98,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[1],
-        div_done_out[1],
         div_vld_out[1],
         sfp_in_sign1,
         sum_2core,
@@ -116,7 +108,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[2],
-        div_done_out[2],
         div_vld_out[2],
         sfp_in_sign2,
         sum_2core,
@@ -127,7 +118,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[3],
-        div_done_out[3],
         div_vld_out[3],
         sfp_in_sign3,
         sum_2core,
@@ -138,7 +128,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[4],
-        div_done_out[4],
         div_vld_out[4],
         sfp_in_sign4,
         sum_2core,
@@ -149,7 +138,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[5],
-        div_done_out[5],
         div_vld_out[5],
         sfp_in_sign5,
         sum_2core,
@@ -160,7 +148,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[6],
-        div_done_out[6],
         div_vld_out[6],
         sfp_in_sign6,
         sum_2core,
@@ -171,7 +158,6 @@ module sfp_row (
         reset,
         strt_pulse,
         div_busy_out[7],
-        div_done_out[7],
         div_vld_out[7],
         sfp_in_sign7,
         sum_2core,
@@ -181,14 +167,35 @@ module sfp_row (
 
     always @(posedge clk) begin
         if (reset) begin
+            sum_q <= 0;
+            div_q <= 0;
+            sfp_in_sign0 <= 0;
+            sfp_in_sign1 <= 0;
+            sfp_in_sign2 <= 0;
+            sfp_in_sign3 <= 0;
+            sfp_in_sign4 <= 0;
+            sfp_in_sign5 <= 0;
+            sfp_in_sign6 <= 0;
+            sfp_in_sign7 <= 0;
         end else begin
             div_q <= div;
+            sfp_in_sign0 <= abs[bw_psum*1-1 : bw_psum*0];
+            sfp_in_sign1 <= abs[bw_psum*2-1 : bw_psum*1];
+            sfp_in_sign2 <= abs[bw_psum*3-1 : bw_psum*2];
+            sfp_in_sign3 <= abs[bw_psum*4-1 : bw_psum*3];
+            sfp_in_sign4 <= abs[bw_psum*5-1 : bw_psum*4];
+            sfp_in_sign5 <= abs[bw_psum*6-1 : bw_psum*5];
+            sfp_in_sign6 <= abs[bw_psum*7-1 : bw_psum*6];
+            sfp_in_sign7 <= abs[bw_psum*8-1 : bw_psum*7];
             if (acc) begin
-                sum_q <= 
+                sum_q <= sum_1 + sum_2;
+
+                sum_1 <=
                    {4'b0, abs[bw_psum*1-1 : bw_psum*0]} +
                    {4'b0, abs[bw_psum*2-1 : bw_psum*1]} +
                    {4'b0, abs[bw_psum*3-1 : bw_psum*2]} +
-                   {4'b0, abs[bw_psum*4-1 : bw_psum*3]} +
+                   {4'b0, abs[bw_psum*4-1 : bw_psum*3]} ;
+                sum_2 <=
                    {4'b0, abs[bw_psum*5-1 : bw_psum*4]} +
                    {4'b0, abs[bw_psum*6-1 : bw_psum*5]} +
                    {4'b0, abs[bw_psum*7-1 : bw_psum*6]} +

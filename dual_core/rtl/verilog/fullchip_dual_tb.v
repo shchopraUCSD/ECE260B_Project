@@ -53,12 +53,14 @@ module fullchip_tb;
 
     reg sfp_acc = 0;
     reg sfp_div = 0;
+    reg sfp_pass = 0;
     reg send_sum = 0;
     reg rec_sum = 0;
 
     //FIXME extend inst for sfp instructions
     assign inst[21] = rec_sum;
     assign inst[20] = send_sum;
+    assign inst[19] = sfp_pass;
     assign inst[18] = sfp_div;
     assign inst[17] = sfp_acc;
     assign inst[16] = ofifo_rd;
