@@ -286,7 +286,7 @@ module fullchip_tb;
 
 
             $display("DBG: normalized prd @cycle%2d: %40h", t, temp16b_norm);
-            final_pmem_expected_result[t] = temp16b_norm[bw_psum*col-1:0];
+            final_pmem_expected_result[t] = {temp16b_norm[(bw_psum*col/2)-1:0], temp16b_norm[bw_psum*col-1:(bw_psum*col/2)]};
             $display("DBG: ======== END cycle number %d ==========\n", t);
         end
 
