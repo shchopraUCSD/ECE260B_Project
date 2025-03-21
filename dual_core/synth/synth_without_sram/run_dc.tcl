@@ -105,14 +105,14 @@ current_design $top_module
 
 change_names -rules verilog -hierarchy
 
-write -format verilog -hier -output [format "%s%s" $top_module .out.v]
+write -format verilog -hier -output [format "%s%s%s" $top_module .out.v]
 
 # Write Reports
-redirect [format "%s%s" log/ $top_module _area.rep] { report_area }
+redirect [format "%s%s%s" log/ $top_module _area.rep] { report_area }
 # FIXME create a separate reference report to avoid appending issues
-redirect [format "%s%s" log/ $top_module _reference.rep] { report_reference }
+redirect [format "%s%s%s" log/ $top_module _reference.rep] { report_reference }
 #redirect -append [format "%s%s%s" log/ $top_module _area.rep] { report_reference }
-redirect [format "%s%s" log/ $top_module _area.rep] { report_area }
+redirect [format "%s%s%s" log/ $top_module _area.rep] { report_area }
 redirect [format "%s%s%s" log/ $top_module _power.rep] { report_power }
 redirect [format "%s%s%s" log/ $top_module _timing.rep] \
   { report_timing -path full -max_paths 100 -nets -transition_time -capacitance -significant_digits 3 -nosplit}
