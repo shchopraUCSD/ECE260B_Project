@@ -3,17 +3,30 @@
 set clock_cycle 1.0 
 set io_delay 0.2 
 
-set clock_port clk
+#set clock_port clk
+#create_clock -name clk -period $clock_cycle [get_ports $clock_port]
 
-create_clock -name clk -period $clock_cycle [get_ports $clock_port]
+#set_input_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports {*}]
+#set_output_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports {*}]
 
-set_input_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports {*}]
-set_output_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports {*}]
+set clock_port clk1
+create_clock -name clk1 -period $clock_cycle [get_ports $clock_port]
 
+set_input_delay -clock [get_clocks clk1] -add_delay -max $io_delay [get_ports {*}]
+set_output_delay -clock [get_clocks clk1] -add_delay -max $io_delay [get_ports {*}]
 
-#set_multicycle_path -setup 2 -from fifo_top_instance/fifo_instance/rd_ptr_reg[*] -to out_reg[*]
-#set_multicycle_path -hold 1 -from fifo_top_instance/fifo_instance/rd_ptr_reg[*] -to out_reg[*]
-#
-#set_multicycle_path -setup 2 -from sum_q_reg[*] -to out_reg[*]
-#set_multicycle_path -hold 1 -from sum_q_reg[*] -to out_reg[*]
+set clock_port clk2
+create_clock -name clk2 -period $clock_cycle [get_ports $clock_port]
 
+set_input_delay -clock [get_clocks clk2] -add_delay -max $io_delay [get_ports {*}]
+set_output_delay -clock [get_clocks clk2] -add_delay -max $io_delay [get_ports {*}]
+
+set_false_path -from [get_clocks clk1] -to [get_clocks clk2]
+set_false_path -from [get_clocks clk2] -to [get_clocks clk1]
+
+set_false_path -from [get_ports "reset"] 
+
+set_clock_uncertainty 0.05 [get_clocks clk2] 
+set_clock_uncertainty 0.05 [get_clocks clk1] 
+#create_generated_clock -name clk1 -source [get_ports $clock_port] -divide_by 1 [get_pins fullchip/clk1]
+#create_generated_clock -name clk2 -source [get_ports $clock_port] -divide_by 1 [get_pins fullchip/clk2] 
