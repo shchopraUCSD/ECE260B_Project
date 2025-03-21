@@ -22,6 +22,7 @@ catch { setOptMode -setupTargetSlack 0 }
 catch { setOptMode -verbose true }
 setExtractRCMode  -engine postRoute -total_c_th 0 -relative_c_th 1 -coupling_c_th 0.1 -minNetTermNrToBeInMem 50
 catch { setCTSMode -moveGateLimit 25 }
+catch { setCTSMode -routeTopPreferredLayer M7 }
 catch {setNanoRouteMode -quiet -drouteAllowMergedWireAtPin false}
 catch {setNanoRouteMode -quiet -drouteAntennaFactor 1.000000}
 catch {setNanoRouteMode -quiet -drouteAutoStop true}
@@ -29,7 +30,9 @@ catch {setNanoRouteMode -quiet -drouteFixAntenna true}
 catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "false"}
 catch {setNanoRouteMode -quiet -drouteStartIteration 0}
 catch {setNanoRouteMode -quiet -routeExpPreserveConstraints true}
+catch {setNanoRouteMode -quiet -routeExpSignatureEco false}
 catch {setNanoRouteMode -quiet -routeSiEffort "medium"}
+catch {setNanoRouteMode -quiet -routeTopRoutingLayer 7}
 catch {setNanoRouteMode -quiet -routeWithSiDriven true}
 catch {setNanoRouteMode -quiet -routeWithSiPostRouteFix false}
 catch {setNanoRouteMode -quiet -routeWithTimingDriven true}
@@ -45,8 +48,10 @@ catch { setDelayCalMode -enable_high_fanout true }
 catch { setDelayCalMode -engine aae }
 catch { setDelayCalMode -ignoreNetLoad false }
 catch { setDelayCalMode -SIAware true }
+catch { setPinAssignMode -maxLayer 7 }
 catch { setTrialRouteMode -handlePreroute true }
 catch { setTrialRouteMode -keepMarkedOptRoutes true }
+catch { setTrialRouteMode -maxRouteLayer 7 }
 catch { setHierMode -disableArt false }
 catch { setHierMode -reportPostRouteArtTiming false }
 catch { setHierMode -trialRouteHonorReadOnly false }

@@ -1,6 +1,6 @@
 # PPCMD 1 
 # sroute 
-# 5 
+# 4 
 # 16 
 # 0 
 # 0 
@@ -14,7 +14,7 @@
 
 # PPCMD 2 
 # addRing -nets {VDD VSS} -type block_rings -around each_block -layer {top M1 bottom M1 left M2 right M2} -width {top 0.5 bottom 0.5 left 0.5 right 0.5} -spacing {top 0.5 bottom 0.5 left 0.5 right 0.5}
-# 4 
+# 3 
 # 8 
 # 1 
 # 0 
@@ -44,7 +44,7 @@
 
 # PPCMD 3 
 # addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit M1 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit M1 -number_of_sets 25 -ybottom_offset 5 -skip_via_on_pin Standardcell -stacked_via_top_layer M8 -padcore_ring_top_layer_limit M1 -spacing 1 -merge_stripes_value 0.1 -direction horizontal -layer M5 -block_ring_bottom_layer_limit M1 -ytop_offset 5 -width 1 -area {} -nets {VDD VSS} -stacked_via_bottom_layer M1
-# 3 
+# 2 
 # 2 
 # 1 
 # 0 
@@ -61,7 +61,7 @@
 
 # PPCMD 4 
 # setAddStripeMode -break_at block_ring
-# 2 
+# 1 
 # 0 
 # 0 
 # 0 
@@ -72,34 +72,4 @@
 # NET_INFO_LIST 
 # END_NET_INFO_LIST 
 # END_PPCMD 4 
-
-# PPCMD 5 
-# addRing -spacing {top 1 bottom 1 left 1 right 1} -width {top 2 bottom 2 left 2 right 2} -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
-# 1 
-# 32 
-# 1 
-# 0 
-# 0 
-# 0 
-# BOX_LIST 
-# END_BOX_LIST 
-# NET_INFO_LIST 
-# VDD 4000 1 1 0 0 0 0 0 
-# RING_PT_INFO_LIST 
-# 631400 7000 631400 1253400 
-# END_RING_PT_INFO_LIST 
-# VDD 4000 2 1 0 0 0 0 0 
-# RING_PT_INFO_LIST 
-# 7000 630200 1255800 630200 
-# END_RING_PT_INFO_LIST 
-# VSS 4000 1 1 0 0 0 0 0 
-# RING_PT_INFO_LIST 
-# 631400 13000 631400 1247400 
-# END_RING_PT_INFO_LIST 
-# VSS 4000 2 1 0 0 0 0 0 
-# RING_PT_INFO_LIST 
-# 13000 630200 1249800 630200 
-# END_RING_PT_INFO_LIST 
-# END_NET_INFO_LIST 
-# END_PPCMD 5 
 
