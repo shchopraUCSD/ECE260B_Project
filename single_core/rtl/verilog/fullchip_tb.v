@@ -84,12 +84,16 @@ module fullchip_tb;
     reg [bw_psum*col-1:0] final_pmem_expected_result[total_cycle-1:0];
 
 
+    `ifdef GLS_RUN
+    fullchip fullchip_instance (
+    `else
     fullchip #(
         .bw(bw),
         .bw_psum(bw_psum),
         .col(col),
         .pr(pr)
     ) fullchip_instance (
+    `endif
         .reset(reset),
         .clk(clk),
         .mem_in(mem_in),

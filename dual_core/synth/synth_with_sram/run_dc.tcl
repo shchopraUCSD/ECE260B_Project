@@ -4,7 +4,7 @@ set rtlPath "/home/linux/ieng6/ee260bwi25/$uname/ECE260B_Project/single_core/rtl
 
 # Target library
 # FIXME use worst corner
-set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db} 
+set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db} 
 set link_library $target_library
 set symbol_library {}
 set wire_load_mode enclosed
@@ -56,6 +56,7 @@ analyze -format verilog -lib WORK fifo_mux_2_1.v
 analyze -format verilog -lib WORK fifo_mux_8_1.v
 analyze -format verilog -lib WORK ofifo.v
 analyze -format verilog -lib WORK sfp_row.v
+analyze -format verilog -lib WORK sfp_custom_div.v
 analyze -format verilog -lib WORK sram_w8_64b.v
 analyze -format verilog -lib WORK sram_w8_160b.v
 

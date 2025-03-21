@@ -36,8 +36,8 @@ module fullchip_tb;
 
     reg reset = 1;
     reg clk = 0;
-    wire clk1 = 0;
-    wire clk2 = 0;
+    wire clk1;
+    wire clk2;
     reg [pr*bw*2-1:0] mem_in;
     reg ofifo_rd = 0;
     //FIXME extend inst for sfp instructions
@@ -96,12 +96,16 @@ module fullchip_tb;
     reg [bw_psum*col-1:0] final_pmem_expected_result[total_cycle-1:0];
 
 
+    `ifdef GLS_RUN
+    fullchip fullchip_instance (
+    `else
     fullchip #(
         .bw(bw),
         .bw_psum(bw_psum),
         .col(core_col),
         .pr(pr)
     ) fullchip_instance (
+    `endif
         .reset(reset),
         .clk1(clk1),
         .clk2(clk2),
