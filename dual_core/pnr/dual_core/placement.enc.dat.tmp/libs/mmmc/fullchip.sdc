@@ -1,1 +1,0 @@
-/home/linux/ieng6/ee260bwi25/sparanjpay/ECE260B_Project/dual_core/pnr/dual_core/constraints/fullchip.sdc
