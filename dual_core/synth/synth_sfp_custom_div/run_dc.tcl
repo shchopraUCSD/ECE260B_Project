@@ -96,7 +96,7 @@ current_design $top_module
 
 change_names -rules verilog -hierarchy
 
-write -format verilog -hier -output [format "%s%s%s" $top_module .out.v]
+write -format verilog -hier -output [format "%s%s" $top_module .out.v]
 
 # Write Reports
 redirect [format "%s%s%s" log/ $top_module _area.rep] { report_area }
