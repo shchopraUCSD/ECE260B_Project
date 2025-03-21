@@ -1,4 +1,0 @@
-checkPinAssignment
-verify_drc
-verifyGeometry
-verifyConnectivity
