@@ -57,9 +57,14 @@ module sfp_row (
 
     reg [bw_psum_out-1:0] sum_q;
 
+    reg [bw_psum_out-1:0] sum0_stg1;
+    reg [bw_psum_out-1:0] sum1_stg1;
+    reg [bw_psum_out-1:0] sum2_stg1;
+    reg [bw_psum_out-1:0] sum3_stg1;
+
+    reg [bw_psum_out-1:0] sum0_stg2;
+    reg [bw_psum_out-1:0] sum1_stg2;
     wire [bw_psum_out-1:0] sum_2core_temp;
-    reg [bw_psum_out-1:0] sum_1;
-    reg [bw_psum_out-1:0] sum_2;
 
     //numerator must also use absolute value as per canvas discussion
 
@@ -173,9 +178,17 @@ module sfp_row (
             valid <= 0;
             div_q <= 0;
             strt_pulse <= 0;
+
             sum_q <= 0;
-            sum_1 <= 0;
-            sum_2 <= 0;
+
+            sum0_stg1 <= 0;
+            sum1_stg1 <= 0;
+            sum2_stg1 <= 0;
+            sum3_stg1 <= 0;
+
+            sum0_stg2 <= 0;
+            sum1_stg2 <= 0;
+
             sfp_in_sign0 <= 0;
             sfp_in_sign1 <= 0;
             sfp_in_sign2 <= 0;
@@ -195,16 +208,21 @@ module sfp_row (
             sfp_in_sign6 <= abs[bw_psum*7-1 : bw_psum*6];
             sfp_in_sign7 <= abs[bw_psum*8-1 : bw_psum*7];
             if (acc) begin
-                sum_q <= sum_1 + sum_2;
+                sum_q <= sum0_stg2 + sum1_stg2;
 
-                sum_1 <=
+                sum0_stg2 <= sum0_stg1 + sum1_stg1;
+                sum1_stg2 <= sum2_stg1 + sum3_stg1;
+
+                sum0_stg1 <=
                    {4'b0, abs[bw_psum*1-1 : bw_psum*0]} +
-                   {4'b0, abs[bw_psum*2-1 : bw_psum*1]} +
+                   {4'b0, abs[bw_psum*2-1 : bw_psum*1]} ;
+                sum1_stg1 <=
                    {4'b0, abs[bw_psum*3-1 : bw_psum*2]} +
                    {4'b0, abs[bw_psum*4-1 : bw_psum*3]} ;
-                sum_2 <=
+                sum2_stg1 <=
                    {4'b0, abs[bw_psum*5-1 : bw_psum*4]} +
-                   {4'b0, abs[bw_psum*6-1 : bw_psum*5]} +
+                   {4'b0, abs[bw_psum*6-1 : bw_psum*5]} ;
+                sum3_stg1 <=
                    {4'b0, abs[bw_psum*7-1 : bw_psum*6]} +
                    {4'b0, abs[bw_psum*8-1 : bw_psum*7]} ;
             end else begin
