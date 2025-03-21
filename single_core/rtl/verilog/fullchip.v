@@ -26,4 +26,10 @@ core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance (
       .inst(inst)
 );
 
+`ifdef SDF_ANNOTATE
+    initial begin
+        $sdf_annotate("../../pnr/core/core_WC.sdf", core_instance, , ,"MAXIMUM","1:1:1","FROM_MTM");
+    end
+`endif 
+
 endmodule
