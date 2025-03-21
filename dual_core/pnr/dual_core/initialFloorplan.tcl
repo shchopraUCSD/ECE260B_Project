@@ -14,8 +14,8 @@ addRing -spacing {top 1 bottom 1 left 1 right 1} -width {top 2 bottom 2 left 2 r
 # note that power stripes in SRAMs are VERTICAL
 addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit M1 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit M1 -number_of_sets 25 -ybottom_offset 5 -skip_via_on_pin Standardcell -stacked_via_top_layer M8 -padcore_ring_top_layer_limit M1 -spacing 1 -merge_stripes_value 0.1 -direction horizontal -layer M5 -block_ring_bottom_layer_limit M1 -ytop_offset 5 -width 1 -area {} -nets {VDD VSS} -stacked_via_bottom_layer M1
 
-setObjFPlanBox Instance core_instance_1 80.5605 229.525 500.885 659.62
-setObjFPlanBox Instance core_instance_2 910.00 229.525 1330.00 659.62
+setObjFPlanBox Instance core_instance_1 80.5605 50.525 500.885 480.62
+setObjFPlanBox Instance core_instance_2 910.00 50.525 1330.00 480.62
 
 flipOrRotateObject -flip MY -name core_instance_2
 

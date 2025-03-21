@@ -1,0 +1,1 @@
+/home/linux/ieng6/ee260bwi25/dnwadhwani/git_project/ECE260B_Project/dual_core/pnr/dual_core/constraints/fullchip.sdc
