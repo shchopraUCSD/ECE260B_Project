@@ -1,0 +1,40 @@
+ 
+****************************************
+Report : reference
+Design : mac_array
+Version: K-2015.06-SP2
+Date   : Fri Mar 21 00:10:52 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+mac_col_bw8_bw_psum20_pr8_col_id1
+                              10769.039999       1  10769.039999  h, n
+mac_col_bw8_bw_psum20_pr8_col_id2
+                              10699.919969       1  10699.919969  h, n
+mac_col_bw8_bw_psum20_pr8_col_id3
+                              10759.679998       1  10759.679998  h, n
+mac_col_bw8_bw_psum20_pr8_col_id4
+                              10747.439999       1  10747.439999  h, n
+mac_col_bw8_bw_psum20_pr8_col_id5
+                              10720.799967       1  10720.799967  h, n
+mac_col_bw8_bw_psum20_pr8_col_id6
+                              10763.639997       1  10763.639997  h, n
+mac_col_bw8_bw_psum20_pr8_col_id7
+                              10751.400000       1  10751.400000  h, n
+mac_col_bw8_bw_psum20_pr8_col_id8
+                              10749.599998       1  10749.599998  h, n
+-----------------------------------------------------------------------------
+Total 8 references                                  85961.519929
+1

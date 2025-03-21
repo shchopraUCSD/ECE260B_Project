@@ -1,0 +1,95 @@
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : reference
+Design : sfp_custom_div
+Version: K-2015.06-SP2
+Date   : Fri Mar 21 00:20:07 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AN2D0              tcbn65gpluswc
+                                  2.160000       3      6.480000  
+AN2D4              tcbn65gpluswc
+                                  4.320000       1      4.320000  
+AN3D0              tcbn65gpluswc
+                                  2.520000       1      2.520000  
+AO22D0             tcbn65gpluswc
+                                  2.880000      40    115.200005  
+AOI21D0            tcbn65gpluswc
+                                  2.160000      17     36.720001  
+AOI21D1            tcbn65gpluswc
+                                  2.160000       1      2.160000  
+AOI31D0            tcbn65gpluswc
+                                  2.520000       1      2.520000  
+BUFFD1             tcbn65gpluswc
+                                  1.440000       1      1.440000  
+BUFFD2             tcbn65gpluswc
+                                  2.160000       1      2.160000  
+CKAN2D1            tcbn65gpluswc
+                                  2.160000       2      4.320000  
+CKND2              tcbn65gpluswc
+                                  1.440000       1      1.440000  
+CKND2D0            tcbn65gpluswc
+                                  1.440000      55     79.200003  
+CKND2D1            tcbn65gpluswc
+                                  1.440000       1      1.440000  
+CKXOR2D0           tcbn65gpluswc
+                                  3.600000       2      7.200000  
+EDFKCNQD1          tcbn65gpluswc
+                                 10.080000      88    887.039993  n
+FA1D0              tcbn65gpluswc
+                                  9.000000       1      9.000000  r
+INR2XD0            tcbn65gpluswc
+                                  2.160000       1      2.160000  
+INVD0              tcbn65gpluswc
+                                  1.080000      73     78.840003  
+INVD1              tcbn65gpluswc
+                                  1.080000       2      2.160000  
+MUX2ND0            tcbn65gpluswc
+                                  2.880000       1      2.880000  
+ND2D0              tcbn65gpluswc
+                                  1.440000       3      4.320000  
+ND2D1              tcbn65gpluswc
+                                  1.440000       2      2.880000  
+NR2D0              tcbn65gpluswc
+                                  1.440000      42     60.480002  
+NR2D1              tcbn65gpluswc
+                                  1.440000       1      1.440000  
+NR2D2              tcbn65gpluswc
+                                  2.520000       1      2.520000  
+NR2XD0             tcbn65gpluswc
+                                  1.440000       5      7.200000  
+NR4D0              tcbn65gpluswc
+                                  2.520000       5     12.600000  
+OA21D0             tcbn65gpluswc
+                                  2.520000       2      5.040000  
+OAI21D0            tcbn65gpluswc
+                                  2.160000      25     54.000002  
+OAI21D1            tcbn65gpluswc
+                                  2.160000       3      6.480000  
+OR2D0              tcbn65gpluswc
+                                  2.160000       5     10.800000  
+OR3D0              tcbn65gpluswc
+                                  2.520000       1      2.520000  
+TIEH               tcbn65gpluswc
+                                  1.080000       1      1.080000  
+XNR2D0             tcbn65gpluswc
+                                  3.600000       8     28.799999  
+XOR2D0             tcbn65gpluswc
+                                  3.600000      10     35.999999  
+-----------------------------------------------------------------------------
+Total 35 references                                  1485.360011
+1

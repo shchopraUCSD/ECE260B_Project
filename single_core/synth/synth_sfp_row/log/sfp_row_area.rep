@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : sfp_row
+Version: K-2015.06-SP2
+Date   : Fri Mar 21 00:20:59 2025
+****************************************
+
+Library(s) Used:
+
+    tcbn65gplustc (File: /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db)
+
+Number of ports:                          895
+Number of nets:                          5328
+Number of cells:                         4505
+Number of combinational cells:           3446
+Number of sequential cells:              1051
+Number of macros/black boxes:               0
+Number of buf/inv:                        642
+Number of references:                      56
+
+Combinational area:               8974.800135
+Buf/Inv area:                      740.520028
+Noncombinational area:            8035.919821
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 17010.719956
+Total area:                 undefined
+1

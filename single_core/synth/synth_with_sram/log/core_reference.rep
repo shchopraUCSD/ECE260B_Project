@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : reference
+Design : core
+Version: K-2015.06-SP2
+Date   : Fri Mar 21 00:40:52 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFFD1             tcbn65gpluswc
+                                  1.440000      14     20.160001  
+DFQD1              tcbn65gpluswc
+                                  6.840000     168   1149.120026  n
+INR2D2             tcbn65gpluswc
+                                  2.880000       1      2.880000  
+INVD0              tcbn65gpluswc
+                                  1.080000       2      2.160000  
+INVD1              tcbn65gpluswc
+                                  1.080000       6      6.480000  
+MUX2D0             tcbn65gpluswc
+                                  3.240000      64    207.360001  
+ND2D2              tcbn65gpluswc
+                                  2.520000       1      2.520000  
+NR2D0              tcbn65gpluswc
+                                  1.440000       2      2.880000  
+mac_array_col8_bw8_bw_psum20_pr8
+                              94656.600077       1  94656.600077  h, n
+ofifo_col8_bw20               36185.760694       1  36185.760694  h, n
+sfp_row_col8_bw8_bw_psum20_bw_psum_out24
+                              20595.600065       1  20595.600065  h, n
+sram_w8_64b_0                  6426.360025       1   6426.360025  h, n
+sram_w8_64b_1                  6426.720025       1   6426.720025  h, n
+sram_w8_160b                  16017.480063       1  16017.480063  h, n
+-----------------------------------------------------------------------------
+Total 14 references                                 181702.080977
+1

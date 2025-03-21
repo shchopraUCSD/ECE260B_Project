@@ -1,6 +1,6 @@
 library (sram_w8_160b ){
   delay_model : table_lookup;
-  date : "Wed Mar 19 18:40:56 2025" ;
+  date : "Fri Mar 21 00:58:09 2025" ;
   revision : "0.0" ;
   bus_naming_style : "%s[%d]" ;
   capacitive_load_unit ( 1.0000,pf);

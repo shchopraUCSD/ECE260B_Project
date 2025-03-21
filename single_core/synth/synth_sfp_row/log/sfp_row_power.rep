@@ -7,7 +7,7 @@ Report : power
         -analysis_effort low
 Design : sfp_row
 Version: K-2015.06-SP2
-Date   : Wed Mar 19 14:12:16 2025
+Date   : Fri Mar 21 00:20:59 2025
 ****************************************
 
 
@@ -41,12 +41,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =   6.9951 mW   (93%)
-  Net Switching Power  = 545.4116 uW    (7%)
+  Cell Internal Power  =   9.4271 mW   (92%)
+  Net Switching Power  = 807.8220 uW    (8%)
                          ---------
-Total Dynamic Power    =   7.5405 mW  (100%)
+Total Dynamic Power    =  10.2349 mW  (100%)
 
-Cell Leakage Power     =  90.3676 uW
+Cell Leakage Power     =  76.1491 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -56,9 +56,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           5.9738        7.7405e-02        2.9456e+04            6.0807  (  79.68%)
+register           8.8169            0.1172        3.6847e+04            8.9710  (  87.00%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      1.0213            0.4680        6.0896e+04            1.5502  (  20.32%)
+combinational      0.6102            0.6906        3.9300e+04            1.3401  (  13.00%)
 --------------------------------------------------------------------------------------------------
-Total              6.9951 mW         0.5454 mW     9.0352e+04 nW         7.6309 mW
+Total              9.4271 mW         0.8078 mW     7.6147e+04 nW        10.3110 mW
 1

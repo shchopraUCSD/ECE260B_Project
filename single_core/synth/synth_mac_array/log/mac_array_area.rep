@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : mac_array
+Version: K-2015.06-SP2
+Date   : Fri Mar 21 00:10:52 2025
+****************************************
+
+Library(s) Used:
+
+    tcbn65gplustc (File: /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db)
+
+Number of ports:                         2676
+Number of nets:                         25861
+Number of cells:                        20712
+Number of combinational cells:          16408
+Number of sequential cells:              4288
+Number of macros/black boxes:               0
+Number of buf/inv:                       2735
+Number of references:                       8
+
+Combinational area:              55105.200463
+Buf/Inv area:                     3005.640119
+Noncombinational area:           30856.319466
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 85961.519929
+Total area:                 undefined
+1
