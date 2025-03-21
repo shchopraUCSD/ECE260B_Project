@@ -36,6 +36,8 @@ module fullchip_tb;
 
     reg reset = 1;
     reg clk = 0;
+    wire clk1 = 0;
+    wire clk2 = 0;
     reg [pr*bw*2-1:0] mem_in;
     reg ofifo_rd = 0;
     //FIXME extend inst for sfp instructions
@@ -56,6 +58,9 @@ module fullchip_tb;
     reg sfp_pass = 0;
     reg send_sum = 0;
     reg rec_sum = 0;
+
+    assign clk1 = clk;
+    assign clk2 = clk;
 
     //FIXME extend inst for sfp instructions
     assign inst[21] = rec_sum;
@@ -98,7 +103,8 @@ module fullchip_tb;
         .pr(pr)
     ) fullchip_instance (
         .reset(reset),
-        .clk(clk),
+        .clk1(clk1),
+        .clk2(clk2),
         .mem_in(mem_in),
         .out(out),
         .inst(inst)
