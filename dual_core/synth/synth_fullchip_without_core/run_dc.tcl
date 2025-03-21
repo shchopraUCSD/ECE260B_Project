@@ -3,8 +3,7 @@ set uname $tcl_platform(user)
 set rtlPath "/home/linux/ieng6/ee260bwi25/$uname/ECE260B_Project/dual_core/rtl/verilog"
 
 # Target library
-# FIXME use worst corner
-set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gpluswc.db} 
+set target_library {/home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db} 
 set link_library $target_library
 set symbol_library {}
 set wire_load_mode enclosed
@@ -46,7 +45,6 @@ set verilogout_single_bit false
 set verilogout_show_unconnected_pins true
 
 # read RTL
-analyze -format verilog -lib WORK core.v
 analyze -format verilog -lib WORK fullchip.v
 
 elaborate $top_module -lib WORK -update

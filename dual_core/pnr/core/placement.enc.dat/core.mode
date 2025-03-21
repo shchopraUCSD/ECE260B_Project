@@ -17,6 +17,9 @@ catch { setOptMode -setupTargetSlack 0 }
 catch { setOptMode -verbose true }
 setExtractRCMode  -engine preRoute -total_c_th 0 -relative_c_th 1 -coupling_c_th 0.1
 catch { setCTSMode -moveGateLimit 25 }
+catch { setCTSMode -routeTopPreferredLayer M7 }
+catch {setNanoRouteMode -quiet -routeTopRoutingLayer 7}
+
 catch { setPlaceMode -congEffort medium }
 catch { setPlaceMode -modulePlan true }
 catch { setPlaceMode -placeIoPins false }
@@ -26,6 +29,8 @@ catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten tr
 catch { setDelayCalMode -enable_high_fanout true }
 catch { setDelayCalMode -engine aae }
 catch { setDelayCalMode -ignoreNetLoad false }
+catch { setPinAssignMode -maxLayer 7 }
 catch { setTrialRouteMode -handlePreroute true }
 catch { setTrialRouteMode -keepMarkedOptRoutes true }
+catch { setTrialRouteMode -maxRouteLayer 7 }
 catch { setAddStripeMode -break_at block_ring }

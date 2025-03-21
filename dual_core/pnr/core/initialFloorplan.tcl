@@ -4,7 +4,8 @@ floorPlan -site core -r 1 0.50 10.0 10.0 10.0 10.0
 globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
 globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
 
-addRing -spacing {top 1 bottom 1 left 1 right 1} -width {top 2 bottom 2 left 2 right 2}  -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
+# disable power ring for subckt
+# addRing -spacing {top 1 bottom 1 left 1 right 1} -width {top 2 bottom 2 left 2 right 2}  -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
 
 setAddStripeMode -break_at {block_ring}
 
