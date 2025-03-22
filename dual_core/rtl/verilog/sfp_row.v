@@ -64,7 +64,6 @@ module sfp_row (
 
     reg [bw_psum_out-1:0] sum0_stg2;
     reg [bw_psum_out-1:0] sum1_stg2;
-    wire [bw_psum_out-1:0] sum_2core_temp;
 
     //numerator must also use absolute value as per canvas discussion
 
@@ -79,8 +78,7 @@ module sfp_row (
 
     assign sum_out = sum_q[bw_psum_out-1:0];
     //FIXME add 1 to stabilize since otherwise could have division by 0 case
-    assign sum_2core_temp = sum_q + sum_in;
-    assign sum_2core = sum_2core_temp[bw_psum_out-1:7]  + 1;
+    assign sum_2core = sum_q[bw_psum_out-1:7]  + 1;
 
     assign abs[bw_psum*1-1 : bw_psum*0] = (sfp_in[bw_psum*1-1]) ?  (~sfp_in[bw_psum*1-1 : bw_psum*0] + 1)  :  sfp_in[bw_psum*1-1 : bw_psum*0];
     assign abs[bw_psum*2-1 : bw_psum*1] = (sfp_in[bw_psum*2-1]) ?  (~sfp_in[bw_psum*2-1 : bw_psum*1] + 1)  :  sfp_in[bw_psum*2-1 : bw_psum*1];
@@ -208,7 +206,7 @@ module sfp_row (
             sfp_in_sign6 <= abs[bw_psum*7-1 : bw_psum*6];
             sfp_in_sign7 <= abs[bw_psum*8-1 : bw_psum*7];
             if (acc) begin
-                sum_q <= sum0_stg2 + sum1_stg2;
+                sum_q <= sum0_stg2 + sum1_stg2 + sum_in;
 
                 sum0_stg2 <= sum0_stg1 + sum1_stg1;
                 sum1_stg2 <= sum2_stg1 + sum3_stg1;

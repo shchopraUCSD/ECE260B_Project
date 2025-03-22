@@ -30,6 +30,7 @@ module core (
     //latch the final normalized output
     //reg [bw_psum*col-1:0] sfp_out_q;
 
+    reg [bw_psum*col-1:0] pmem_out_q;
     wire [pr*bw-1:0] mac_in;
     wire [pr*bw-1:0] kmem_out;
     wire [pr*bw-1:0] qmem_out;
@@ -77,7 +78,7 @@ module core (
     assign pmem_in = sfp_out;
 
     //final output of core - pmem out for final verification
-    assign out = pmem_out;
+    assign out = pmem_out_q;
 
     sram_w8_64b qmem_instance (
         .CLK(clk),
@@ -157,6 +158,7 @@ module core (
     always @(posedge clk) begin
         array_out_q <= array_out;
         fifo_wr_q   <= fifo_wr;
+        pmem_out_q  <= pmem_out;
         //if(sfp_div)
         //sfp_out_q <= sfp_out;
     end
