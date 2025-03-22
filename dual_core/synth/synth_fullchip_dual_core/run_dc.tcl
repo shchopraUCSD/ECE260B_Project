@@ -46,7 +46,6 @@ set verilogout_single_bit false
 set verilogout_show_unconnected_pins true
 
 # read RTL
-#analyze -format verilog -lib WORK core.v
 analyze -format verilog -lib WORK fullchip.v
 analyze -format verilog -lib WORK async_fifo.v
 

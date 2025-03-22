@@ -4,7 +4,7 @@ Warning: Design 'core' has '2' unresolved references. For more detailed informat
 Report : reference
 Design : core
 Version: K-2015.06-SP2
-Date   : Fri Mar 21 17:37:39 2025
+Date   : Fri Mar 21 21:58:17 2025
 ****************************************
 
 Attributes:
@@ -31,12 +31,12 @@ MUX2D0             tcbn65gpluswc
 OR2D0              tcbn65gpluswc
                                   2.160000       3      6.480000  
 mac_array_col8_bw8_bw_psum20_pr8
-                              94693.320067       1  94693.320067  h, n
-ofifo_col8_bw20               36244.080692       1  36244.080692  h, n
+                              94696.920066       1  94696.920066  h, n
+ofifo_col8_bw20               36227.880692       1  36227.880692  h, n
 sfp_row_col8_bw8_bw_psum20_bw_psum_out24
-                              18413.640027       1  18413.640027  h, n
+                              18482.400049       1  18482.400049  h, n
 sram_w8_64b                       0.000000       2      0.000000  b
 sram_w8_160b                      0.000000       1      0.000000  b
 -----------------------------------------------------------------------------
-Total 10 references                                 151817.040837
+Total 10 references                                 151873.200858
 1

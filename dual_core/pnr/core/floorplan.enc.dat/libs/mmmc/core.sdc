@@ -1,1 +1,1 @@
-/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/dual_core/pnr/core/constraints/core.sdc
+/home/linux/ieng6/ee260bwi25/sparanjpay/ECE260B_Project/dual_core/pnr/core/constraints/core.sdc
