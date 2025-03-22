@@ -3,7 +3,7 @@
 # Define paths and extension
 single_core_path="single_core"
 dual_core_path="dual_core"
-extension=".v"
+extension=".sdc"
 
 # Check if directories exist
 if [ ! -d "$single_core_path" ]; then

@@ -1,0 +1,1 @@
+/home/linux/ieng6/ee260bwi25/mak025/ECE260B_Project/dual_core/pnr/pnr_sram_w8_64b/constraints/sram_w8_64b.sdc
