@@ -526,6 +526,8 @@ module fullchip_tb;
 
         for (q = 0; q < total_cycle; q = q + 1) begin
             #0.5 clk = 1'b0;
+	    #0.5 clk = 1'b1;
+	    #0.5 clk = 1'b0;
 
             $display("DBG: final output from pmem for @cycle%2d: %40h, expected_out %40h", q,
                      out[bw_psum*col-1:0], final_pmem_expected_result[q]);
