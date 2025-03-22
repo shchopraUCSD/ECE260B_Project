@@ -2,7 +2,7 @@
 *	Innovus 15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
 *	
 *
-* 	Date & Time:	2025-Mar-21 18:11:14 (2025-Mar-22 01:11:14 GMT)
+* 	Date & Time:	2025-Mar-21 22:18:13 (2025-Mar-22 05:18:13 GMT)
 *
 *----------------------------------------------------------------------------------------
 *
@@ -45,45 +45,45 @@
 
 Total Power 
 -----------------------------------------------------------------------------------------
-Total Internal Power:       86.95680793 	   78.4527%
-Total Switching Power:      22.67368068 	   20.4563%
-Total Leakage Power:         1.20923570 	    1.0910%
-Total Power:               110.83972451 
+Total Internal Power:       86.98791457 	   78.5410%
+Total Switching Power:      22.57166173 	   20.3798%
+Total Leakage Power:         1.19526818 	    1.0792%
+Total Power:               110.75484459 
 -----------------------------------------------------------------------------------------
 
 
 Group                           Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-Sequential                         67.98       3.853      0.4305       72.26       65.19 
-Macro                                  0      0.6583           0      0.6583      0.5939 
-IO                                     0           0     7.6e-07     7.6e-07   6.857e-07 
-Combinational                      18.98       18.16      0.7787       37.92       34.21 
+Sequential                         68.12       3.895      0.4296       72.45       65.41 
+Macro                                  0      0.6624           0      0.6624       0.598 
+IO                                     0           0     7.6e-07     7.6e-07   6.862e-07 
+Combinational                      18.86       18.01      0.7657       37.64       33.99 
 Clock (Combinational)                  0           0           0           0           0 
 Clock (Sequential)                     0           0           0           0           0 
 -----------------------------------------------------------------------------------------
-Total                              86.96       22.67       1.209       110.8         100 
+Total                              86.99       22.57       1.195       110.8         100 
 -----------------------------------------------------------------------------------------
 
 
 Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-VDD                       0.9      86.96       22.67       1.209       110.8         100 
+VDD                       0.9      86.99       22.57       1.195       110.8         100 
 
 
 -----------------------------------------------------------------------------------------
 *	Power Distribution Summary: 
-* 		Highest Average Power:         psum_mem_instance (sram_w8_160b): 	    0.4469 
-* 		Highest Leakage Power: mac_array_instance/col_idx_8__mac_col_inst/mac_8in_instance/U3016 (CMPE42D1): 	 0.0002486 
-* 		Total Cap: 	2.22622e-10 F
-* 		Total instances in design: 45156
+* 		Highest Average Power:         psum_mem_instance (sram_w8_160b): 	    0.4521 
+* 		Highest Leakage Power: mac_array_instance/col_idx_7__mac_col_inst/mac_8in_instance/U3003 (CMPE42D2): 	 0.0002569 
+* 		Total Cap: 	2.2063e-10 F
+* 		Total instances in design: 45020
 * 		Total instances in design with no power:     0
 *          Total instances in design with no activity:     0
 * 		Total Fillers and Decap:     0
 -----------------------------------------------------------------------------------------
 
-Total leakage power = 1.20924 mW
+Total leakage power = 1.19527 mW
  Cell usage statistics:  
- Library tcbn65gpluswc , 45153 cells ( 100.000000%) , 1.20924 mW ( 100.000000%  ) 
+ Library tcbn65gpluswc , 45017 cells ( 100.000000%) , 1.19527 mW ( 100.000000%  ) 
  
