@@ -14,5 +14,5 @@ xrun \
 -v ../../pnr/pnr_sram_w8_160b/sram_w8_160b.pnr.v \
 -v ../../pnr/pnr_sram_w8_64b/sram_w8_64b.pnr.v \
 -v ../../pnr/core/core.pnr.v \
--v ../../rtl/verilog/fullchip.v \
-../../rtl/verilog/fullchip_tb.v
+-v ../../../single_core/rtl/verilog/fullchip.v \
+../../../single_core/rtl/verilog/fullchip_tb.v

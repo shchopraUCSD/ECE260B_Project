@@ -11,7 +11,8 @@ xrun \
 -xminitialize 0 \
 -input probes.tcl \
 -v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v \
--v ../../synth/synth_with_sram/core.out.v \
--v ../../rtl/verilog/async_fifo.v \
--v ../../synth/synth_fullchip_without_core/fullchip.out.v \
+-v ../../synth/synth_without_sram/core.out.v \
+-v ../../synth/synth_fullchip_dual_core/fullchip.out.v \
+-v ../../synth/synth_only_sram_w8_64b/sram_w8_64b.out.v \
+-v ../../synth/synth_only_sram_w8_160b/sram_w8_160b.out.v \
 ../../rtl/verilog/fullchip_dual_tb.v

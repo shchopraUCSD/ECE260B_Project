@@ -2,7 +2,7 @@
 # we will optimize the final dual core design at the end
 set clock_cycle 1.0 
 set io_delay 0.2 
-set o_delay 0.05 
+set o_delay 0.1 
 
 #set clock_port clk
 #create_clock -name clk -period $clock_cycle [get_ports $clock_port]
